@@ -28,6 +28,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
   # Required to support the jekyll-sitemap plugin below.
   # Uncomment the url line when ready to push to production. If using different branches for multiple
   # custom domains, edit this url parameter in the relevant branch to match the relevant custom domain.
+logo: "logo.png"
+logo_alt_text: "Shield with stars and stripes."
 
 # Twitter handle. Only the handle, not the URL.
 twitter: 18F
