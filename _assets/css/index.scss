@@ -9,11 +9,9 @@ $theme-hero-image: asset_path("hero.jpg");
 @import "uswds";
 
 // Example - Override the background image in the hero component using CSS:
-//.usa-hero {
-//  background-image: asset_url("your-image.png")
-//  background-position: 50%;
-//  background-size: cover;
-//}
+.usa-hero {
+  min-height: 650px;
+}
 
 /*
   Add your SASS/CSS here
