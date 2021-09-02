@@ -3,15 +3,18 @@
     <ul class="usa-sidenav">
       <li class="usa-sidenav__item">
         <a href="/about" {% if page.url == "/about/" %}class="usa-current"{% endif %}>Our Website</a>
+        {% if page.url == "/about/" %}
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
             <a href="/about" {% if page.url == "/about/" %}class="usa-current"{% endif %}>About This Site</a>
           </li>
         </ul>
+        {% endif %}
       </li>
       <li class="usa-sidenav__item">
         {% assign policy_check = page.url | split:'/' %}
         <a href="/policies/accessibility" {% if policy_check[1] == "policies" %}class="usa-current"{% endif %}>Policies </a>
+        {% if policy_check[1] == "policies" %}
 
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
@@ -24,9 +27,24 @@
             <a href="/policies/privacy" {% if page.url == "/policies/privacy" %}class="usa-current"{% endif %}>Privacy</a>
           </li>
         </ul>
-      </li>
+        {% endif %}
+    </li>
       <li class="usa-sidenav__item">
-        <a href="/customer-service" {% if page.url == "/customer-service" %}class="usa-current"{% endif %}>Customer Service</a>
+        {% assign service_check = page.url | split:'/' %}
+        <a href="/customer-service/support" {% if service_check[1] == "customer-service" %}class="usa-current"{% endif %}>Customer Service</a>
+        {% if service_check[1] == "customer-service" %}
+        <ul class="usa-sidenav__sublist">
+          <li class="usa-sidenav__item">
+            <a href="/customer-service/support" {% if page.url == "/customer-service/support" %}class="usa-current"{% endif %}>Government Customer Support</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="/customer-service/resources" {% if page.url == "/customer-service/resources" %}class="usa-current"{% endif %}>External Resources</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="/customer-service/contact" {% if page.url == "/customer-service/contact" %}class="usa-current"{% endif %}>Contact</a>
+          </li>
+        </ul>
+        {% endif %}
       </li>
     </ul>
   </nav>
