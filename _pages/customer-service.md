@@ -1,5 +1,5 @@
 ---
-permalink: /customer-service
+permalink: /customer-service/
 layout: page
 title: Customer Service
 sidenav: true

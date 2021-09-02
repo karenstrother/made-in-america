@@ -1,5 +1,5 @@
 ---
-permalink: /customer-service/support
+permalink: /customer-service/support/
 layout: page
 title: Support
 sidenav: true

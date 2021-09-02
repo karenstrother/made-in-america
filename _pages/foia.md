@@ -1,5 +1,5 @@
 ---
-permalink: /policies/foia
+permalink: /policies/foia/
 layout: page
 title: FOIA
 sidenav: true

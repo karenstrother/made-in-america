@@ -1,5 +1,5 @@
 ---
-permalink: /customer-service/resources
+permalink: /customer-service/resources/
 layout: page
 title: Resources
 sidenav: true

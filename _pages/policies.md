@@ -1,5 +1,5 @@
 ---
-permalink: /policies/accessibility
+permalink: /policies/accessibility/
 layout: page
 title: Accessibility
 sidenav: true

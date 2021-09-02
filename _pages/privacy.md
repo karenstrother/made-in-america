@@ -1,5 +1,5 @@
 ---
-permalink: /policies/privacy
+permalink: /policies/privacy/
 layout: page
 title: Privacy
 sidenav: true
