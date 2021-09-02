@@ -4,7 +4,14 @@
 */
 
 // Example - Override the background image in the hero component using SASS:
+$theme-show-notifications: false;
 $theme-hero-image: asset_path("hero.jpg");
+$theme-grid-container-max-width: 'desktop-lg';
+$theme-respect-user-font-size: true;
+$theme-font-type-sans: 'public-sans';
+$theme-type-scale-sm: 5;
+$theme-body-font-size: 'sm';
+$theme-body-line-height: 5;
 
 @import "uswds";
 
@@ -13,6 +20,10 @@ $theme-hero-image: asset_path("hero.jpg");
   min-height: 650px;
 }
 
+.usa-card__img img {
+  width: auto;
+  margin: auto;
+}
 /*
   Add your SASS/CSS here
 */
