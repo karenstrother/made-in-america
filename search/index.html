@@ -1,7 +1,7 @@
 ---
 permalink: /search/
 layout: page
-title: Search
+title: Waivers
 ---
 
 
@@ -46,8 +46,48 @@ title: Search
 </script>
 
 
-{% if site.searchgov %}
-  <h1>Search Results</h1>
+
+  <div class="flex-row">
+    <div class="flex-1">
+        <h1>Waivers</h1>
+        <p>A Synopsis of waiver requests submitted to date.</p>
+    </div>
+
+    <div class="flex-1">
+            <form class="usa-search usa-search--small" role="search">
+              <label class="usa-sr-only" for="search-input"> Search </label>
+              <input
+                class="usa-input"
+                id="search-input"
+                type="search"
+                name="search"
+                placeholder="Search Waivers"
+              />
+              <button class="usa-button" type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </form>
+    </div>
+    <div class="flex-1">
+        <label class="usa-label" for="options">Sort By</label>
+        <select class="usa-select" name="options" id="options">
+            <option value="recent">Most Recent</option>
+            <option value="value2"></option>
+            <option value="value3">Option C</option>
+        </select>
+    </div>
+  </div>
+
+  <h3 class="site-preview-heading">Small variant</h3>
+
+
+  <!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
+
+<!-- or without installing anything -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
   <ol id="search-results"></ol>
 
   {% if site.searchgov.affiliate == "federalist-uswds-example" %}
@@ -64,8 +104,20 @@ title: Search
       </div>
     </div>
   {% endif %}
-{% else %}
-  <script>
-    window.location = "/";
-  </script>
-{% endif %}
+
+  <div
+  class="usa-summary-box"
+  role="region"
+  aria-labelledby="summary-box-key-information"
+>
+  <div class="usa-summary-box__body">
+    {% asset sam-gov-logo.png alt="sam gov mark" %}
+
+    <div class="usa-summary-box__text">
+        <h2 class="text-primary">Buy American Historical Waivers</h2>
+        <h3 class="text-normal">Visit SAM.gov to learn more about Buy American Historical Waivers</h3>
+    </div>
+    <a class="usa-button" href="/">View Historical Waivers</a>
+
+  </div>
+</div>
