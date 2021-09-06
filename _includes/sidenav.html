@@ -2,46 +2,46 @@
   <nav>
     <ul class="usa-sidenav">
       <li class="usa-sidenav__item">
-        <a href="/about/" {% if page.url == "/about/" %}class="usa-current"{% endif %}>Our Website</a>
+        <a href="{{ site.baseurl }}/about/" {% if page.url == "/about/" %}class="usa-current"{% endif %}>Our Website</a>
         {% if page.url == "/about/" %}
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
-            <a href="/about/" {% if page.url == "/about/" %}class="usa-current"{% endif %}>About This Site</a>
+            <a href="{{ site.baseurl }}/about/" {% if page.url == "/about/" %}class="usa-current"{% endif %}>About This Site</a>
           </li>
         </ul>
         {% endif %}
       </li>
       <li class="usa-sidenav__item">
         {% assign policy_check = page.url | split:'/' %}
-        <a href="/policies/accessibility/" {% if policy_check[1] == "policies" %}class="usa-current"{% endif %}>Policies </a>
+        <a href="{{ site.baseurl }}/policies/accessibility/" {% if policy_check[1] == "policies" %}class="usa-current"{% endif %}>Policies </a>
         {% if policy_check[1] == "policies" %}
 
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
-            <a href="/policies/accessibility/" {% if page.url == "/policies/accessibility/" %}class="usa-current"{% endif %}>Accessibility</a>
+            <a href="{{ site.baseurl }}/policies/accessibility/" {% if page.url == "/policies/accessibility/" %}class="usa-current"{% endif %}>Accessibility</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="/policies/foia/" {% if page.url == "/policies/foia/" %}class="usa-current"{% endif %}>Freedom of Information Act</a>
+            <a href="{{ site.baseurl }}/policies/foia/" {% if page.url == "/policies/foia/" %}class="usa-current"{% endif %}>Freedom of Information Act</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="/policies/privacy/" {% if page.url == "/policies/privacy/" %}class="usa-current"{% endif %}>Privacy</a>
+            <a href="{{ site.baseurl }}/policies/privacy/" {% if page.url == "/policies/privacy/" %}class="usa-current"{% endif %}>Privacy</a>
           </li>
         </ul>
         {% endif %}
     </li>
       <li class="usa-sidenav__item">
         {% assign service_check = page.url | split:'/' %}
-        <a href="/customer-service/support/" {% if service_check[1] == "customer-service" %}class="usa-current"{% endif %}>Customer Service</a>
+        <a href="{{ site.baseurl }}/customer-service/support/" {% if service_check[1] == "customer-service" %}class="usa-current"{% endif %}>Customer Service</a>
         {% if service_check[1] == "customer-service" %}
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
-            <a href="/customer-service/support/" {% if page.url == "/customer-service/support/" %}class="usa-current"{% endif %}>Government Customer Support</a>
+            <a href="{{ site.baseurl }}/customer-service/support/" {% if page.url == "/customer-service/support/" %}class="usa-current"{% endif %}>Government Customer Support</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="/customer-service/resources/" {% if page.url == "/customer-service/resources/" %}class="usa-current"{% endif %}>External Resources</a>
+            <a href="{{ site.baseurl }}/customer-service/resources/" {% if page.url == "/customer-service/resources/" %}class="usa-current"{% endif %}>External Resources</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="/customer-service/contact/" {% if page.url == "/customer-service/contact/" %}class="usa-current"{% endif %}>Contact</a>
+            <a href="{{ site.baseurl }}/customer-service/contact/" {% if page.url == "/customer-service/contact/" %}class="usa-current"{% endif %}>Contact</a>
           </li>
         </ul>
         {% endif %}
