@@ -4,108 +4,121 @@ layout: page
 title: Waivers
 ---
 
-
-<script>
-//<![CDATA[
-
-  var urlParams = new URLSearchParams(window.location.search);
-  var searchEndpoint = new URL("{{site.searchgov.endpoint}}/api/v2/search/i14y");
-  params = { affiliate: "{{site.searchgov.affiliate}}", access_key: "{{site.searchgov.access_key}}", query: urlParams.get('query') }
-
-
-  Object.keys(params).forEach(key => searchEndpoint.searchParams.append(key, params[key]))
-
-  fetch(searchEndpoint).then(function(res) {
-      return res.json()
-    }).then(function(posts) {
-      for (item in posts.web.results){
-        render_result(`
-          <li class="padding-bottom-5 margin-top-4 usa-prose border-bottom-05 border-base-lightest">
-            <b class="title"><a href="${posts.web.results[item]['url']}">${posts.web.results[item]['title']}</a></b>
-            <div> ${posts.web.results[item]['snippet'].replace(/\uE000/g, '<span class="bg-yellow">').replace(/\uE001/g, '</span>')} </div>
-          </li>
-          `, true)
-
-      }
-    }).catch(function(ex) {
-      console.log('parsing failed', ex);
-    }).finally(function(e){
-
-      if(document.getElementById('search-results').childNodes.length == 0){
-        render_result(`<li class="title">No results found</li>`, false)
-      }
-
-    })
-
-    function render_result(content, append = true){
-      const previous = document.getElementById('search-results').innerHTML;
-      document.getElementById('search-results').innerHTML = (append == true) ? previous + content : content;
-    }
-
-//]]>
-</script>
-
-
-
-  <div class="flex-row">
-    <div class="flex-1">
-        <h1>Waivers</h1>
-        <p>A Synopsis of waiver requests submitted to date.</p>
-    </div>
-
-    <div class="flex-1">
-            <form class="usa-search usa-search--small" role="search">
-              <label class="usa-sr-only" for="search-input"> Search </label>
-              <input
-                class="usa-input"
-                id="search-input"
-                type="search"
-                name="search"
-                placeholder="Search Waivers"
-              />
-              <button class="usa-button" type="submit">
-                <span class="usa-sr-only">Search</span>
-              </button>
-            </form>
-    </div>
-    <div class="flex-1">
-        <label class="usa-label" for="options">Sort By</label>
-        <select class="usa-select" name="options" id="options">
-            <option value="recent">Most Recent</option>
-            <option value="value2"></option>
-            <option value="value3">Option C</option>
-        </select>
-    </div>
+<div
+  class="grid-row flex-row flex-align-end"
+  style="justify-content: space-between"
+>
+  <div class="flex-1">
+    <h1 class="margin-0">Waivers</h1>
+    <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
   </div>
 
-  <h3 class="site-preview-heading">Small variant</h3>
+  <div class="flex-1 margin-x-3">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-input"> Search </label>
+      <input
+        class="usa-input"
+        id="search-input"
+        type="search"
+        name="search"
+        placeholder="Search Waivers"
+      />
+      <button class="usa-button" type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </form>
+  </div>
+  
+  <div class="flex-1 margin-left-3">
+    <label class="usa-label" for="options">Sort By</label>
+    <select class="usa-select" name="options" id="options">
+      <option value="recent">Most Recent</option>
+      <option value="value2">Alphabetical</option>
+      <option value="value3">Option C</option>
+    </select>
+  </div>
+</div>
 
-
-  <!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="Search blog posts..">
-<ul id="results-container"></ul>
-
-<!-- or without installing anything -->
-<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-
-  <ol id="search-results"></ol>
-
-  {% if site.searchgov.affiliate == "federalist-uswds-example" %}
-    <div class="usa-alert usa-alert--info">
-      <div class="usa-alert__body">
-        This is an example. You will need to configure your site with search.gov to see the correct search results. To do this:
-        <ol>
-          <li>Create an account with Search.gov at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a></li>
-          <li>Go to the "Activate" section and get "API Access Key"</a></li>
-          <li>Open <code>_config.yml</code> and look for <code>searchgov</code> fields</li>
-          <li>Add your <code>affiliate</code> and <code>access_key</code></li>
-          <li>Your results will not show up immediately. Make sure you follow <a href="https://search.gov/manual/searchgov-for-federalist.html">instructions to index your site</a>.</li>
-        </ol>
+<ul id="results-container" style="padding: 0">
+  <div
+    class="grid-row direction-column border padding-2 flex-align-center"
+    style="justify-content: space-between"
+  >
+    <div>
+      <h4 class="margin-0">Procurement Title</h4>
+      <p class="margin-0">Cripps Pink/ Pink Lady Apples</p>
+    </div>
+    <div>
+      <h4 class="margin-0">Contradicting Department</h4>
+      <p class="margin-0">Department of Defense</p>
+    </div>
+    <div>
+      <h4 class="margin-0">Product Service Code (PSC)</h4>
+      <p class="margin-0">Fruit and Vegetables</p>
+    </div>
+    <a
+      href="#example-modal-1"
+      class="usa-button usa-button--outline"
+      aria-controls="example-modal-1"
+      data-open-modal
+      >View More</a
+    >
+    <div
+      class="usa-modal"
+      id="example-modal-1"
+      aria-labelledby="modal-1-heading"
+      aria-describedby="modal-1-description"
+    >
+      <div class="usa-modal__content">
+        <div class="usa-modal__main">
+          <h2 class="usa-modal__heading" id="modal-1-heading">
+            Are you sure you want to continue?
+          </h2>
+          <div class="usa-prose">
+            <p id="modal-1-description">
+              You have unsaved changes that will be lost.
+            </p>
+          </div>
+          <div class="usa-modal__footer">
+            <ul class="usa-button-group">
+              <li class="usa-button-group__item">
+                <button type="button" class="usa-button" data-close-modal>
+                  Continue without saving
+                </button>
+              </li>
+              <li class="usa-button-group__item">
+                <button
+                  type="button"
+                  class="
+                    usa-button usa-button--unstyled
+                    padding-105
+                    text-center
+                  "
+                  data-close-modal
+                >
+                  Go back
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="usa-button usa-modal__close"
+          aria-label="Close this window"
+          data-close-modal
+        >
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use xlink:href="/assets/img/sprite.svg#close"></use>
+          </svg>
+        </button>
       </div>
     </div>
-  {% endif %}
+  </div>
+</ul>
 
-  <div
+<!-- or without installing anything -->
+
+<div
   class="usa-summary-box"
   role="region"
   aria-labelledby="summary-box-key-information"
@@ -114,10 +127,26 @@ title: Waivers
     {% asset sam-gov-logo.png alt="sam gov mark" %}
 
     <div class="usa-summary-box__text">
-        <h2 class="text-primary">Buy American Historical Waivers</h2>
-        <h3 class="text-normal">Visit SAM.gov to learn more about Buy American Historical Waivers</h3>
+      <h2 class="text-primary">Buy American Historical Waivers</h2>
+      <h3 class="text-normal">
+        Visit SAM.gov to learn more about Buy American Historical Waivers
+      </h3>
     </div>
     <a class="usa-button" href="/">View Historical Waivers</a>
-
   </div>
 </div>
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+  window.simpleJekyllSearch = new SimpleJekyllSearch({
+    searchInput: document.getElementById("search-input"),
+    resultsContainer: document.getElementById("results-container"),
+    json: "{{ site.baseurl }}/search.json",
+    searchResultTemplate:
+      '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+    noResultsText: "No results found",
+    limit: 10,
+    fuzzy: false,
+    exclude: ["Welcome"],
+  });
+</script>
