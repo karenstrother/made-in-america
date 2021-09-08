@@ -4,56 +4,94 @@ layout: page
 title: Waivers
 ---
 
-<div
-  class="grid-row flex-row flex-align-end"
-  style="justify-content: space-between"
->
-  <div class="flex-1">
-    <h1 class="margin-0">Waivers</h1>
-    <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
-  </div>
+<div>
+  <div class="grid-container padding-0">
+    <div
+      class="grid-row flex-align-end"
+      style="justify-content: space-between"
+    >
+      <div class="tablet:grid-col-3">
+        <h1 class="margin-0">Waivers</h1>
+        <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
+      </div>
 
-  <div class="flex-1 margin-x-3">
-    <form class="usa-search usa-search--small" role="search">
-      <label class="usa-sr-only" for="search-input"> Search </label>
-      <input
-        class="usa-input"
-        id="search-input"
-        type="search"
-        name="search"
-        placeholder="Search Waivers"
-      />
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
-    </form>
-  </div>
+      <form class="usa-search usa-search--small tablet:grid-col-3" role="search">
+        <label class="usa-sr-only" for="search-input"> Search </label>
+        <input
+          class="usa-input"
+          id="search-input"
+          type="search"
+          name="search"
+          placeholder="Search Waivers"
+        />
+        <button class="usa-button" type="submit">
+          <span class="usa-sr-only">Search</span>
+        </button>
+      </form>
 
-  <div class="flex-1 margin-left-3">
-    <label class="usa-label" for="options">Sort By</label>
-    <select class="usa-select" name="options" id="options">
-      <option value="recent">Most Recent</option>
-      <option value="value2">Alphabetical</option>
-      <option value="value3">Option C</option>
-    </select>
+      <div class="tablet:grid-col-3 margin-left-3">
+        <label class="usa-label" for="options">Sort By</label>
+        <select class="usa-select" name="options" id="options">
+          <option value="recent">Most Recent</option>
+          <option value="value2">Alphabetical</option>
+          <option value="value3">Option C</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
 
-<ul id="results-container" style="padding: 0"></ul>
-
-<!-- or without installing anything -->
+<ul id="results-container" style="padding: 0">
+  {% include waiver-teaser.html title='Cripps Pink / Pink Lady Apples'
+  synopsis='Department of Defense' contracting_agency_id='Department of Defense'
+  contracting_agency_name='Department of Defense' funding_agency_id='Department
+  of Defense' funding_agency_name='Department of Defense'
+  procurement_stage='Department of Defense' naics='Department of Defense'
+  solicitation_id='Department of Defense' psc='Fruits and Vegetables'
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  title='Torques' psc='Metal Finishing Equipment'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  title='Fuji Apples' psc='Fruits and Vegetables'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%} {% include waiver-teaser.html
+  title='Cog Wheel Finish' psc='Metal Finishing Equipment'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%} {% include waiver-teaser.html
+  title='Golden Delicious Apples' psc='Fruits and Vegetables'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%}
+</ul>
 
 <div class="usa-summary-box" role="region">
   <div class="usa-summary-box__body">
     {% asset sam-gov-logo.png alt="sam gov mark" %}
 
-    <div class="usa-summary-box__text">
-      <h2 class="text-primary">Buy American Historical Waivers</h2>
-      <h3 class="text-normal">
-        Visit SAM.gov to learn more about Buy American Historical Waivers
-      </h3>
+    <div class="grid-row">
+      <div class="usa-summary-box__text">
+        <h2 class="text-primary">Buy American Historical Waivers</h2>
+        <h3 class="text-normal">
+          Visit SAM.gov to learn more about Buy American Historical Waivers
+        </h3>
+      </div>
+      <a class="usa-button" href="/">View Historical Waivers</a>
     </div>
-    <a class="usa-button" href="/">View Historical Waivers</a>
   </div>
 </div>
 
