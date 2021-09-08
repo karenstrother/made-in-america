@@ -1,14 +1,14 @@
 <div
   class="usa-modal maxw-desktop"
-  id="example-modal-1"
-  aria-labelledby="modal-1-heading"
-  aria-describedby="modal-1-description"
+  id={{include.id}}
+  aria-labelledby="{{include.id}}-heading"
+  aria-describedby="{{include.id}}-description"
 >
   <div class="usa-modal__content flex-column">
     <div class="usa-modal__main width-full">
       <h2
         class="usa-modal__heading text-primary-vivid font-sans-xl"
-        id="modal-1-heading"
+        id="{{include.id}}-heading"
       >
         {{include.title}}
       </h2>

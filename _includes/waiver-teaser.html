@@ -24,13 +24,13 @@
   </div>
 
   <a
-    href="#example-modal-1"
+    href={{include.id}}
     class="usa-button usa-button--outline margin-0 tablet:grid-col-2"
-    aria-controls="example-modal-1"
+    aria-controls={{include.id}}
     data-open-modal
     >View More</a
   >
-  {% include modal.html title=include.title synopsis=include.synopsis
+  {% include modal.html id=include.id title=include.title synopsis=include.synopsis
   contracting_agency_name=include.contracting_agency_name
   funding_agency_id=include.funding_agency_id
   funding_agency_name=include.funding_agency_name

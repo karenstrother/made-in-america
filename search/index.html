@@ -7,9 +7,11 @@ title: Waivers
 <div>
   <div class="grid-container padding-0">
     <div class="grid-row flex-align-end" style="justify-content: space-between">
-      <div class="tablet:grid-col-3">
+      <div class="tablet:grid-col-4">
         <h1 class="margin-0">Waivers</h1>
-        <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
+        <h2 class="margin-0 margin-0 font-sans-sm text-light">
+          A Synopsis of waiver requests submitted to date.
+        </h2>
       </div>
 
       <form
@@ -42,37 +44,40 @@ title: Waivers
 </div>
 
 <ul id="results-container" style="padding: 0">
-  {% include waiver-teaser.html title='Cripps Pink / Pink Lady Apples'
-  synopsis='Department of Defense' contracting_agency_id='Department of Defense'
-  contracting_agency_name='Department of Defense' funding_agency_id='Department
-  of Defense' funding_agency_name='Department of Defense'
-  procurement_stage='Department of Defense' naics='Department of Defense'
-  solicitation_id='Department of Defense' psc='Fruits and Vegetables'
-  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  {% include waiver-teaser.html id="cripps-pink" title='Cripps Pink / Pink Lady
+  Apples' synopsis='Department of Defense' contracting_agency_id='Department of
+  Defense' contracting_agency_name='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense' psc='Fruits and Vegetables'
+  period_of_performance='Department of Defense' %} 
+  {% include waiver-teaser.html
+    id="torques"
   title='Torques' psc='Metal Finishing Equipment'
   contracting_agency_name='Department of Defense' synopsis='Department of
   Defense' contracting_agency_id='Department of Defense'
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense'
-  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
-  title='Fuji Apples' psc='Fruits and Vegetables'
+  period_of_performance='Department of Defense' %} 
+  {% include waiver-teaser.html
+  id="fuji-apples" title='Fuji Apples' psc='Fruits and Vegetables'
   contracting_agency_name='Department of Defense' synopsis='Department of
   Defense' contracting_agency_id='Department of Defense'
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense'
   period_of_performance='Department of Defense'%} {% include waiver-teaser.html
-  title='Cog Wheel Finish' psc='Metal Finishing Equipment'
+  id="cog-wheel" title='Cog Wheel Finish' psc='Metal Finishing Equipment'
   contracting_agency_name='Department of Defense' synopsis='Department of
   Defense' contracting_agency_id='Department of Defense'
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense'
   period_of_performance='Department of Defense'%} {% include waiver-teaser.html
-  title='Golden Delicious Apples' psc='Fruits and Vegetables'
-  contracting_agency_name='Department of Defense' synopsis='Department of
-  Defense' contracting_agency_id='Department of Defense'
+  id="gol-del-apples" title='Golden Delicious Apples' psc='Fruits and
+  Vegetables' contracting_agency_name='Department of Defense'
+  synopsis='Department of Defense' contracting_agency_id='Department of Defense'
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense'
@@ -84,7 +89,10 @@ title: Waivers
     {% asset sam-gov-logo.png alt="sam gov mark" %}
   </div>
 
-  <div class="grid-row flex-row flex-align-end" style="justify-content: space-between;">
+  <div
+    class="grid-row flex-row flex-align-end"
+    style="justify-content: space-between"
+  >
     <div>
       <h2 class="text-primary margin-0">Buy American Historical Waivers</h2>
       <h3 class="text-normal margin-0">
