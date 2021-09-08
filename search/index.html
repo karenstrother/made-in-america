@@ -6,16 +6,16 @@ title: Waivers
 
 <div>
   <div class="grid-container padding-0">
-    <div
-      class="grid-row flex-align-end"
-      style="justify-content: space-between"
-    >
+    <div class="grid-row flex-align-end" style="justify-content: space-between">
       <div class="tablet:grid-col-3">
         <h1 class="margin-0">Waivers</h1>
         <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
       </div>
 
-      <form class="usa-search usa-search--small tablet:grid-col-3" role="search">
+      <form
+        class="usa-search usa-search--small tablet:grid-col-3 margin-top-2"
+        role="search"
+      >
         <label class="usa-sr-only" for="search-input"> Search </label>
         <input
           class="usa-input"
@@ -29,7 +29,7 @@ title: Waivers
         </button>
       </form>
 
-      <div class="tablet:grid-col-3 margin-left-3">
+      <div class="tablet:grid-col-3">
         <label class="usa-label" for="options">Sort By</label>
         <select class="usa-select" name="options" id="options">
           <option value="recent">Most Recent</option>
@@ -79,33 +79,34 @@ title: Waivers
   period_of_performance='Department of Defense'%}
 </ul>
 
-<div class="usa-summary-box" role="region">
-  <div class="usa-summary-box__body">
+<div class="bg-primary-lighter padding-4 radius-md">
+  <div class="margin-bottom-1">
     {% asset sam-gov-logo.png alt="sam gov mark" %}
-
-    <div class="grid-row">
-      <div class="usa-summary-box__text">
-        <h2 class="text-primary">Buy American Historical Waivers</h2>
-        <h3 class="text-normal">
-          Visit SAM.gov to learn more about Buy American Historical Waivers
-        </h3>
-      </div>
-      <a class="usa-button" href="/">View Historical Waivers</a>
-    </div>
   </div>
-</div>
 
-<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-<script>
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
-    searchInput: document.getElementById("search-input"),
-    resultsContainer: document.getElementById("results-container"),
-    json: "{{ site.baseurl }}/search.json",
-    searchResultTemplate:
-      '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-    noResultsText: "No results found",
-    limit: 10,
-    fuzzy: false,
-    exclude: ["Welcome"],
-  });
-</script>
+  <div class="grid-row flex-row flex-align-end" style="justify-content: space-between;">
+    <div>
+      <h2 class="text-primary margin-0">Buy American Historical Waivers</h2>
+      <h3 class="text-normal margin-0">
+        Visit SAM.gov to learn more about Buy American Historical Waivers
+      </h3>
+    </div>
+
+    <a class="usa-button height-5" href="/">View Historical Waivers</a>
+  </div>
+
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById("search-input"),
+      resultsContainer: document.getElementById("results-container"),
+      json: "{{ site.baseurl }}/search.json",
+      searchResultTemplate:
+        '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+      noResultsText: "No results found",
+      limit: 10,
+      fuzzy: false,
+      exclude: ["Welcome"],
+    });
+  </script>
+</div>
