@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "netlify-cms": "^2.10.102",
+    "simple-jekyll-search": "^1.10.0",
     "uswds": "~2.12.1"
   },
   "devDependencies": {

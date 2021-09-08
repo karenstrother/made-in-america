@@ -1,0 +1,20 @@
+---
+layout: none
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "synopsis" : "{{ post.synopsis }}",
+      "contracting_agency_id"     : "{{ post.tags | join: ', ' }}",
+      "contracting_agency_name"     : "{{ post.tags | join: ', ' }}",
+      "funding_agency_id"      : "{{ site.baseurl }}{{ post.url }}",
+      "funding_agency_name"      : "{{ site.baseurl }}{{ post.url }}",
+      "procurement_stage"      : "{{ site.baseurl }}{{ post.url }}",
+      "naics"      : "{{ site.baseurl }}{{ post.url }}",
+      "solicitation_id"      : "{{ site.baseurl }}{{ post.url }}",
+      "psc"      : "{{ site.baseurl }}{{ post.url }}",
+      "period_of_performance"      : "{{ site.baseurl }}{{ post.url }}",
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

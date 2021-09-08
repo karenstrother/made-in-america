@@ -1,71 +1,73 @@
 ---
-permalink: /search/
+permalink: /waivers/
 layout: page
-title: Search
+title: Waivers
 ---
 
+<div
+  class="grid-row flex-row flex-align-end"
+  style="justify-content: space-between"
+>
+  <div class="flex-1">
+    <h1 class="margin-0">Waivers</h1>
+    <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
+  </div>
 
-<script>
-//<![CDATA[
+  <div class="flex-1 margin-x-3">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-input"> Search </label>
+      <input
+        class="usa-input"
+        id="search-input"
+        type="search"
+        name="search"
+        placeholder="Search Waivers"
+      />
+      <button class="usa-button" type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </form>
+  </div>
 
-  var urlParams = new URLSearchParams(window.location.search);
-  var searchEndpoint = new URL("{{site.searchgov.endpoint}}/api/v2/search/i14y");
-  params = { affiliate: "{{site.searchgov.affiliate}}", access_key: "{{site.searchgov.access_key}}", query: urlParams.get('query') }
+  <div class="flex-1 margin-left-3">
+    <label class="usa-label" for="options">Sort By</label>
+    <select class="usa-select" name="options" id="options">
+      <option value="recent">Most Recent</option>
+      <option value="value2">Alphabetical</option>
+      <option value="value3">Option C</option>
+    </select>
+  </div>
+</div>
 
+<ul id="results-container" style="padding: 0"></ul>
 
-  Object.keys(params).forEach(key => searchEndpoint.searchParams.append(key, params[key]))
+<!-- or without installing anything -->
 
-  fetch(searchEndpoint).then(function(res) {
-      return res.json()
-    }).then(function(posts) {
-      for (item in posts.web.results){
-        render_result(`
-          <li class="padding-bottom-5 margin-top-4 usa-prose border-bottom-05 border-base-lightest">
-            <b class="title"><a href="${posts.web.results[item]['url']}">${posts.web.results[item]['title']}</a></b>
-            <div> ${posts.web.results[item]['snippet'].replace(/\uE000/g, '<span class="bg-yellow">').replace(/\uE001/g, '</span>')} </div>
-          </li>
-          `, true)
+<div class="usa-summary-box" role="region">
+  <div class="usa-summary-box__body">
+    {% asset sam-gov-logo.png alt="sam gov mark" %}
 
-      }
-    }).catch(function(ex) {
-      console.log('parsing failed', ex);
-    }).finally(function(e){
-
-      if(document.getElementById('search-results').childNodes.length == 0){
-        render_result(`<li class="title">No results found</li>`, false)
-      }
-
-    })
-
-    function render_result(content, append = true){
-      const previous = document.getElementById('search-results').innerHTML;
-      document.getElementById('search-results').innerHTML = (append == true) ? previous + content : content;
-    }
-
-//]]>
-</script>
-
-
-{% if site.searchgov %}
-  <h1>Search Results</h1>
-  <ol id="search-results"></ol>
-
-  {% if site.searchgov.affiliate == "federalist-uswds-example" %}
-    <div class="usa-alert usa-alert--info">
-      <div class="usa-alert__body">
-        This is an example. You will need to configure your site with search.gov to see the correct search results. To do this:
-        <ol>
-          <li>Create an account with Search.gov at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a></li>
-          <li>Go to the "Activate" section and get "API Access Key"</a></li>
-          <li>Open <code>_config.yml</code> and look for <code>searchgov</code> fields</li>
-          <li>Add your <code>affiliate</code> and <code>access_key</code></li>
-          <li>Your results will not show up immediately. Make sure you follow <a href="https://search.gov/manual/searchgov-for-federalist.html">instructions to index your site</a>.</li>
-        </ol>
-      </div>
+    <div class="usa-summary-box__text">
+      <h2 class="text-primary">Buy American Historical Waivers</h2>
+      <h3 class="text-normal">
+        Visit SAM.gov to learn more about Buy American Historical Waivers
+      </h3>
     </div>
-  {% endif %}
-{% else %}
-  <script>
-    window.location = "/";
-  </script>
-{% endif %}
+    <a class="usa-button" href="/">View Historical Waivers</a>
+  </div>
+</div>
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+  window.simpleJekyllSearch = new SimpleJekyllSearch({
+    searchInput: document.getElementById("search-input"),
+    resultsContainer: document.getElementById("results-container"),
+    json: "{{ site.baseurl }}/search.json",
+    searchResultTemplate:
+      '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+    noResultsText: "No results found",
+    limit: 10,
+    fuzzy: false,
+    exclude: ["Welcome"],
+  });
+</script>

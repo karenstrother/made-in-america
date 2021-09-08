@@ -4,17 +4,26 @@
 */
 
 // Example - Override the background image in the hero component using SASS:
-// $theme-hero-image: asset_path("whatever-the-default-is.png");
+$theme-show-notifications: false;
+$theme-hero-image: asset_path("hero.jpg");
+$theme-grid-container-max-width: 'desktop-lg';
+$theme-respect-user-font-size: true;
+$theme-font-type-sans: 'public-sans';
+$theme-type-scale-sm: 5;
+$theme-body-font-size: 'sm';
+$theme-body-line-height: 5;
 
 @import "uswds";
 
 // Example - Override the background image in the hero component using CSS:
-//.usa-hero {
-//  background-image: asset_url("your-image.png")
-//  background-position: 50%;
-//  background-size: cover;
-//}
+.usa-hero {
+  min-height: 650px;
+}
 
+.usa-card__img img {
+  width: auto;
+  margin: auto;
+}
 /*
   Add your SASS/CSS here
 */
