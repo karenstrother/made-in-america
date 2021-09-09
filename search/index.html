@@ -50,17 +50,14 @@ title: Waivers
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense' psc='Fruits and Vegetables'
-  period_of_performance='Department of Defense' %} 
-  {% include waiver-teaser.html
-    id="torques"
-  title='Torques' psc='Metal Finishing Equipment'
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  id="torques" title='Torques' psc='Metal Finishing Equipment'
   contracting_agency_name='Department of Defense' synopsis='Department of
   Defense' contracting_agency_id='Department of Defense'
   funding_agency_id='Department of Defense' funding_agency_name='Department of
   Defense' procurement_stage='Department of Defense' naics='Department of
   Defense' solicitation_id='Department of Defense'
-  period_of_performance='Department of Defense' %} 
-  {% include waiver-teaser.html
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
   id="fuji-apples" title='Fuji Apples' psc='Fruits and Vegetables'
   contracting_agency_name='Department of Defense' synopsis='Department of
   Defense' contracting_agency_id='Department of Defense'
@@ -102,19 +99,4 @@ title: Waivers
 
     <a class="usa-button height-5" href="/">View Historical Waivers</a>
   </div>
-
-  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-  <script>
-    window.simpleJekyllSearch = new SimpleJekyllSearch({
-      searchInput: document.getElementById("search-input"),
-      resultsContainer: document.getElementById("results-container"),
-      json: "{{ site.baseurl }}/search.json",
-      searchResultTemplate:
-        '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-      noResultsText: "No results found",
-      limit: 10,
-      fuzzy: false,
-      exclude: ["Welcome"],
-    });
-  </script>
 </div>
