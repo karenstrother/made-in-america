@@ -31,7 +31,7 @@ $theme-body-line-height: 5;
 }
 
 // pollyfill not working
-// TODO: get working on mobile
+// TODO: not working on mobile
 .usa-banner__button::after {
   -webkit-mask: url(../img/usa-icons/expand_more.svg) no-repeat center/1rem 1rem;
 }
@@ -47,12 +47,16 @@ $theme-body-line-height: 5;
 
 .usa-nav__secondary {
   height: 100%;
-
-  // .usa-button {
-  //   margin-top: 8px;
-  // }
 }
 
+footer {
+  .usa-accordion__heading:not(:first-child) {
+    margin-top: 0px;
+    border-top: none;
+  }
+}
+
+// TODO: this is still aperaing at widths above 1126px
 @media screen and (min-width: 1126px) {
   .mia-mobile-menu-btn {
     display: none;
