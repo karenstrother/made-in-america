@@ -6,10 +6,10 @@ where we provide an easy way to manage your navigation system
 <header class="usa-header usa-header--extended" role="banner">
   <div class="usa-navbar">
     {% include logo.html %}
-    <a class="mia-mobile-menu-btn" href="{{ site.baseurl }}/waivers/">View Waivers</a>
+    <a class="mia-mobile-menu-btn desktop:display-none" href="{{ site.baseurl }}/waivers/">View Waivers</a>
   </div>
   <nav id="menu-navigation" aria-label="Menu navigation" role="navigation" class="usa-nav">
-    <div class="usa-nav__inner">
+    <div class="usa-nav__inner display:none desktop:display-block">
       <button class="usa-nav__close">{% asset close.svg alt="close" %}</button>
       <div class="usa-nav__secondary">
         <a class="usa-button" href="{{ site.baseurl }}/waivers/">View Waivers</a>
