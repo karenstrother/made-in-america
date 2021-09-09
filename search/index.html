@@ -4,70 +4,101 @@ layout: page
 title: Waivers
 ---
 
-<div
-  class="grid-row flex-row flex-align-end"
-  style="justify-content: space-between"
->
-  <div class="flex-1">
-    <h1 class="margin-0">Waivers</h1>
-    <p class="margin-0">A Synopsis of waiver requests submitted to date.</p>
-  </div>
+<div>
+  <div class="grid-container padding-0">
+    <div class="grid-row flex-align-end" style="justify-content: space-between">
+      <div class="tablet:grid-col-4">
+        <h1 class="margin-0">Waivers</h1>
+        <h2 class="margin-0 margin-0 font-sans-sm text-light">
+          A Synopsis of waiver requests submitted to date.
+        </h2>
+      </div>
 
-  <div class="flex-1 margin-x-3">
-    <form class="usa-search usa-search--small" role="search">
-      <label class="usa-sr-only" for="search-input"> Search </label>
-      <input
-        class="usa-input"
-        id="search-input"
-        type="search"
-        name="search"
-        placeholder="Search Waivers"
-      />
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
-    </form>
-  </div>
+      <form
+        class="usa-search usa-search--small tablet:grid-col-3 margin-top-2"
+        role="search"
+      >
+        <label class="usa-sr-only" for="search-input"> Search </label>
+        <input
+          class="usa-input"
+          id="search-input"
+          type="search"
+          name="search"
+          placeholder="Search Waivers"
+        />
+        <button class="usa-button" type="submit">
+          <span class="usa-sr-only">Search</span>
+        </button>
+      </form>
 
-  <div class="flex-1 margin-left-3">
-    <label class="usa-label" for="options">Sort By</label>
-    <select class="usa-select" name="options" id="options">
-      <option value="recent">Most Recent</option>
-      <option value="value2">Alphabetical</option>
-      <option value="value3">Option C</option>
-    </select>
+      <div class="tablet:grid-col-3">
+        <label class="usa-label" for="options">Sort By</label>
+        <select class="usa-select" name="options" id="options">
+          <option value="recent">Most Recent</option>
+          <option value="value2">Alphabetical</option>
+          <option value="value3">Option C</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
 
-<ul id="results-container" style="padding: 0"></ul>
+<ul id="results-container" style="padding: 0">
+  {% include waiver-teaser.html id="cripps-pink" title='Cripps Pink / Pink Lady
+  Apples' synopsis='Department of Defense' contracting_agency_id='Department of
+  Defense' contracting_agency_name='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense' psc='Fruits and Vegetables'
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  id="torques" title='Torques' psc='Metal Finishing Equipment'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense' %} {% include waiver-teaser.html
+  id="fuji-apples" title='Fuji Apples' psc='Fruits and Vegetables'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%} {% include waiver-teaser.html
+  id="cog-wheel" title='Cog Wheel Finish' psc='Metal Finishing Equipment'
+  contracting_agency_name='Department of Defense' synopsis='Department of
+  Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%} {% include waiver-teaser.html
+  id="gol-del-apples" title='Golden Delicious Apples' psc='Fruits and
+  Vegetables' contracting_agency_name='Department of Defense'
+  synopsis='Department of Defense' contracting_agency_id='Department of Defense'
+  funding_agency_id='Department of Defense' funding_agency_name='Department of
+  Defense' procurement_stage='Department of Defense' naics='Department of
+  Defense' solicitation_id='Department of Defense'
+  period_of_performance='Department of Defense'%}
+</ul>
 
-<!-- or without installing anything -->
-
-<div class="usa-summary-box" role="region">
-  <div class="usa-summary-box__body">
+<div class="bg-primary-lighter padding-4 radius-md">
+  <div class="margin-bottom-1">
     {% asset sam-gov-logo.png alt="sam gov mark" %}
+  </div>
 
-    <div class="usa-summary-box__text">
-      <h2 class="text-primary">Buy American Historical Waivers</h2>
-      <h3 class="text-normal">
+  <div
+    class="grid-row flex-row flex-align-end"
+    style="justify-content: space-between"
+  >
+    <div>
+      <h2 class="text-primary margin-0">Buy American Historical Waivers</h2>
+      <h3 class="text-normal margin-0">
         Visit SAM.gov to learn more about Buy American Historical Waivers
       </h3>
     </div>
-    <a class="usa-button" href="/">View Historical Waivers</a>
+
+    <a class="usa-button height-5 margin-top-2" style="width: fit-content" href="/">
+      View Historical Waivers
+    </a>
   </div>
 </div>
-
-<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-<script>
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
-    searchInput: document.getElementById("search-input"),
-    resultsContainer: document.getElementById("results-container"),
-    json: "{{ site.baseurl }}/search.json",
-    searchResultTemplate:
-      '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-    noResultsText: "No results found",
-    limit: 10,
-    fuzzy: false,
-    exclude: ["Welcome"],
-  });
-</script>
