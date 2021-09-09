@@ -56,44 +56,37 @@ footer {
   }
 }
 
-// TODO: this is still aperaing at widths above 1126px
-@media screen and (min-width: 1126px) {
-  .mia-mobile-menu-btn {
-    display: none;
-  }
+// recreate menu btn
+.mia-mobile-menu-btn {
+  -moz-osx-font-smoothing: inherit;
+  -webkit-font-smoothing: inherit;
+  color: #005ea2;
+  text-decoration: underline;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  flex: 0 1 auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #005ea2;
+  color: white;
+  font-size: 0.81rem;
+  height: 3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 14px;
 }
-// recreate
+
 @media screen and (max-width: 1126px) {
   .usa-header--extended .usa-logo img {
     max-width: 140px;
     margin-left: 14px;
-  }
-
-  .mia-mobile-menu-btn {
-    display: initial;
-    -moz-osx-font-smoothing: inherit;
-    -webkit-font-smoothing: inherit;
-    color: #005ea2;
-    text-decoration: underline;
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    flex: 0 1 auto;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    background-color: #005ea2;
-    color: white;
-    font-size: 0.81rem;
-    height: 3rem;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-top: 14px;
   }
 }
 
