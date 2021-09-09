@@ -5,7 +5,7 @@
 
 // Example - Override the background image in the hero component using SASS:
 $theme-show-notifications: false;
-$theme-hero-image: asset_path("hero.jpg");
+$theme-hero-image: asset_path("mia-hero.png");
 $theme-grid-container-max-width: 'desktop-lg';
 $theme-respect-user-font-size: true;
 $theme-font-type-sans: 'public-sans';
@@ -31,12 +31,66 @@ $theme-body-line-height: 5;
 }
 
 // pollyfill not working
+// TODO: get working on mobile
 .usa-banner__button::after {
-    -webkit-mask: url(../img/usa-icons/expand_more.svg) no-repeat center/1rem 1rem;
+  -webkit-mask: url(../img/usa-icons/expand_more.svg) no-repeat center/1rem 1rem;
 }
 
-.usa-logo img {
-  max-width: 50%;
+// some overides needed to match nav designs
+.usa-header--extended .usa-logo {
+  margin: 10px 0px 0px;
+
+  img {
+    max-width: 240px;
+  }
+}
+
+.usa-nav__secondary {
+  height: 100%;
+
+  // .usa-button {
+  //   margin-top: 8px;
+  // }
+}
+
+@media screen and (min-width: 1126px) {
+  .mia-mobile-menu-btn {
+    display: none;
+  }
+}
+// recreate
+@media screen and (max-width: 1126px) {
+  .usa-header--extended .usa-logo img {
+    max-width: 140px;
+    margin-left: 14px;
+  }
+
+  .mia-mobile-menu-btn {
+    display: initial;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-font-smoothing: inherit;
+    color: #005ea2;
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    flex: 0 1 auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: #005ea2;
+    color: white;
+    font-size: 0.81rem;
+    height: 3rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 14px;
+  }
 }
 
 @media screen and (min-width: 640px) {
