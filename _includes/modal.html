@@ -1,84 +1,113 @@
 <div
-  class="usa-modal maxw-desktop"
-  id={{include.id}}
+  class="usa-modal usa-modal--lg"
+  id="{{include.id}}"
   aria-labelledby="{{include.id}}-heading"
-  aria-describedby="{{include.id}}-description"
 >
-  <div class="usa-modal__content flex-column">
-    <div class="usa-modal__main width-full">
+  <div class="usa-modal__content">
+    <div
+      class="usa-modal__main padding-0"
+      style="max-width: none; padding-bottom: 0"
+    >
       <h2
-        class="usa-modal__heading text-primary-vivid font-sans-xl"
+        class="usa-modal__heading text-primary-vivid font-sans-xl padding-x-4"
         id="{{include.id}}-heading"
       >
         {{include.title}}
       </h2>
-      <div class="text-base-darker font-sans-sm margin-bottom-2">
+      <div
+        class="
+          usa-prose
+          padding-x-4
+          text-base-darker
+          font-sans-sm
+          margin-bottom-2
+        "
+      >
         <h3 class="margin-0">Procurement Synopsis</h3>
         <p class="margin-0">{{include.synopsis}}</p>
+
+        <div
+          class="grid-row flex-row text-base-darker font-sans-sm"
+          style="justify-content: space-between"
+        >
+          <div class="tablet:grid-col-6">
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Contracting Office Agency ID</h3>
+              <p class="margin-0">{{include.contracting_agency_id}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Funding Agency ID</h3>
+              <p class="margin-0">{{include.funding_agency_id}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Procurement Stage</h3>
+              <p class="margin-0">{{include.procurement_stage}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">
+                North American Industry Classification (NAICS)
+              </h3>
+              <p class="margin-0">{{include.naics}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Period of Performance</h3>
+              <p class="margin-0">{{include.period_of_performance}}</p>
+            </div>
+          </div>
+          <div class="tablet:grid-col-6">
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Contracting Office Agency Name</h3>
+              <p class="margin-0">{{include.contracting_agency_name}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Funding Agency Name</h3>
+              <p class="margin-0">{{include.funding_agency_name}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Solicitation ID</h3>
+              <p class="margin-0">{{include.solicitation_id}}</p>
+            </div>
+            <div class="margin-bottom-2">
+              <h3 class="margin-0">Product Service Code (PSC)</h3>
+              <p class="margin-0">{{include.psc}}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="usa-prose grid-row flex-row text-base-darker font-sans-sm">
-        <div class="margin-right-15">
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Contracting Office Agency ID</h3>
-            <p class="margin-0">{{include.contracting_agency_id}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Funding Agency ID</h3>
-            <p class="margin-0">{{include.funding_agency_id}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Procurement Stage</h3>
-            <p class="margin-0">{{include.procurement_stage}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">
-              North American Industry Classification (NAICS)
-            </h3>
-            <p class="margin-0">{{include.naics}}</p>
-          </div class="margin-bottom-2">
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Period of Performance</h3>
-            <p class="margin-0">{{include.period_of_performance}}</p>
-          </div>
+      <div
+        class="
+          usa-modal__footer
+          bg-primary-lighter
+          padding-4
+          radius-md
+          grid-row
+          flex-row flex-align-center
+        "
+        style="justify-content: space-between"
+      >
+        <div class="maxw-tablet">
+          <h2 class="text-primary text-light margin-0">
+            Do you have products that make waivers unnecessary?
+          </h2>
+          <p class="margin-0">
+            This site provides initial information on historical waivers as well
+            as current waivers resulting from initial implementation of Made in
+            America Executive Order. This site will evolve over the next few
+            months to incorporate more information of use for both current and
+            potential domestic suppliers.
+          </p>
         </div>
-        <div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Contracting Office Agency Name</h3>
-            <p class="margin-0">{{include.contracting_agency_name}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Funding Agency Name</h3>
-            <p class="margin-0">{{include.funding_agency_name}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Solicitation ID</h3>
-            <p class="margin-0">{{include.solicitation_id}}</p>
-          </div>
-          <div class="margin-bottom-2">
-            <h3 class="margin-0">Product Service Code (PSC)</h3>
-            <p class="margin-0">{{include.psc}}</p>
-          </div>
-        </div>
-      </div>
-      <div class="usa-modal__footer"></div>
-    </div>
-    <div class="bg-primary-lighter padding-4 radius-md grid-row flex-row flex-align-center" style="justify-content: space-between;">
-      <div class="maxw-tablet">
-        <h2 class="text-primary text-light margin-0">
-          Do you have products that make waivers unnecessary?
-        </h2>
-        <p class="margin-0">
-          This site provides initial information on historical waivers as well
-          as current waivers resulting from initial implementation of Made in
-          America Executive Order. This site will evolve over the next few
-          months to incorporate more information of use for both current and
-          potential domestic suppliers.
-        </p>
-      </div>
-      <div>
         <button class="usa-button" href="">Learn More</button>
       </div>
     </div>
+
+    <button
+      class="usa-button usa-modal__close"
+      aria-label="Close this window"
+      data-close-modal
+    >
+      {% asset close.svg alt="close icon" class="usa-icon" %}
+    </button>
   </div>
 </div>
