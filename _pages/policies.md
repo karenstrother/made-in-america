@@ -7,6 +7,6 @@ sidenav: true
 
 # Accessibility
 
-The General Services Administration is committed to making this website accessible for all visitors with disabilities.
+We are committed to providing access to all individuals—with or without disabilities—seeking information on our site. We’ve built this website to conform to the [Section 508 of the Rehabilitation Act (as amended)](https://www.section508.gov){:target="_blank"}, which requires that all individuals with disabilities (whether federal employees or members of the general public) have access to, and use of, information and data comparable to that provided to individuals without disabilities, unless an undue burden would be imposed on us.
 
-To meet this commitment, we comply with the requirements of [Section 508 of the Rehabilitation Act (29 U.S.C. 794d)](https://www.section508.gov). Section 508 requires that individuals with disabilities, who are federal employees or members of the public seeking information or services from us have access to and use of information and data that is comparable to the information provided to federal employees or the public who are not individuals with disabilities, unless an undue burden would be imposed on us.
+
