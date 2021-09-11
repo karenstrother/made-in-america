@@ -9,4 +9,5 @@ sidenav: true
 
 We are committed to providing access to all individuals—with or without disabilities—seeking information on our site. We’ve built this website to conform to the [Section 508 of the Rehabilitation Act (as amended)](https://www.section508.gov){:target="_blank"}, which requires that all individuals with disabilities (whether federal employees or members of the general public) have access to, and use of, information and data comparable to that provided to individuals without disabilities, unless an undue burden would be imposed on us.
 
+[Learn more about GSA's Accessibility Policy](https://www.gsa.gov/website-information/website-policies#accessibility){:target="_blank"}
 
