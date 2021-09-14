@@ -6,11 +6,12 @@
 // Example - Override the background image in the hero component using SASS:
 $theme-show-notifications: false;
 $theme-hero-image: asset_path("mia-hero.png");
-$theme-grid-container-max-width: 'desktop-lg';
+$theme-grid-container-max-width: "widescreen";
+$theme-header-max-width: "widescreen";
 $theme-respect-user-font-size: true;
-$theme-font-type-sans: 'public-sans';
+$theme-font-type-sans: "public-sans";
 $theme-type-scale-sm: 5;
-$theme-body-font-size: 'sm';
+$theme-body-font-size: "sm";
 $theme-body-line-height: 5;
 
 @import "uswds";
