@@ -3,6 +3,15 @@ You shouldn't have to edit this page very often. But if you want to modify some 
 site, this is the place to do it.
 {% endcomment %}
 
+{% assign title = site.title %}
+{% if page.class == "home" -%}
+  {% assign title = page.title %}
+{% else %}
+  {% assign title = page.title | append: ' | ' | append: title %}
+{% endif %}
+
+{% assign desc = page.description | default: site.description %}
+
 <head>
   <!-- Basic Page Needs
     ================================================== -->
@@ -16,15 +25,15 @@ site, this is the place to do it.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title and meta description
     ================================================== -->
-  <title>{{site.title}}</title>
-  <meta property="og:title" content="{{site.title}}">
-  <meta name="description" content="{{site.description}}">
-  <meta property="og:description" content="{{site.description}}">
+  <title>{{title}}</title>
+  <meta property="og:title" content="{{title}}">
+  <meta name="description" content="{{desc}}">
+  <meta property="og:description" content="{{desc}}">
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{site.twitter}}" />
-  <meta name="twitter:title" content="{{site.title}}" />
-  <meta name="twitter:description" content="{{site.description}}" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{desc}}" />
 
   <meta property="og:type" content="article">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
