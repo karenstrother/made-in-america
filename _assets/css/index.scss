@@ -15,6 +15,7 @@ $theme-type-scale-sm: 5;
 $theme-body-font-size: "sm";
 $theme-body-line-height: 5;
 
+
 @import "uswds";
 
 // Example - Override the background image in the hero component using CSS:
@@ -50,6 +51,20 @@ $theme-body-line-height: 5;
 .usa-nav__secondary {
   height: 100%;
 }
+
+.usa-prose {
+
+  h1,
+  h2 {
+    font-family: sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
 
 footer {
   .usa-accordion__heading:not(:first-child) {
