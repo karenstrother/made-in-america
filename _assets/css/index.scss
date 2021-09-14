@@ -108,6 +108,9 @@ footer {
     display: none;
   }
 }
+.usa-prose > p {
+    max-width: none;
+}
 
 @media screen and (max-width: 640px) {
   .paginate-link {
