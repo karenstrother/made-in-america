@@ -185,6 +185,7 @@ exclude:
 
 assets:
   sources:
+    - favicons
     - node_modules/uswds/dist/img
     - node_modules/uswds/dist/js
     - node_modules/uswds/dist/scss
