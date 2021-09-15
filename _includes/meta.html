@@ -1,8 +1,3 @@
-{% comment %}
-You shouldn't have to edit this page very often. But if you want to modify some of the meta-data for the
-site, this is the place to do it.
-{% endcomment %}
-
 {% assign title = site.title %}
 {% if page.class == "home" -%}
   {% assign title = page.title %}
@@ -11,6 +6,11 @@ site, this is the place to do it.
 {% endif %}
 
 {% assign desc = page.description | default: site.description %}
+
+{% assign image_files = site.static_files | where: "image", true %}
+{% for myimage in image_files %}
+  {{ myimage.path }}
+{% endfor %}
 
 <head>
   <!-- Basic Page Needs
@@ -29,11 +29,13 @@ site, this is the place to do it.
   <meta property="og:title" content="{{title}}">
   <meta name="description" content="{{desc}}">
   <meta property="og:description" content="{{desc}}">
+  <meta property="og:image" content="{{site.baseurl}}{{site.meta.og:image}}">
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{site.twitter}}" />
+  <meta name="twitter:site" content="@{{site.meta.twitter.handle}}" />
   <meta name="twitter:title" content="{{title}}" />
-  <meta name="twitter:description" content="{{desc}}" />
+  <meta name="twitter:description" content="{{desc}}"/>
+  <meta property="twitter:image:src" content="{{site.baseurl}}{{site.meta.twitter.image}}">
 
   <meta property="og:type" content="article">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />

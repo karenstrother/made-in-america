@@ -17,7 +17,11 @@
 ##########################################################################################
 # Be sure to edit the values below
 ##########################################################################################
-
+defaults:
+  - scope:
+      path: "_assets/meta-images"
+    values:
+      image: true
 title: Made in America
 email: contact@example.gov
 description: >- # this means to ignore newlines until "baseurl:"
@@ -30,9 +34,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
   # custom domains, edit this url parameter in the relevant branch to match the relevant custom domain.
 logo: "logo.svg"
 logo_alt_text: "Shield with stars and stripes."
-
-# Twitter handle. Only the handle, not the URL.
-twitter: 18F
+meta:
+  og:image: _assets/images/mia_og_card.png
+  twitter:
+    handle: 18F
+    image: _assets/images/mia_twitter_card.png
 
 #################################################################
 #
