@@ -105,6 +105,17 @@ footer {
   padding-top: 14px;
 }
 
+.usa-modal__content {
+  position: relative;
+
+  .usa-modal__close {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+  }
+
+}
+
 @media screen and (max-width: 1126px) {
   .usa-header--extended .usa-logo img {
     max-width: 140px;
