@@ -1,7 +1,23 @@
-{% comment %}
-You shouldn't have to edit this page very often. But if you want to modify some of the meta-data for the
-site, this is the place to do it.
-{% endcomment %}
+{% assign title = site.title %}
+{% if page.class == "home" -%}
+  {% assign title = page.title %}
+{% else %}
+  {% assign title = page.title | append: ' | ' | append: title %}
+{% endif %}
+
+{% assign desc = page.description | default: site.description %}
+
+{% assign meta_image_files = site.static_files | where: "image", true %}
+{% for file in meta_image_files %}
+  {% if file.name == site.meta.og.image %}
+    {% assign og-image = file.path %}
+  {% endif %}
+  {% if file.name == site.meta.twitter.image%}
+    {% assign twitter-image = file.path %}
+  {% endif %}
+{% endfor %}
+
+{% assign favicon_image_files = site.static_files | where: "image", true %}
 
 <head>
   <!-- Basic Page Needs
@@ -16,36 +32,36 @@ site, this is the place to do it.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title and meta description
     ================================================== -->
-  <title>{{site.title}}</title>
-  <meta property="og:title" content="{{site.title}}">
-  <meta name="description" content="{{site.description}}">
-  <meta property="og:description" content="{{site.description}}">
+  <title>{{title}}</title>
+  <meta property="og:title" content="{{title}}">
+  <meta name="description" content="{{desc}}">
+  <meta property="og:description" content="{{desc}}">
+  <meta property="og:image" content="{{site.baseurl}}{{og-image}}">
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{site.twitter}}" />
-  <meta name="twitter:title" content="{{site.title}}" />
-  <meta name="twitter:description" content="{{site.description}}" />
+  <meta name="twitter:site" content="@{{site.meta.twitter.handle}}" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{desc}}"/>
+  <meta property="twitter:image:src" content="{{site.baseurl}}{{twitter-image}}">
 
   <meta property="og:type" content="article">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
   <!-- Favicons
     ================================================== -->
-  <!-- 128x128 -->
-  <link rel="shortcut icon" type="image/ico" href="{% asset favicons/favicon.ico @path %}">
-  <link rel="icon" type="image/png" href="{% asset favicons/favicon.png @path %}">
-  <!-- 192x192, as recommended for Android
-    http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-    -->
-  <link rel="icon" type="image/png" sizes="192x192" href="{% asset favicons/favicon-192.png @path %}">
-  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-  <link rel="apple-touch-icon-precomposed" href="{% asset favicons/favicon-57.png @path %}">
-  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% asset favicons/favicon-72.png @path %}">
-  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% asset favicons/favicon-114.png @path %}">
-  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% asset favicons/favicon-144.png @path %}">
+  {% for icon in site.data.favicons %}
+
+     {% for file in favicon_image_files %}
+      {% if file.name == icon.name %}
+        {% assign path = file.path %}
+      {% endif %}
+     {% endfor %}
+
+    <link rel="{{ icon.rel | default: 'icon' }}" type="{{ icon.type }}"
+      {% if icon.sizes -%}sizes="{{ icon.sizes }}"
+      {% endif %}href="{{ path | relative_url }}">
+
+  {% endfor %}
   <!-- CSS
     ================================================== -->
   {% asset index.scss %}
