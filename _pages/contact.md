@@ -6,7 +6,7 @@ sidenav: true
 ---
 
 # Contact
-Questions about the Made in America Office or Waivers? [Send Email](MadeInAmerica@omb.eop.gov){:target="_blank"}
+Questions about the Made in America Office or Waivers? [Send Email](mailto:MadeInAmerica@omb.eop.govgov){:target="_blank"}
 
 [Questions about the U.S. General Services Administration (GSA)?](https://www.gsa.gov/about-us/contact-us){:target="_blank"}
 
