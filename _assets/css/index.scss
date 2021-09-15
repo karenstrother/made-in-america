@@ -156,8 +156,16 @@ footer {
     display: none;
   }
 }
-.usa-prose > p {
+
+.usa-prose {
+  p {
     max-width: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #005ea2;
+  }
 }
 
 @media screen and (max-width: 640px) {
