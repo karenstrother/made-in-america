@@ -7,9 +7,14 @@
 
 {% assign desc = page.description | default: site.description %}
 
-{% assign image_files = site.static_files | where: "image", true %}
-{% for myimage in image_files %}
-  {{ myimage.path }}
+{% assign meta_image_files = site.static_files | where: "image", true %}
+{% for file in meta_image_files %}
+  {% if file.name == site.meta.og.image %}
+    {% assign og-image = file.path %}
+  {% endif %}
+  {% if file.name == site.meta.twitter.image%}
+    {% assign twitter-image = file.path %}
+  {% endif %}
 {% endfor %}
 
 <head>
@@ -29,13 +34,16 @@
   <meta property="og:title" content="{{title}}">
   <meta name="description" content="{{desc}}">
   <meta property="og:description" content="{{desc}}">
-  <meta property="og:image" content="{{site.baseurl}}{{site.meta.og:image}}">
+  <meta property="og:image" content="{{site.baseurl}}{{og-image}}">
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{site.meta.twitter.handle}}" />
   <meta name="twitter:title" content="{{title}}" />
   <meta name="twitter:description" content="{{desc}}"/>
-  <meta property="twitter:image:src" content="{{site.baseurl}}{{site.meta.twitter.image}}">
+  {% for file in meta_image_files %}
+    <meta property="twitter:image:src" content="{{file.name}}">
+  {% endfor %}
+  <meta property="twitter:image:src" content="{{site.baseurl}}{{twitter-image}}">
 
   <meta property="og:type" content="article">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
