@@ -8,11 +8,13 @@ $theme-show-notifications: false;
 $theme-hero-image: asset_path("mia-hero.png");
 $theme-grid-container-max-width: "widescreen";
 $theme-header-max-width: "widescreen";
+$theme-banner-max-width: "widescreen";
 $theme-respect-user-font-size: true;
 $theme-font-type-sans: "public-sans";
 $theme-type-scale-sm: 5;
 $theme-body-font-size: "sm";
 $theme-body-line-height: 5;
+
 
 @import "uswds";
 
@@ -29,6 +31,11 @@ $theme-body-line-height: 5;
 // default mode hide banner
 .usa-banner__content {
   display: hidden;
+}
+
+.usa-card__media .usa-card__img,
+.usa-card--flag .usa-card__img {
+  border-radius: 0;
 }
 
 // pollyfill not working
@@ -49,6 +56,20 @@ $theme-body-line-height: 5;
 .usa-nav__secondary {
   height: 100%;
 }
+
+.usa-prose {
+
+  h1,
+  h2 {
+    font-family: sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
 
 footer {
   .usa-accordion__heading:not(:first-child) {
@@ -84,10 +105,37 @@ footer {
   padding-top: 14px;
 }
 
+.usa-modal__content {
+  position: relative;
+
+  .usa-modal__close {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+  }
+
+}
+
 @media screen and (max-width: 1126px) {
   .usa-header--extended .usa-logo img {
     max-width: 140px;
     margin-left: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #gov-business .usa-card--flag {
+    .usa-card__header,
+    .usa-card__body,
+    .usa-card__footer {
+      margin-left: 30rem;
+    }
+
+    .usa-card__img,
+    .usa-card__media {
+      width: 100%;
+      max-width: 450px;
+    }
   }
 }
 

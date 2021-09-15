@@ -3,13 +3,13 @@
   id="{{include.id}}"
   aria-labelledby="{{include.id}}-heading"
 >
-  <div class="usa-modal__content">
+  <div class="usa-modal__content padding-0">
     <div
-      class="usa-modal__main padding-0"
-      style="max-width: none; padding-bottom: 0"
+      class="usa-modal__main"
+      style="max-width: none;"
     >
       <h2
-        class="text-primary-vivid font-sans-xl padding-x-4"
+        class="font-sans-xl padding-x-4"
         id="{{include.id}}-heading"
       >
         {{include.title}}
@@ -23,52 +23,52 @@
           margin-bottom-2
         "
       >
-        <h3 class="margin-0 font-sans-xs">Procurement Synopsis</h3>
-        <p class="margin-0 font-sans-xs">{{include.synopsis}}</p>
+        <div class="margin-0 font-sans-lg text-bold">Procurement Synopsis</div>
+        <div class="margin-0 font-sans-xs">{{include.synopsis}}</div>
 
         <div
-          class="grid-row flex-row text-base-darker font-sans-sm"
+          class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
           style="justify-content: space-between"
         >
           <div class="tablet:grid-col-6">
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Contracting Office Agency ID</h3>
+              <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency ID</div>
               <p class="margin-0 font-sans-xs">{{include.contracting_agency_id}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Funding Agency ID</h3>
+              <div class="margin-0 font-sans-xs text-bold">Funding Agency ID</div>
               <p class="margin-0 font-sans-xs">{{include.funding_agency_id}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Procurement Stage</h3>
+              <div class="margin-0 font-sans-xs text-bold">Procurement Stage</div>
               <p class="margin-0 font-sans-xs">{{include.procurement_stage}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">
+              <div class="margin-0 font-sans-xs text-bold">
                 North American Industry Classification (NAICS)
-              </h3>
-              <p class="margin-0 font-sans-xs">{{include.naics}}</p>
+              </div>
+              <p class="margin-0 font-sans-xs text-bold">{{include.naics}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Period of Performance</h3>
+              <div class="margin-0 font-sans-xs text-bold">Period of Performance</div>
               <p class="margin-0 font-sans-xs">{{include.period_of_performance}}</p>
             </div>
           </div>
           <div class="tablet:grid-col-6">
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Contracting Office Agency Name</h3>
+              <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency Name</div>
               <p class="margin-0 font-sans-xs">{{include.contracting_agency_name}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Funding Agency Name</h3>
+              <div class="margin-0 font-sans-xs text-bold">Funding Agency Name</div>
               <p class="margin-0 font-sans-xs">{{include.funding_agency_name}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Solicitation ID</h3>
+              <div class="margin-0 font-sans-xs text-bold">Solicitation ID</div>
               <p class="margin-0 font-sans-xs">{{include.solicitation_id}}</p>
             </div>
             <div class="margin-bottom-2">
-              <h3 class="margin-0 font-sans-xs">Product Service Code (PSC)</h3>
+              <div class="margin-0 font-sans-xs text-bold">Product Service Code (PSC)</div>
               <p class="margin-0 font-sans-xs">{{include.psc}}</p>
             </div>
           </div>
@@ -77,7 +77,7 @@
     </div>
 
     <button
-      class="usa-button usa-modal__close"
+      class="usa-button usa-modal__close square-3"
       aria-label="Close this window"
       data-close-modal
     >
