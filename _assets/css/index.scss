@@ -38,12 +38,6 @@ $theme-body-line-height: 5;
   border-radius: 0;
 }
 
-// pollyfill not working
-// TODO: not working on mobile
-.usa-banner__button::after {
-  -webkit-mask: url(../img/usa-icons/expand_more.svg) no-repeat center/1rem 1rem;
-}
-
 // some overides needed to match nav designs
 .usa-header--extended .usa-logo {
   margin: 10px 0px 0px;

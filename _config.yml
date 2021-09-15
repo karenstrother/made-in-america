@@ -17,12 +17,10 @@
 ##########################################################################################
 # Be sure to edit the values below
 ##########################################################################################
-
 title: Made in America
-email: contact@example.gov
+email: MadeInAmerica@omb.eop.gov
 description: >- # this means to ignore newlines until "baseurl:"
-  Agency Name (EAC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Aenean et sapien a leo auctor scelerisque quis nec magna. Sed dictum ante a risus vehicula facilisis.
+  “Made in America” policies are designed to increase reliance on domestic supply chains and ultimately reduce the need to spend taxpayer dollars on foreign-made goods.
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://example.gov" # the base hostname & protocol for your site, e.g. https://example.com.
   # Required to support the jekyll-sitemap plugin below.
@@ -30,9 +28,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
   # custom domains, edit this url parameter in the relevant branch to match the relevant custom domain.
 logo: "logo.svg"
 logo_alt_text: "Shield with stars and stripes."
-
-# Twitter handle. Only the handle, not the URL.
-twitter: 18F
+meta:
+  og:
+    image: "mia_og_card.png"
+  twitter:
+    handle: 18F
+    image: "mia_twitter_card.png"
 
 #################################################################
 #
@@ -164,6 +165,12 @@ plugins:
 #   # Without file extension
 #   indexpage: "index.html"
 
+defaults:
+  - scope:
+      path: "images"
+    values:
+      image: true
+
 exclude:
   - package.json
   - package-lock.json
@@ -178,6 +185,7 @@ exclude:
 
 assets:
   sources:
+    - favicons
     - node_modules/uswds/dist/img
     - node_modules/uswds/dist/js
     - node_modules/uswds/dist/scss
