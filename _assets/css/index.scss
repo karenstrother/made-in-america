@@ -31,6 +31,11 @@ $theme-body-line-height: 5;
   display: hidden;
 }
 
+.usa-card__media .usa-card__img,
+.usa-card--flag .usa-card__img {
+  border-radius: 0;
+}
+
 // pollyfill not working
 // TODO: not working on mobile
 .usa-banner__button::after {
@@ -88,6 +93,22 @@ footer {
   .usa-header--extended .usa-logo img {
     max-width: 140px;
     margin-left: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #gov-business .usa-card--flag {
+    .usa-card__header,
+    .usa-card__body,
+    .usa-card__footer {
+      margin-left: 30rem;
+    }
+
+    .usa-card__img,
+    .usa-card__media {
+      width: 100%;
+      max-width: 450px;
+    }
   }
 }
 
