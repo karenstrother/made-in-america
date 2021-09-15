@@ -10,5 +10,4 @@ This website links to publicly available websites that are government-owned or g
 
 This website may link to non-government websites, if they provide relevant information that’s not available on an official government website. We provide these links as a public service only; the U.S. government, including GSA, neither endorses nor guarantees in any way the external organizations, services, advice, or products included in these website links. Furthermore, the U.S. government neither controls nor guarantees the accuracy, relevance, timeliness or completeness of the information contained in non-government website links.
 
-Other government and non-government links with the “external link” icon  
-indicate that you are leaving the GSA website when you click the link. 
+Other government and non-government links with the “external link” icon indicate that you are leaving the GSA website when you click the link. 
