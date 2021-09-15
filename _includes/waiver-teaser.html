@@ -13,7 +13,7 @@
 >
   <div class="tablet:grid-col-3 margin-y-1">
     <p class="margin-0"><b>Procurrement Title</b></p>
-    <p class="margin-0 text-primary-vivid">{{ include.title }}</p>
+    <p class="margin-0">{{ include.title }}</p>
   </div>
   <div class="tablet:grid-col-3 margin-y-1">
     <p class="margin-0"><b>Contracting Department</b></p>
@@ -27,11 +27,15 @@
   <a
     class="usa-button usa-button--outline margin-0 tablet:grid-col-2"
     aria-controls="{{include.id}}"
+    aria-describedby="{{ include.title }}-info"
     data-open-modal
     href="#{{include.id}}"
   >
     View More
   </a>
+  <div id="{{ include.title }}-info" class="height-0 width-0" hidden>
+      View more information about {{ include.title }}
+  </div>
   {% include modal.html id=include.id title=include.title
   synopsis=include.synopsis
   contracting_agency_name=include.contracting_agency_name

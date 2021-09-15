@@ -8,11 +8,13 @@ $theme-show-notifications: false;
 $theme-hero-image: asset_path("mia-hero.png");
 $theme-grid-container-max-width: "widescreen";
 $theme-header-max-width: "widescreen";
+$theme-banner-max-width: "widescreen";
 $theme-respect-user-font-size: true;
 $theme-font-type-sans: "public-sans";
 $theme-type-scale-sm: 5;
 $theme-body-font-size: "sm";
 $theme-body-line-height: 5;
+
 
 @import "uswds";
 
@@ -55,6 +57,20 @@ $theme-body-line-height: 5;
   height: 100%;
 }
 
+.usa-prose {
+
+  h1,
+  h2 {
+    font-family: sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+
 footer {
   .usa-accordion__heading:not(:first-child) {
     margin-top: 0px;
@@ -87,6 +103,17 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   padding-top: 14px;
+}
+
+.usa-modal__content {
+  position: relative;
+
+  .usa-modal__close {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+  }
+
 }
 
 @media screen and (max-width: 1126px) {
