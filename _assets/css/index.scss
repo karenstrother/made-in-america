@@ -53,6 +53,10 @@ $theme-body-line-height: 5;
 
 .usa-prose {
 
+  h1 {
+    line-height: 1.2;
+  }
+
   h1,
   h2 {
     font-family: sans-serif;
@@ -60,6 +64,7 @@ $theme-body-line-height: 5;
 
   a {
     text-decoration: none;
+    color: #005ea2;
   }
 
 }
@@ -154,11 +159,6 @@ footer {
 .usa-prose {
   p {
     max-width: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: #005ea2;
   }
 }
 
