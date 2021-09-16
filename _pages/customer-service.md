@@ -1,8 +1,9 @@
 ---
 permalink: /customer-service/
 layout: page
-title: Customer Service
+title: Customer Service – Government Customer Support
 sidenav: true
+description: "Answers to your questions about government programs and services can be found at USA.gov."
 ---
 
 # Customer Service
