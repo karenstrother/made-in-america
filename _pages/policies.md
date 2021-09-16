@@ -1,8 +1,9 @@
 ---
 permalink: /policies/accessibility/
 layout: page
-title: Accessibility
+title: Policies - Accessibility
 sidenav: true
+description: "This website conforms to Section 508 of the Rehabilitation Act."
 ---
 
 # Accessibility
