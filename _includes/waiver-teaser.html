@@ -27,13 +27,13 @@
   <a
     class="usa-button usa-button--outline margin-0 tablet:grid-col-2"
     aria-controls="{{include.id}}"
-    aria-describedby="{{ include.title }}-info"
+    aria-describedby="{{include.id}}-info"
     data-open-modal
     href="#{{include.id}}"
   >
     View More
   </a>
-  <div id="{{ include.title }}-info" class="height-0 width-0" hidden>
+  <div id="{{include.id}}-info" class="height-0 width-0" hidden>
       View more information about {{ include.title }}
   </div>
   {% include modal.html id=include.id title=include.title
