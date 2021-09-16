@@ -45,8 +45,8 @@
   <meta property="twitter:image:src" content="{{site.baseurl}}{{twitter-image}}">
 
   <meta property="og:type" content="article">
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <link rel="canonical" href="{{site.baseurl}}{{ page.url | absolute_url }}" />
+  <meta property="og:url" content="{{site.baseurl}}{{ page.url | absolute_url }}" />
   <!-- Favicons
     ================================================== -->
   {% for icon in site.data.favicons %}
