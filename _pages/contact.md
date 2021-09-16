@@ -1,8 +1,9 @@
 ---
 permalink: /customer-service/contact/
 layout: page
-title: Contact
+title: Customer Service – Contact
 sidenav: true
+description: "Send comments and questions about the Made in America website or GSA. Report fraud and abuse to the GSA IG."
 ---
 
 # Contact

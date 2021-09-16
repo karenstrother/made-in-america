@@ -20,10 +20,23 @@ $theme-body-line-height: 5;
 
 // Example - Override the background image in the hero component using CSS:
 .usa-hero {
-  min-height: 650px;
+  min-height: 178px;
   background-position: top;
-  width: 1400px;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    min-height: 250px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 650px;
+  }
 }
+
 .home {
     display: flex;
     flex-direction: column;

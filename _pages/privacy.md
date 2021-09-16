@@ -1,8 +1,9 @@
 ---
 permalink: /policies/privacy/
 layout: page
-title: Privacy
+title: Policies – Privacy
 sidenav: true
+description: "Learn more about our privacy policy."
 ---
 
 # Privacy
