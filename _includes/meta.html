@@ -36,17 +36,17 @@
   <meta property="og:title" content="{{title}}">
   <meta name="description" content="{{desc}}">
   <meta property="og:description" content="{{desc}}">
-  <meta property="og:image" content="{{site.baseurl}}{{og-image}}">
+  <meta property="og:image" content="{{ site.url }}{{og-image}}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:type" content="article">
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{site.meta.twitter.handle}}" />
   <meta name="twitter:title" content="{{title}}" />
   <meta name="twitter:description" content="{{desc}}"/>
-  <meta property="twitter:image:src" content="{{site.baseurl}}{{twitter-image}}">
+  <meta property="twitter:image" content="{{ site.url }}{{twitter-image}}">
 
-  <meta property="og:type" content="article">
-  <link rel="canonical" href="{{site.baseurl}}{{ page.url | absolute_url }}" />
-  <meta property="og:url" content="{{site.baseurl}}{{ page.url | absolute_url }}" />
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
   <!-- Favicons
     ================================================== -->
   {% for icon in site.data.favicons %}
