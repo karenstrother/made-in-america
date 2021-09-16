@@ -19,5 +19,5 @@ We use Google Analytics to collect and store information about your visit to our
 
 If your browser accepts cookies, we may use a session cookie to learn how many different visitors come to GSA.gov. We use this information for statistical purposes and to help us make our site more useful. We do not collect personally identifiable information nor do we sell this data to anyone.
 
-[Learn more about how Google Analytics safeguards data](https://www.usa.gov/optout-instructions){:target="_blank"}.
+[Learn more about how Google Analytics safeguards data](https://www.usa.gov/optout-instructions){:target="_blank" rel="noreferrer"}.
 

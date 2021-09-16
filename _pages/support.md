@@ -6,5 +6,5 @@ sidenav: true
 ---
 
 # Support
-Answers to your questions about government programs and services can be found at 
-[USA.gov](https://www.usa.gov){:target="_blank"}.
+Answers to your questions about government programs and services can be found at
+[USA.gov](https://www.usa.gov){:target="_blank" rel="noreferrer"}.
