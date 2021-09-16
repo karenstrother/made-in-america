@@ -71,7 +71,7 @@ $theme-body-line-height: 5;
 
 }
 
-.usa-layout-docs__main a {
+.usa-layout-docs__main a:not(.usa-button) {
   text-decoration: none;
   color: #005ea2;
 }
