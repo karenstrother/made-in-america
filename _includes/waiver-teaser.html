@@ -36,13 +36,17 @@
   <div id="{{include.id}}-info" class="height-0 width-0" hidden>
       View more information about {{ include.title }}
   </div>
-  {% include modal.html id=include.id title=include.title
-  synopsis=include.synopsis
-  contracting_agency_name=include.contracting_agency_name
-  contracting_agency_id=include.contracting_agency_id
-  funding_agency_id=include.funding_agency_id
-  funding_agency_name=include.funding_agency_name
-  procurement_stage=include.procurement_stage naics=include.naics
-  solicitation_id=include.solicitation_id psc=include.psc
-  period_of_performance=include.period_of_performance %}
+  {%
+    include modal.html
+    id=include.id
+    title=include.title
+    synopsis=include.synopsis
+    contracting_agency_name=include.contracting_agency_name
+    contracting_agency_id=include.contracting_agency_id
+    funding_agency_id=include.funding_agency_id
+    funding_agency_name=include.funding_agency_name
+    procurement_stage=include.procurement_stage naics=include.naics
+    solicitation_id=include.solicitation_id psc=include.psc
+    period_of_performance=include.period_of_performance
+  %}
 </li>
