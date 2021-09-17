@@ -57,8 +57,10 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
       contracting_agency_id=waiver.contracting_agency_id
       funding_agency_id=waiver.funding_agency_id
       funding_agency_name=waiver.funding_agency_name
-      procurement_stage=waiver.procurement_stage naics=include.naics
-      solicitation_id=waiver.solicitation_id psc=include.psc
+      procurement_stage=waiver.procurement_stage
+      naics=waiver.naics
+      solicitation_id=waiver.solicitation_id
+      psc=waiver.psc
       period_of_performance=waiver.period_of_performance
     %}
   {% endfor %}

@@ -132,7 +132,10 @@ footer {
     top: 4rem;
     right: 2rem;
   }
+}
 
+.text-base-lightest.usa-link--external::after {
+  background-image: url("../img/usa-icons-bg/launch--white.svg") !important;
 }
 
 @media screen and (max-width: 1126px) {
