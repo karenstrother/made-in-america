@@ -4,16 +4,9 @@ where we provide an easy way to manage your navigation system
 {% endcomment %}
 
 <header class="usa-header usa-header--extended" role="banner">
-  <div class="usa-navbar padding-x-0">
+  <div class="usa-navbar padding-x-0 flex-align-center" style="display: flex; justify-content: space-between;">
     {% include logo.html %}
     <a class="mia-mobile-menu-btn desktop:display-none" href="{{ site.baseurl }}/waivers/">View Waivers</a>
+    <a class="usa-button display-none desktop:display-block" href="{{ site.baseurl }}/waivers/">View Waivers</a>
   </div>
-  <nav id="menu-navigation" aria-label="Menu navigation" role="navigation" class="usa-nav">
-    <div class="usa-nav__inner display:none desktop:display-block">
-      <button class="usa-nav__close">{% asset close.svg alt="close" %}</button>
-      <div class="usa-nav__secondary">
-        <a class="usa-button" href="{{ site.baseurl }}/waivers/">View Waivers</a>
-      </div>
-    </div>
-  </nav>
 </header>
