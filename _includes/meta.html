@@ -1,9 +1,6 @@
 {% assign title = site.title %}
-{% if page.class == "home" -%}
-  {% assign title = page.title %}
-{% else %}
-  {% assign title = page.title | append: ' | ' | append: title %}
-{% endif %}
+
+{% assign title = page.title | append: ' | ' | append: title %}
 
 {% assign desc = page.description | default: site.description %}
 
@@ -24,7 +21,7 @@
     ================================================== -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="noindex, nofollow">
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
   <!-- Mobile Specific Metas
     ================================================== -->
   <meta name="HandheldFriendly" content="True">
@@ -37,7 +34,7 @@
   <meta name="description" content="{{desc}}">
   <meta property="og:description" content="{{desc}}">
   <meta property="og:image" content="{{ site.url }}{{og-image}}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="article">
 
   <meta name="twitter:card" content="summary" />
@@ -46,7 +43,7 @@
   <meta name="twitter:description" content="{{desc}}"/>
   <meta property="twitter:image" content="{{ site.url }}{{twitter-image}}">
 
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <!-- Favicons
     ================================================== -->
   {% for icon in site.data.favicons %}
