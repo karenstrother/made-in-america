@@ -41,14 +41,15 @@ $theme-body-line-height: 5;
   }
 }
 
-.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .home {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
 .usa-card__img img {
   width: auto;
+  height: auto;
   margin: auto;
 }
 
