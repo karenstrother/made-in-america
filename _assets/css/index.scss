@@ -3,7 +3,6 @@
   See all at designsystem.digital.gov/documentation/settings
 */
 
-// Example - Override the background image in the hero component using SASS:
 $theme-show-notifications: false;
 $theme-hero-image: asset_path("mia-hero.png");
 $theme-grid-container-max-width: "widescreen";
@@ -18,7 +17,6 @@ $theme-body-line-height: 5;
 
 @import "uswds";
 
-// Example - Override the background image in the hero component using CSS:
 .usa-hero {
   min-height: 178px;
   background-position: top;
@@ -40,12 +38,6 @@ $theme-body-line-height: 5;
     min-height: 850px;
   }
 }
-
-// .home {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
 .usa-card__img img {
   width: auto;
