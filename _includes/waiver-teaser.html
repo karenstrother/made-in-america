@@ -1,52 +1,94 @@
-<li
-  class="
-    grid-row
-    flex-row flex-align-center
-    padding-x-6
-    padding-y-3
-    margin-y-105
-    border border-base-lighter
-    radius-sm
-    text-base-darker
-  "
-  style="justify-content: space-between; max-width: none"
->
-  <div class="tablet:grid-col-3 margin-y-1">
-    <p class="margin-0"><b>Procurement Title</b></p>
-    <p class="margin-0">{{ include.title }}</p>
-  </div>
-  <div class="tablet:grid-col-3 margin-y-1">
-    <p class="margin-0"><b>Contracting Department</b></p>
-    <p class="margin-0">{{ include.contracting_agency_name }}</p>
-  </div>
-  <div class="tablet:grid-col-3 margin-y-1">
-    <p class="margin-0"><b>Product Service Code (PSC)</b></p>
-    <p class="margin-0">{{ include.psc }}</p>
-  </div>
-
-  <a
-    class="usa-button usa-button--outline margin-0 tablet:grid-col-2"
+<!-- start accordion item -->
+<div class="usa-accordion__heading waiver border border-base-lighter radius-sm">
+  <button
+    class="usa-accordion__button bg-transparent padding-x-6 padding-y-3 text-base-darker"
+    aria-expanded="false"
     aria-controls="{{include.id}}"
-    aria-describedby="{{include.id}}-info"
-    data-open-modal
-    href="#{{include.id}}"
   >
-    View More
-  </a>
-  <div id="{{include.id}}-info" class="height-0 width-0" hidden>
-      View more information about {{ include.title }}
+  <div class="grid-row flex-row flex-align-center">
+    <div class="desktop:grid-col-4 margin-y-1">
+      <p class="margin-0"><b>Procurement Title</b></p>
+      <p class="margin-0 text-normal">{{ include.title }}</p>
+    </div>
+    <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1 ">
+      <p class="margin-0"><b>Contracting Department</b></p>
+      <p class="margin-0 text-normal">{{ include.contracting_agency_name }}</p>
+    </div>
+    <div class="desktop:grid-col-3 margin-y-1">
+      <p class="margin-0"><b>Product Service Code (PSC)</b></p>
+      <p class="margin-0 text-normal">{{ include.psc }}</p>
+    </div>
   </div>
-  {%
-    include modal.html
-    id=include.id
-    title=include.title
-    synopsis=include.synopsis
-    contracting_agency_name=include.contracting_agency_name
-    contracting_agency_id=include.contracting_agency_id
-    funding_agency_id=include.funding_agency_id
-    funding_agency_name=include.funding_agency_name
-    procurement_stage=include.procurement_stage naics=include.naics
-    solicitation_id=include.solicitation_id psc=include.psc
-    period_of_performance=include.period_of_performance
-  %}
-</li>
+  </button>
+</div>
+<div id="{{include.id}}" class="usa-accordion__content usa-prose border border-base-lighter radius-sm">
+  <div class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2">
+    <div class="margin-0 font-sans-lg text-bold">Summary of Procurement</div>
+    <div class="margin-0 font-sans-xs">{{include.synopsis}}</div>
+
+    <div
+      class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
+      style="justify-content: space-between"
+    >
+      <div class="tablet:grid-col-6">
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency ID</div>
+          <p class="margin-0 font-sans-xs">{{include.contracting_agency_id}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Funding Agency ID</div>
+          <p class="margin-0 font-sans-xs">{{include.funding_agency_id}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Procurement Stage</div>
+          <p class="margin-0 font-sans-xs">{{include.procurement_stage}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">
+            North American Industry Classification (NAICS)
+          </div>
+          <p class="margin-0 font-sans-xs">{{include.naics}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Market Research & Non-availability Determination</div>
+          <p class="margin-0 font-sans-xs">{{include.market_research_determination}}</p>
+        </div>
+         <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Was a sources sought or Request for Information issued?</div>
+          <p class="margin-0 font-sans-xs">{{include.information_issued}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
+          <p class="margin-0 font-sans-xs">{{include.standard_baa_provision}}</p>
+        </div>
+      </div>
+      <div class="tablet:grid-col-6">
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency Name</div>
+          <p class="margin-0 font-sans-xs">{{include.contracting_agency_name}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Funding Agency Name</div>
+          <p class="margin-0 font-sans-xs">{{include.funding_agency_name}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Solicitation ID</div>
+          <p class="margin-0 font-sans-xs">{{include.solicitation_id}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Expected Maximum Duration of the Requested Waiver</div>
+          <p class="margin-0 font-sans-xs">{{include.maximum_duration}}</p>
+        </div>
+         <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">If a sources sought or Request for Information was issued, identify where it was published and for how long. If not, please explain why not.</div>
+          <p class="margin-0 font-sans-xs">{{include.information_issued_published}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Reason for not including the price preference.</div>
+          <p class="margin-0 font-sans-xs">{{include.reason_for_no_price_preference}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end accordion item -->
