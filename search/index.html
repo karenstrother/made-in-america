@@ -42,10 +42,9 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
   </div>
 </div>
 
-<ul
+<div
   id="results-container"
-  class="usa-list usa-list--unstyled"
-  style="padding: 0"
+  class="usa-accordion"
 >
   {% for waiver in site.data.waivers %}
     {%
@@ -61,11 +60,16 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
       naics=waiver.naics
       solicitation_id=waiver.solicitation_id
       psc=waiver.psc
-      period_of_performance=waiver.period_of_performance
+      maximum_duration=waiver.maximum_duration
+      market_research_determination=waiver.market_research_determination
+      information_issued=waiver.information_issued
+      information_issued_published=waiver.information_issued_published
+      standard_baa_provision=waiver.standard_baa_provision
+      reason_for_no_price_preference=waiver.reason_for_no_price_preference
     %}
   {% endfor %}
 
-</ul>
+</div>
 
 <div class="bg-primary-lighter padding-x-6 padding-y-4 radius-md margin-top-5">
   <div class="margin-bottom-1">
