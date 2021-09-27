@@ -1,5 +1,0 @@
-# This is the configuration for the site favicons.
-
-- rel: shortcut icon
-  type: image/ico
-  name: favicon.ico

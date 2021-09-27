@@ -78,6 +78,12 @@ dap:
 ga:
   # ua: your-ua
 
+# Favicons
+favicons:
+  - rel: shortcut icon
+    type: image/ico
+    name: favicon.ico
+
 # Site Navigation
 footer_navigation:
   - name: Our Website
