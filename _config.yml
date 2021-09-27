@@ -95,7 +95,7 @@ footer_navigation:
       - name: Accessibility
         url: /policies/accessibility/
       - name: Freedom of Information Act
-        url: https://www.gsa.gov/reference/freedom-of-information-act-foia
+        url: https://www.whitehouse.gov/omb/freedom-of-information-act-foia/
         ext: true
       - name: Privacy policy
         url: /policies/privacy/
