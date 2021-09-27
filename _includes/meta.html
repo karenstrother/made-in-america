@@ -55,7 +55,7 @@
      {% endfor %}
 
     <link rel="{{ icon.rel | default: 'icon' }}" type="{{ icon.type }}"
-      {% if icon.sizes -%}sizes="{{ icon.sizes }}"
+      {% if icon.sizes %}sizes="{{ icon.sizes }}"
       {% endif %}href="{{ path | relative_url }}">
 
   {% endfor %}
