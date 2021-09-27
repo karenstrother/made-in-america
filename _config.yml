@@ -107,8 +107,6 @@ footer_navigation:
         url: /customer-service/support/
       - name: External Resources
         url: /customer-service/resources/
-      - name: Privacy policy
-        url: /customer-service/contact/
       - name: Contact
         url: /customer-service/contact/
 

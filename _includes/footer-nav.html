@@ -20,11 +20,13 @@
           {% for subnav in nav.children %}
               <ul class="add-list-reset">
                 <li>
-                  <a href="{{ site.baseurl }}{{ subnav.url }}"
+                  <a
                   {% if subnav.ext %}
+                  href="{{ subnav.url }}"
                   class="usa-link text-no-underline usa-link--external"
                   rel="noreferrer" target="_blank"
                   {% else %}
+                  href="{{ site.baseurl }}{{ subnav.url }}"
                   class="usa-link text-no-underline"
                   {% endif %}
                     >
