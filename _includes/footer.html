@@ -1,114 +1,44 @@
 <footer class="usa-footer site-footer" role="contentinfo">
   <div class="footer-section-bottom tablet:display-none">
-    <!-- start mobile -->
-    <div class="usa-accordion">
-      <!-- start accordion item -->
-      <div class="usa-accordion__heading border-y border-base-lighter">
-        <button
-          class="usa-accordion__button bg-white"
-          aria-expanded="false"
-          aria-controls="footer-menu-1"
-        >
-          Our Website
-        </button>
-      </div>
-      <div
-        id="footer-menu-1"
-        class="usa-accordion__content usa-prose bg-base-lightest"
-      >
-        <ul class="add-list-reset">
-          <li>
-            <a href="{{ site.baseurl }}/about/" class="usa-link">
-              About This Site
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- end accordion item -->
-      <!-- start accordion item -->
-      <div class="usa-accordion__heading border-y border-base-lighter">
-        <button
-          class="usa-accordion__button bg-white"
-          aria-expanded="false"
-          aria-controls="footer-menu-2"
-        >
-          Policies
-        </button>
-      </div>
-      <div
-        id="footer-menu-2"
-        class="usa-accordion__content usa-prose bg-base-lightest"
-      >
-        <ul class="add-list-reset">
-          <li>
-            <a
-              href="{{ site.baseurl }}/policies/accessibility/"
-              class="usa-link"
-            >
-              Accessibility
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.gsa.gov/reference/freedom-of-information-act-foia"
-              class="usa-link usa-link--external"
-              rel="noreferrer" target="_blank"
-            >
-              Freedom of Information Act
-            </a>
-          </li>
-          <li>
-            <a href="{{ site.baseurl }}/policies/privacy/" class="usa-link">
-              Privacy policy
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- end accordion item -->
-      <!-- start accordion item -->
-      <div class="usa-accordion__heading border-y border-base-lighter">
-        <button
-          class="usa-accordion__button bg-white"
-          aria-expanded="false"
-          aria-controls="footer-menu-3"
-        >
-          Customer Service
-        </button>
-      </div>
-      <div
-        id="footer-menu-3"
-        class="usa-accordion__content usa-prose bg-base-lightest"
-      >
-        <ul class="add-list-reset">
-          <li>
-            <a
-              href="{{ site.baseurl }}/customer-service/support/"
-              class="usa-link"
-            >
-              Government Customer Support
-            </a>
-          </li>
-          <li>
-            <a
-              href="{{ site.baseurl }}/customer-service/resources/"
-              class="usa-link"
-            >
-              External Resources
-            </a>
-          </li>
-          <li>
-            <a
-              href="{{ site.baseurl }}/customer-service/contact/"
-              class="usa-link"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- end accordion item -->
+  <div class="usa-accordion">
+    {% for nav in site.footer_navigation %}
+      {% assign control = nav.name | downcase | slugify %}
+        <div class="usa-accordion__heading border-y border-base-lighter">
+          <button
+            class="usa-accordion__button bg-white"
+            aria-expanded="false"
+            aria-controls="footer-menu-{{ control }}"
+          >
+            {{ nav.name | strip }}
+          </button>
+        </div>
+        {% if nav.children %}
+          <div
+            id="footer-menu-{{ control }}"
+            class="usa-accordion__content usa-prose bg-base-lightest"
+          >
+          {% for subnav in nav.children %}
+              <ul class="add-list-reset">
+                <li>
+                  <a href="{{ site.baseurl }}{{ subnav.url }}"
+                  {% if subnav.ext %}
+                  class="usa-link text-no-underline usa-link--external"
+                  rel="noreferrer" target="_blank"
+                  {% else %}
+                  class="usa-link text-no-underline"
+                  {% endif %}
+                    >
+                    {{ subnav.name }}
+                  </a>
+                </li>
+              </ul>
+          {% endfor %}
+         </div>
+        {% endif %}
+      {% endfor %}
     </div>
-    <!-- end mobile -->
+
+
     <!-- start desktop -->
   </div>
   <div
