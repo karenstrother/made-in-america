@@ -2,7 +2,7 @@
   "name": "federalist-uswds-jekyll",
   "version": "1.3.0",
   "scripts": {
-    "test": "npm run pa11y-ci:sitemap && npm run htmlproofer",
+    "test-local": "npm run pa11y-ci:sitemap && npm run htmlproofer",
     "build": "bundle exec jekyll build",
     "clean": "bundle exec jekyll clean",
     "reset": "npx rimraf .git",

@@ -46,7 +46,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <!-- Favicons
     ================================================== -->
-  {% for icon in site.data.favicons %}
+  {% for icon in site.favicons %}
 
      {% for file in favicon_image_files %}
       {% if file.name == icon.name %}
@@ -55,7 +55,7 @@
      {% endfor %}
 
     <link rel="{{ icon.rel | default: 'icon' }}" type="{{ icon.type }}"
-      {% if icon.sizes -%}sizes="{{ icon.sizes }}"
+      {% if icon.sizes %}sizes="{{ icon.sizes }}"
       {% endif %}href="{{ path | relative_url }}">
 
   {% endfor %}

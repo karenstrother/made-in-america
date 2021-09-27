@@ -78,10 +78,37 @@ dap:
 ga:
   # ua: your-ua
 
+# Favicons
+favicons:
+  - rel: shortcut icon
+    type: image/ico
+    name: favicon.ico
+
 # Site Navigation
-# primary_navigation:
-#   - name: Home
-#     url: /
+footer_navigation:
+  - name: Our Website
+    children:
+      - name: About This Site
+        url: /about/
+  - name: Policies
+    children:
+      - name: Accessibility
+        url: /policies/accessibility/
+      - name: Freedom of Information Act
+        url: https://www.whitehouse.gov/omb/freedom-of-information-act-foia/
+        ext: true
+      - name: Privacy policy
+        url: /policies/privacy/
+      - name: Website policy
+        url: /policies/website-policy/
+  - name: Customer Service
+    children:
+      - name: Government Customer Support
+        url: /customer-service/support/
+      - name: External Resources
+        url: /customer-service/resources/
+      - name: Contact
+        url: /customer-service/contact/
 
 # Search.gov configuration
 #
