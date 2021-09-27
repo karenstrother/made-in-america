@@ -58,11 +58,12 @@
             {% for subnav in nav.children %}
             <li>
               <a
-                href="{{ site.baseurl }}{{ subnav.url }}"
                 {% if subnav.ext %}
+                href="{{ subnav.url }}"
                 class="usa-link text-no-underline usa-link--external"
                 rel="noreferrer" target="_blank"
                 {% else %}
+                href="{{ site.baseurl }}{{ subnav.url }}"
                 class="usa-link text-no-underline"
                 {% endif %}
                 >{{ subnav.name }}</a
