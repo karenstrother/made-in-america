@@ -97,9 +97,9 @@ footer_navigation:
       - name: Freedom of Information Act
         url: https://www.whitehouse.gov/omb/freedom-of-information-act-foia/
         ext: true
-      - name: Privacy policy
+      - name: Privacy Policy
         url: /policies/privacy/
-      - name: Website policy
+      - name: Website Policy
         url: /policies/website-policy/
   - name: Customer Service
     children:
