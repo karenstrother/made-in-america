@@ -11,7 +11,7 @@
       <p class="margin-0 text-normal">{{ include.title }}</p>
     </div>
     <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1 ">
-      <p class="margin-0"><b>Contracting Department</b></p>
+      <p class="margin-0"><b>Contracting Office Agency Name</b></p>
       <p class="margin-0 text-normal">{{ include.contracting_agency_name }}</p>
     </div>
     <div class="desktop:grid-col-3 margin-y-1">
@@ -54,10 +54,6 @@
           <p class="margin-0 font-sans-xs">{{include.information_issued}}</p>
         </div>
         <div class="margin-bottom-2">
-          <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
-          <p class="margin-0 font-sans-xs">{{include.standard_baa_provision}}</p>
-        </div>
-        <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Describe why competition was not conducted.</div>
           <p class="margin-0 font-sans-xs">{{include.why_not_conducted}}</p>
         </div>
@@ -65,7 +61,12 @@
           <div class="margin-0 font-sans-xs text-bold">Waiver Coverage</div>
           <p class="margin-0 font-sans-xs">{{include.waiver_coverage}}</p>
         </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
+          <p class="margin-0 font-sans-xs">{{include.standard_baa_provision}}</p>
+        </div>
       </div>
+      <!-- end col 1 -->
       <div class="tablet:grid-col-6">
         <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency Name</div>
