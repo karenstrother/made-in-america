@@ -27,7 +27,7 @@
   waiver_rationale_summary: 'N/A'
   information_issued: 'N/A'
   maximum_duration: 'N/A'
-  waiver_coverage: 'N/A'
+  waiver_coverage: 'Multi-Procurement Waiver'
   standard_baa_provision: 'Yes'
 - id: 'rayon'
   title: 'Rayon'
@@ -42,7 +42,7 @@
   waiver_rationale_summary: 'N/A'
   information_issued: 'N/A'
   maximum_duration: 'N/A'
-  waiver_coverage: 'N/A'
+  waiver_coverage: 'Individual Waiver'
   standard_baa_provision: 'No'
 
 
