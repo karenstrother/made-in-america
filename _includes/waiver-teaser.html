@@ -30,7 +30,7 @@
       class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
       style="justify-content: space-between"
     >
-      <div class="tablet:grid-col-6">
+      <div class="tablet:grid-col-6 tablet:padding-right-4">
         <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency ID</div>
           <p class="margin-0 font-sans-xs">{{include.contracting_agency_id}}</p>
@@ -49,10 +49,6 @@
           </div>
           <p class="margin-0 font-sans-xs">{{include.naics}}</p>
         </div>
-        <!-- <div class="margin-bottom-2">
-          <div class="margin-0 font-sans-xs text-bold">Market Research & Non-availability Determination</div>
-          <p class="margin-0 font-sans-xs">{{include.market_research_determination}}</p>
-        </div> -->
          <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Was a sources sought or Request for Information issued?</div>
           <p class="margin-0 font-sans-xs">{{include.information_issued}}</p>
@@ -60,6 +56,14 @@
         <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
           <p class="margin-0 font-sans-xs">{{include.standard_baa_provision}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Describe why competition was not conducted.</div>
+          <p class="margin-0 font-sans-xs">{{include.why_not_conducted}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Waiver Coverage</div>
+          <p class="margin-0 font-sans-xs">{{include.waiver_coverage}}</p>
         </div>
       </div>
       <div class="tablet:grid-col-6">
@@ -83,10 +87,18 @@
           <div class="margin-0 font-sans-xs text-bold">If a sources sought or Request for Information was issued, identify where it was published and for how long. If not, please explain why not.</div>
           <p class="margin-0 font-sans-xs">{{include.information_issued_published}}</p>
         </div>
-        <!-- <div class="margin-bottom-2">
-          <div class="margin-0 font-sans-xs text-bold">Reason for not including the price preference</div>
-          <p class="margin-0 font-sans-xs">{{include.reason_for_no_price_preference}}</p>
-        </div> -->
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Did you compete this opportunity?</div>
+          <p class="margin-0 font-sans-xs">{{include.compete_opportunity}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">Describe why competition was not conducted.</div>
+          <p class="margin-0 font-sans-xs">{{include.compete_opportunity}}</p>
+        </div>
+        <div class="margin-bottom-2">
+          <div class="margin-0 font-sans-xs text-bold">OMB determination</div>
+          <p class="margin-0 font-sans-xs">{{include.omb_determination}}</p>
+        </div>
       </div>
     </div>
   </div>

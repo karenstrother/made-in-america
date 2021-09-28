@@ -16,6 +16,10 @@
   information_issued_published: 'N/A'
   standard_baa_provision: 'No'
   reason_for_no_price_preference: 'There are no domestic sources that can produce the requested amount of the supply for this requirement.'
+  compete_opportunity: 'N/A'
+  omb_determination: 'Consistent with Policy'
+  why_not_conducted: 'N/A'
+  waiver_coverage: 'N/A'
 - id: 'tactical-pants'
   title: 'Tactical Pants for TSA Federal Air Marshals'
   synopsis: 'Delivery order for uniform items, i.e., tactical pants for TSA federal air marshals'
@@ -33,6 +37,10 @@
   information_issued_published: 'N/A'
   standard_baa_provision: 'Yes'
   reason_for_no_price_preference: 'N/A - A U.S made end product is not available'
+  compete_opportunity: 'N/A'
+  omb_determination: 'Consistent with Policy'
+  why_not_conducted: 'N/A'
+  waiver_coverage: 'N/A'
 - id: 'rayon'
   title: 'Rayon'
   synopsis: 'ENKA 300/60 AS Select Rayon'
@@ -50,6 +58,10 @@
   information_issued_published: 'N/A'
   standard_baa_provision: 'No'
   reason_for_no_price_preference: 'Rayon must meet military specs.'
+  compete_opportunity: 'No'
+  omb_determination: 'Consistent with Policy'
+  why_not_conducted: 'RFI did not find another qualified source'
+  waiver_coverage: 'N/A'
 
 
 
