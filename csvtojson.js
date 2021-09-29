@@ -30,8 +30,13 @@ async function buildWaiverJSON() {
       return Object.fromEntries(filtered);
     })
 
+    filteredItems.reverse()
+
   fs.writeFile(`${dataDir}/waivers-data.json`, JSON.stringify(filteredItems), err => {
+    // Checking for errors
     if (err) throw err
+
+    console.info('Done converting waiver csv -> json') // Success
   })
 }
 
