@@ -56,7 +56,7 @@
 
     <link rel="{{ icon.rel | default: 'icon' }}" type="{{ icon.type }}"
       {% if icon.sizes %}sizes="{{ icon.sizes }}"
-      {% endif %}href="{{ path | absolute_url }}">
+      {% endif %}href="{{ path | relative_url }}">
 
   {% endfor %}
   <!-- CSS
