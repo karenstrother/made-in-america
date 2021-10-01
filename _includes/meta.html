@@ -50,13 +50,13 @@
 
      {% for file in favicon_image_files %}
       {% if file.name == icon.name %}
-        {% assign path = file.path %}
+        {% assign url = file.url %}
       {% endif %}
      {% endfor %}
 
     <link rel="{{ icon.rel | default: 'icon' }}" type="{{ icon.type }}"
       {% if icon.sizes %}sizes="{{ icon.sizes }}"
-      {% endif %}href="{{ path | relative_url }}">
+      {% endif %}href="{{ url }}">
 
   {% endfor %}
   <!-- CSS
