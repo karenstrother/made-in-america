@@ -5,8 +5,8 @@
     aria-expanded="false"
     aria-controls="{{include.id}}"
   >
-  <div class="grid-row flex-row flex-align-center">
-    <div class="desktop:grid-col-4 margin-y-1">
+  <div class="grid-row flex-row">
+    <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
       <p class="margin-0"><b>Procurement Title</b></p>
       <p class="margin-0 text-normal">{{ include.title | default: 'N/A' }}</p>
     </div>
@@ -22,6 +22,12 @@
                 {{ word }}
             {% elsif word == 'of' %}
                 {{ word }}
+            {% elsif word == 'the' %}
+                {{ word }}
+            {% elsif word == 'an' %}
+                {{ word }}
+            {% elsif word == 'dla' %}
+                {{ word | upcase }}
             {% else %}
                 {{ word | capitalize}}
             {% endif %}
@@ -65,7 +71,7 @@
           </div>
           <p class="margin-0 font-sans-xs">{{include.naics | default: 'N/A'}}</p>
         </div>
-        <div class="margin-bottom-2">
+        <div class="margin-bottom-2 margin-right-2">
           <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
           <p class="margin-0 font-sans-xs">{{include.standard_baa_provision | default: 'N/A'}}</p>
         </div>
@@ -84,8 +90,14 @@
                     {{ word }}
                 {% elsif word == 'of' %}
                     {{ word }}
+                {% elsif word == 'the' %}
+                    {{ word }}
+                {% elsif word == 'an' %}
+                    {{ word }}
+                {% elsif word == 'dla' %}
+                    {{ word | upcase }}
                 {% else %}
-                    {{ word | capitalize}}
+                    {{ word | capitalize }}
                 {% endif %}
               {% endfor %}
             {% endcapture %}
@@ -94,7 +106,29 @@
         </div>
         <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Funding Agency Name</div>
-          <p class="margin-0 font-sans-xs">{{include.funding_agency_name | default: 'N/A'}}</p>
+          <p class="margin-0 font-sans-xs">
+           {% assign words = include.funding_agency_name | downcase | split: ' ' %}
+            {% capture titlecase %}
+              {% for word in words %}
+                {% if word == 'for' %}
+                    {{ word }}
+                {% elsif word == 'and' %}
+                    {{ word }}
+                {% elsif word == 'of' %}
+                    {{ word }}
+                {% elsif word == 'the' %}
+                    {{ word }}
+                {% elsif word == 'an' %}
+                    {{ word }}
+                {% elsif word == 'dla' %}
+                    {{ word | upcase }}
+                {% else %}
+                    {{ word | capitalize}}
+                {% endif %}
+              {% endfor %}
+            {% endcapture %}
+            {{ titlecase | default: 'N/A' }}
+           </p>
         </div>
         <div class="margin-bottom-2">
           <div class="margin-0 font-sans-xs text-bold">Expected Maximum Duration of the Requested Waiver</div>
