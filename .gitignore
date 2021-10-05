@@ -4,4 +4,4 @@ _site
 node_modules
 .bundle
 .jekyll-cache/
-./waivers.csv
+waivers.csv
