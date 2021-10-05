@@ -29,7 +29,7 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
   {% assign contracting_agency_name = waiver["Contracting Office Agency Name"] %}
   {% assign contracting_agency_id = waiver["Contracting Office Agency ID"] %}
   {% assign funding_agency_id = waiver["Funding Agency ID"] %}
-  {% assign funding_agency_name = waiver["Product Service Code (PSC)"] %}
+  {% assign funding_agency_name = waiver["Funding Agency Name"] %}
   {% assign procurement_stage = waiver["Procurement Stage"] %}
   {% assign naics = waiver["North American Industry Classification System (NAICS)"] %}
   {% assign psc = waiver["Product Service Code (PSC)"] %}
@@ -38,7 +38,9 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
   {% assign information_issued = waiver["Was a sources sought or Request for Information issued?"] %}
   {% assign maximum_duration = waiver["Expected Maximum Duration of Requested Waiver"] %}
   {% assign waiver_coverage = waiver["Waiver Coverage"] %}
-  {% assign standard_baa_provision = waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?"] %}
+  {% assign standard_baa_provision = waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?"] %}
+
+  <div>{{ waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?"] }}</div>
 
   {% include waiver-teaser.html
     id=id
@@ -57,6 +59,7 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
     waiver_coverage=waiver_coverage
     standard_baa_provision=standard_baa_provision
   %}
+
   {% endfor %}
 
 </div>
