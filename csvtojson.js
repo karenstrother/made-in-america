@@ -12,26 +12,54 @@ async function buildWaiverJSON() {
   const json = csv2json(csv, { parseNumbers: false })
 
     const valuesToKeep = [
-    "Product Service Code (PSC)",
-    "Procurement Title",
-    "Contracting Office Agency Name",
-    "Contracting Office Agency ID",
-    "Funding Agency ID",
-    "Funding Agency Name",
-    "Product Service Code (PSC)",
-    "Procurement Stage",
-    "North American Industry Classification System (NAICS)",
-    "Product Service Code (PSC)",
-    "Summary of Procurement",
-    "Waiver Rationale Summary",
-    "Was a sources sought or Request for Information issued?",
-    "Expected Maximum Duration of Requested Waiver",
-    "Waiver Coverage",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?",
+    'Product Service Code (PSC)',
+    'Procurement Title',
+    'Contracting Office Agency Name',
+    'Contracting Office Agency ID',
+    'Funding Agency ID',
+    'Funding Agency Name',
+    'Product Service Code (PSC)',
+    'Procurement Stage',
+    'North American Industry Classification System (NAICS)',
+    'Product Service Code (PSC)',
+    'Summary of Procurement',
+    'Waiver Rationale Summary',
+    'Was a sources sought or Request for Information issued?',
+    'Expected Maximum Duration of Requested Waiver',
+    'Waiver Coverage',
+    'Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?',
     ]
+
+    const lowerCaseExceptions = ['for', 'and', 'of', 'the', 'an']
+    const accrynmException = ['dla']
+
+    const handleOfficeCase = (data) => {
+      data.map(item => {
+        if (item[0] === "Funding Agency Name" | item[0] === "Contracting Office Agency Name") {
+          let name = item[1].toLowerCase().split(/(\s+)/)
+          name.map((word, i) => {
+
+            if (!lowerCaseExceptions.includes(word)) {
+              name[i] = word.charAt(0).toUpperCase() + word.slice(1)
+            }
+
+            if (accrynmException.includes(word)) {
+              console.log(word.toUpperCase())
+              name[i] = word.toUpperCase()
+            }
+
+            return name
+          })
+          item[1] = name.join('')
+          return item
+        }
+      })
+      return data
+    }
+
     const filteredItems = json.map((waiver) => {
       const asArray = Object.entries(waiver);
-      const filtered = asArray.filter((item => valuesToKeep.includes(item[0])));
+      const filtered = handleOfficeCase(asArray).filter((item => valuesToKeep.includes(item[0])));
       return Object.fromEntries(filtered);
     })
 
