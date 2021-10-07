@@ -22,25 +22,44 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
   id="results-container"
   class="usa-accordion"
 >
-  {% for waiver in site.data.waivers %}
-    {%
-      include waiver-teaser.html
-      id=waiver.id
-      title=waiver.title
-      contracting_agency_name=waiver.contracting_agency_name
-      contracting_agency_id=waiver.contracting_agency_id
-      funding_agency_id=waiver.funding_agency_id
-      funding_agency_name=waiver.funding_agency_name
-      procurement_stage=waiver.procurement_stage
-      naics=waiver.naics
-      psc=waiver.psc
-      synopsis=waiver.synopsis
-      waiver_rationale_summary=waiver.waiver_rationale_summary
-      information_issued=waiver.information_issued
-      maximum_duration=waiver.maximum_duration
-      waiver_coverage=waiver.waiver_coverage
-      standard_baa_provision=waiver.standard_baa_provision
-    %}
+  {% for waiver in site.data.waivers-data %}
+
+  {% assign id = waiver["Product Service Code (PSC)"] %}
+  {% assign title = waiver["Procurement Title"] %}
+  {% assign contracting_agency_name = waiver["Contracting Office Agency Name"] %}
+  {% assign contracting_agency_id = waiver["Contracting Office Agency ID"] %}
+  {% assign funding_agency_id = waiver["Funding Agency ID"] %}
+  {% assign funding_agency_name = waiver["Funding Agency Name"] %}
+  {% assign procurement_stage = waiver["Procurement Stage"] %}
+  {% assign naics = waiver["North American Industry Classification System (NAICS)"] %}
+  {% assign psc = waiver["Product Service Code (PSC)"] %}
+  {% assign synopsis = waiver["Summary of Procurement"] %}
+  {% assign waiver_rationale_summary = waiver["Waiver Rationale Summary"] %}
+  {% assign information_issued = waiver["Was a sources sought or Request for Information issued?"] %}
+  {% assign maximum_duration = waiver["Expected Maximum Duration of Requested Waiver"] %}
+  {% assign waiver_coverage = waiver["Waiver Coverage"] %}
+  {% assign standard_baa_provision = waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?"] %}
+
+  <div>{{ waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?"] }}</div>
+
+  {% include waiver-teaser.html
+    id=id
+    title=title
+    contracting_agency_name=contracting_agency_name
+    contracting_agency_id=contracting_agency_id
+    funding_agency_id=funding_agency_id
+    funding_agency_name=funding_agency_name
+    procurement_stage=procurement_stage
+    naics=naics
+    psc=psc
+    synopsis=synopsis
+    waiver_rationale_summary=waiver_rationale_summary
+    information_issued=information_issued
+    maximum_duration=maximum_duration
+    waiver_coverage=waiver_coverage
+    standard_baa_provision=standard_baa_provision
+  %}
+
   {% endfor %}
 
 </div>
