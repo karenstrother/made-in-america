@@ -18,50 +18,12 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
   </div>
 </div>
 
-<div
-  id="results-container"
-  class="usa-accordion"
->
-  {% for waiver in site.data.waivers-data %}
-
-  {% assign id = waiver["Product Service Code (PSC)"] %}
-  {% assign title = waiver["Procurement Title"] %}
-  {% assign contracting_agency_name = waiver["Contracting Office Agency Name"] %}
-  {% assign contracting_agency_id = waiver["Contracting Office Agency ID"] %}
-  {% assign funding_agency_id = waiver["Funding Agency ID"] %}
-  {% assign funding_agency_name = waiver["Funding Agency Name"] %}
-  {% assign procurement_stage = waiver["Procurement Stage"] %}
-  {% assign naics = waiver["North American Industry Classification System (NAICS)"] %}
-  {% assign psc = waiver["Product Service Code (PSC)"] %}
-  {% assign synopsis = waiver["Summary of Procurement"] %}
-  {% assign waiver_rationale_summary = waiver["Waiver Rationale Summary"] %}
-  {% assign information_issued = waiver["Was a sources sought or Request for Information issued?"] %}
-  {% assign maximum_duration = waiver["Expected Maximum Duration of Requested Waiver"] %}
-  {% assign waiver_coverage = waiver["Waiver Coverage"] %}
-  {% assign standard_baa_provision = waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?"] %}
-
-  <div>{{ waiver["Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?"] }}</div>
-
-  {% include waiver-teaser.html
-    id=id
-    title=title
-    contracting_agency_name=contracting_agency_name
-    contracting_agency_id=contracting_agency_id
-    funding_agency_id=funding_agency_id
-    funding_agency_name=funding_agency_name
-    procurement_stage=procurement_stage
-    naics=naics
-    psc=psc
-    synopsis=synopsis
-    waiver_rationale_summary=waiver_rationale_summary
-    information_issued=information_issued
-    maximum_duration=maximum_duration
-    waiver_coverage=waiver_coverage
-    standard_baa_provision=standard_baa_provision
-  %}
-
-  {% endfor %}
-
+<div id="results-container" class="usa-accordion">
+  <app-root></app-root>
+  <base href="/waivers/" />
+  <script src="../search-app/dist/usa-components/runtime.js" defer></script>
+  <script src="../search-app/dist/usa-components/polyfills.js" defer></script>
+  <script src="../search-app/dist/usa-components/main.js" defer></script>
 </div>
 
 <div class="bg-primary-lighter padding-x-6 padding-y-4 radius-md margin-top-5">
@@ -84,7 +46,8 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
 
     <a
       class="usa-button height-5 margin-top-2 margin-right-0"
-      rel="noreferrer" target="_blank"
+      rel="noreferrer"
+      target="_blank"
       href="https://sam.gov/data-services/Contract%20Opportunities/Buy%20American%20Act?privacy=Public"
     >
       View Historical Waivers
@@ -93,5 +56,9 @@ description: "Non-availability waivers, synopsis of waiver requests, buy America
 </div>
 
 <div class="margin-top-4">
-  If you have any questions about waivers from Made in America laws, please reach out to the Made in America Office at <a class="usa-link text-no-underline" href="mailto:MadeInAmerica@omb.eop.gov">MadeInAmerica@omb.eop.gov</a>.
+  If you have any questions about waivers from Made in America laws, please
+  reach out to the Made in America Office at
+  <a class="usa-link text-no-underline" href="mailto:MadeInAmerica@omb.eop.gov"
+    >MadeInAmerica@omb.eop.gov</a
+  >.
 </div>
