@@ -1,0 +1,15 @@
+<!-- <usa-theme-switcher></usa-theme-switcher> -->
+
+<div class="padding-1 grid-row">
+  <usa-search [size]="'small'" placeholder="Search Waivers"></usa-search>
+  <div>
+    <p>Sort By</p>
+    <uswds-dropdown
+      [id]="'dropdown1'"
+      [label]="'Dropdown'"
+      [options]="dropdownOptions"
+      (optionChange)="onOptionChange($event)"
+    >
+    </uswds-dropdown>
+  </div>
+</div>
