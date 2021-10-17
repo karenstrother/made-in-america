@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DropdownOptionsModel } from 'uswds-components';
-// import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { SearchService } from './search.service';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -19,44 +18,38 @@ export class AppComponent implements OnInit {
       value: null,
     },
     {
-      label: 'Option A',
+      label: 'Alphabetical',
       value: 'value1',
-    },
-    {
-      label: 'Option B',
-      value: 'value2',
-    },
-    {
-      label: 'Option C',
-      value: 'value3',
-    },
-    {
-      label: 'Option D',
-      value: 'value4',
-    },
-    {
-      label: 'Option E',
-      value: 'value5',
     },
   ];
   selectedOption = '';
 
   constructor(
     public data: SearchService,
-    private themeSwitcherService: ThemeSwitcherService
+    private themeSwitcherService: ThemeSwitcherService,
+    private http: HttpClient
   ) {}
 
-  ngOnInit() {
+  ngOnInit() {      
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
+    const url = '';
+    const options = {
+        // headers?: HttpHeaders | {[header: string]: string | string[]},
+        // observe?: 'body' | 'events' | 'response',
+        // params?: HttpParams|{[param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>},
+        // reportProgress?: boolean,
+        // responseType?: 'arraybuffer'|'blob'|'json'|'text',
+        // withCredentials?: boolean,
+    };
+    // https://angular.io/guide/http#requesting-data-from-a-server
+    this.http.get(url, options)
 
-    // const subscription = this.router.events.subscribe((data) => {
-    //   if (data instanceof NavigationEnd) {
-    //     const url = this.router.url;
-    //   }
-    // });
   }
 
-  onOptionChange($event) {
+  onSortChange($event) {
+    this.searchTerm = $event;
+  }
+  onSearchChange($event) {
     this.selectedOption = $event;
   }
 }

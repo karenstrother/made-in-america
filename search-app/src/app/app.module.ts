@@ -11,11 +11,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ThemeSwitcherModule } from './shared/theme-switcher/theme-switcher.module';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ThemeSwitcherModule,
@@ -27,7 +29,7 @@ import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.ser
     }),
   ],
   providers: [
-      ThemeSwitcherService,
+    ThemeSwitcherService,
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {

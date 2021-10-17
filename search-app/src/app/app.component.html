@@ -1,14 +1,25 @@
 <!-- <usa-theme-switcher></usa-theme-switcher> -->
 
-<div class="padding-1 grid-row">
-  <usa-search [size]="'small'" placeholder="Search Waivers"></usa-search>
-  <div>
-    <p>Sort By</p>
+<div class="grid-container padding-0 margin-bottom-3">
+  <div class="grid-row flex-align-end" style="justify-content: space-between">
+    <div class="tablet:grid-col-6">
+      <h1 class="margin-0 font-family-sans">Non-Availability Waivers</h1>
+      <p class="margin-0 margin-0 font-sans-sm">
+        Waivers reviewed by Made in America Office.
+      </p>
+    </div>
+    <usa-search
+      [size]="'small'"
+      placeholder="Search Waivers"
+      class="flex-align-end"
+      (searchTextChange)="onSearchChange($event)"
+
+    ></usa-search>
     <uswds-dropdown
       [id]="'dropdown1'"
-      [label]="'Dropdown'"
+      [label]="'Sort By'"
       [options]="dropdownOptions"
-      (optionChange)="onOptionChange($event)"
+      (optionChange)="onSortChange($event)"
     >
     </uswds-dropdown>
   </div>
