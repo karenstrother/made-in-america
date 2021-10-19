@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from './search.service';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   title = 'usa-components';
-  data = []
+  data = [];
   searchTerm = '';
   sort = '';
   dropdownOptions = [
@@ -29,24 +28,24 @@ export class AppComponent implements OnInit {
     private http: HttpClient
   ) {}
 
-  ngOnInit() {      
+  ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
-    const url = 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
+    const url =
+      'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
 
     // curl --location --request GET 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission' --header 'x-token: <token>'
     const options = {
-        // headers?: HttpHeaders | {[header: string]: string | string[]},
-        // observe?: 'body' | 'events' | 'response',
-        // params?: HttpParams|{[param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>},
-        // reportProgress?: boolean,
-        // responseType?: 'arraybuffer'|'blob'|'json'|'text',
-        // withCredentials?: boolean,
+      // headers?: HttpHeaders | {[header: string]: string | string[]},
+      // observe?: 'body' | 'events' | 'response',
+      // params?: HttpParams|{[param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>},
+      // reportProgress?: boolean,
+      // responseType?: 'arraybuffer'|'blob'|'json'|'text',
+      // withCredentials?: boolean,
     };
     // https://angular.io/guide/http#requesting-data-from-a-server
     // this.http.get(url, options)
 
-    this.data = [{},{},{}]
-
+    this.data = [{}, {}, {}];
   }
 
   onSortChange($event) {

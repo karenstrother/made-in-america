@@ -1,5 +1,3 @@
-<!-- <usa-theme-switcher></usa-theme-switcher> -->
-
 <div class="grid-container padding-0 margin-bottom-3">
   <div class="grid-row flex-align-end" style="justify-content: space-between">
     <div class="tablet:grid-col-6">
@@ -24,5 +22,5 @@
   </div>
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
-    <search-result></search-result>
+  <search-result *ngFor="let val of data"></search-result>
 </div>
