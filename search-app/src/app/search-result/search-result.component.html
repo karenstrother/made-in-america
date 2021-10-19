@@ -1,81 +1,106 @@
-<!-- start accordion item -->
-<div class="usa-accordion__heading waiver border border-base-lighter radius-sm">
-    <button
-      class="usa-accordion__button bg-transparent padding-x-6 padding-y-3 text-base-darker"
-      aria-expanded="false"
-    >
-    <div class="grid-row flex-row">
-      <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
-        <p class="margin-0"><b>Procurement Title</b></p>
-        <p class="margin-0 text-normal">
-          <span class="text-base-light text-italic">Pending Title</span>
-        </p>
-      </div>
-      <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1 ">
-        <p class="margin-0"><b>Contracting Office Agency Name</b></p>
-        <p class="margin-0 text-normal">
+<usa-accordion [headerLevel]="2" bordered="true">
+  <usa-accordion-item>
+    <ng-template UsaAccordionHeader>
+      <div class="grid-row flex-row">
+        <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
+          <p class="margin-0"><b>Procurement Title</b></p>
+          <p class="margin-0 text-normal">
+            <span class="text-base-light text-italic">Pending Title</span>
           </p>
+        </div>
+        <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
+          <p class="margin-0"><b>Contracting Office Agency Name</b></p>
+          <p class="margin-0 text-normal"></p>
+        </div>
+        <div class="desktop:grid-col-3 margin-y-1">
+          <p class="margin-0"><b>Product Service Code (PSC)</b></p>
+        </div>
       </div>
-      <div class="desktop:grid-col-3 margin-y-1">
-        <p class="margin-0"><b>Product Service Code (PSC)</b></p>
-      </div>
-    </div>
-    </button>
-  </div>
-  <div class="usa-accordion__content usa-prose border border-base-lighter radius-sm">
-    <div class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2">
-      <div class="margin-0 font-sans-lg text-bold">Summary of Procurement</div>
-  
+    </ng-template>
+    <ng-template UsaAccordionContent>
       <div
-        class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
-        style="justify-content: space-between"
+        class="
+          usa-prose
+          padding-x-4
+          text-base-darker
+          font-sans-sm
+          margin-bottom-2
+        "
       >
-        <div class="tablet:grid-col-6 tablet:padding-right-4">
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency ID</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Funding Agency ID</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Procurement Stage</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">
-              North American Industry Classification System (NAICS)
+        <div class="margin-0 font-sans-lg text-bold">
+          Summary of Procurement
+        </div>
+
+        <div
+          class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
+          style="justify-content: space-between"
+        >
+          <div class="tablet:grid-col-6 tablet:padding-right-4">
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Contracting Office Agency ID
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Funding Agency ID
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Procurement Stage
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                North American Industry Classification System (NAICS)
+              </div>
+            </div>
+            <div class="margin-bottom-2 margin-right-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Did / Will the solicitation include one of the standard BAA
+                provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9,
+                Buy American—Construction Materials) announcing the agency’s
+                intention to provide a price preference for domestic end
+                products and construction material?
+              </div>
             </div>
           </div>
-          <div class="margin-bottom-2 margin-right-2">
-            <div class="margin-0 font-sans-xs text-bold">Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9, Buy American—Construction Materials) announcing the agency’s intention to provide a price preference for domestic end products and construction material?</div>
-          </div>
-        </div>
-        <!-- end col 1 -->
-        <div class="tablet:grid-col-6">
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Contracting Office Agency Name</div>
-            <p class="margin-0 font-sans-xs">
-            </p>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Funding Agency Name</div>
-            <p class="margin-0 font-sans-xs">
-             </p>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Expected Maximum Duration of the Requested Waiver</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Was a sources sought or Request for Information issued?</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Waiver Rationale Summary</div>
-          </div>
-          <div class="margin-bottom-2">
-            <div class="margin-0 font-sans-xs text-bold">Waiver Coverage</div>
+          <!-- end col 1 -->
+          <div class="tablet:grid-col-6">
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Contracting Office Agency Name
+              </div>
+              <p class="margin-0 font-sans-xs"></p>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Funding Agency Name
+              </div>
+              <p class="margin-0 font-sans-xs"></p>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Expected Maximum Duration of the Requested Waiver
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Was a sources sought or Request for Information issued?
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">
+                Waiver Rationale Summary
+              </div>
+            </div>
+            <div class="margin-bottom-2">
+              <div class="margin-0 font-sans-xs text-bold">Waiver Coverage</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- end accordion item -->
-  
+    </ng-template>
+  </usa-accordion-item>
+</usa-accordion>

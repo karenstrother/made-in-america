@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { UsaSearchModule, USWDSDropdownModule } from 'uswds-components';
+import { UsaAccordionModule, UsaSearchModule, USWDSDropdownModule } from 'uswds-components';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import { ThemeSwitcherModule } from './shared/theme-switcher/theme-switcher.module';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchResultModule } from './search-result/search-result.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     ThemeSwitcherModule,
     UsaSearchModule,
     USWDSDropdownModule,
+    UsaAccordionModule,
     MarkdownModule.forRoot(),
+    SearchResultModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),

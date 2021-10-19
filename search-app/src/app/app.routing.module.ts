@@ -18,63 +18,6 @@ import { CharacterCountModule, ROUTES as CHARACTER_COUNT_ROUTES } from "./charac
 import { SearchModule, ROUTES as SEARCH_ROUTES } from './search/search.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'checkbox',
-    pathMatch: 'full',
-  },
-  {
-    path: 'accordion',
-    children: ACCORDION_ROUTES
-  },
-  {
-    path: 'button-group',
-    component: ButtonGroupComponent
-  },
-  {
-    path: 'checkbox',
-    children: CHECKBOX_ROUTES,
-  },
-  {
-    path: 'dropdown',
-    component: DropdownComponent
-  },
-  {
-    path: 'file-input',
-    children: FILE_INPUT_ROUTES,
-  },
-  {
-    path: 'step-indicator',
-    children: STEP_INDICATOR_ROUTES,
-  },
-  {
-    path: 'modal',
-    children: MODAL_ROUTES,
-  },
-  {
-    path: 'table',
-    children: TABLE_ROUTES,
-  },
-  {
-    path: 'tooltip',
-    children: TOOLTIP_ROUTES
-  },
-  {
-    path: 'datepicker',
-    children: DATEPICKER_ROUTES,
-  },
-  {
-    path: 'character-count',
-    children: CHARACTER_COUNT_ROUTES,
-  },
-  {
-    path: 'radio',
-    children: RADIO_ROUTES,
-  },
-  {
-    path: 'search',
-    children: SEARCH_ROUTES,
-  },
 ]
 @NgModule({
   imports: [

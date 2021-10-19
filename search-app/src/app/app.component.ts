@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  currentStyle = 'uswds';
   title = 'usa-components';
+  data = []
   searchTerm = '';
   sort = '';
   dropdownOptions = [
@@ -25,14 +25,15 @@ export class AppComponent implements OnInit {
   selectedOption = '';
 
   constructor(
-    public data: SearchService,
     private themeSwitcherService: ThemeSwitcherService,
     private http: HttpClient
   ) {}
 
   ngOnInit() {      
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
-    const url = '';
+    const url = 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
+
+    // curl --location --request GET 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission' --header 'x-token: <token>'
     const options = {
         // headers?: HttpHeaders | {[header: string]: string | string[]},
         // observe?: 'body' | 'events' | 'response',
@@ -42,7 +43,9 @@ export class AppComponent implements OnInit {
         // withCredentials?: boolean,
     };
     // https://angular.io/guide/http#requesting-data-from-a-server
-    this.http.get(url, options)
+    // this.http.get(url, options)
+
+    this.data = [{},{},{}]
 
   }
 
