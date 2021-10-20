@@ -18,10 +18,8 @@ async function buildWaiverJSON() {
     'Contracting Office Agency ID',
     'Funding Agency ID',
     'Funding Agency Name',
-    'Product Service Code (PSC)',
     'Procurement Stage',
     'North American Industry Classification System (NAICS)',
-    'Product Service Code (PSC)',
     'Summary of Procurement',
     'Waiver Rationale Summary',
     'Was a sources sought or Request for Information issued?',
@@ -44,7 +42,6 @@ async function buildWaiverJSON() {
             }
 
             if (accrynmException.includes(word)) {
-              console.log(word.toUpperCase())
               name[i] = word.toUpperCase()
             }
 
