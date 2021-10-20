@@ -1,0 +1,22 @@
+{
+  "ignoreTestFiles": [
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ],
+  "env": {
+    "cypress-plugin-snapshots": {
+      "autoCleanUp": false,
+      "autopassNewSnapshots": true,
+      "diffLines": 3,
+      "excludeFields": [
+        "results-container"
+      ],
+      "ignoreExtraArrayItems": false,
+      "ignoreExtraFields": false,
+      "normalizeJson": true,
+      "prettier": true,
+      "updateSnapshots": false,
+      "backgroundBlend": "difference"
+    }
+  }
+}
