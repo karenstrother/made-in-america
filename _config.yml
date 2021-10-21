@@ -212,6 +212,7 @@ exclude:
   - Gemfile.lock
 
 assets:
+  digest: false
   sources:
     - favicons
     - node_modules/uswds/dist/img

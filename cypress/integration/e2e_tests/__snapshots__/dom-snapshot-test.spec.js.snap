@@ -14,7 +14,7 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -45,7 +45,7 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -62,7 +62,7 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -89,10 +89,7 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -428,10 +425,7 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -460,14 +454,8 @@ exports[`text snapshot > toMatchSnapshot #0`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -487,7 +475,7 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -518,7 +506,7 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -535,7 +523,7 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -562,10 +550,7 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -920,10 +905,7 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -952,14 +934,8 @@ exports[`text snapshot > toMatchSnapshot #1`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -979,7 +955,7 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -1010,7 +986,7 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -1027,7 +1003,7 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -1054,10 +1030,7 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -1410,10 +1383,7 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -1442,14 +1412,8 @@ exports[`text snapshot > toMatchSnapshot #2`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -1469,7 +1433,7 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -1500,7 +1464,7 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -1517,7 +1481,7 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -1544,10 +1508,7 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -1922,10 +1883,7 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -1954,14 +1912,8 @@ exports[`text snapshot > toMatchSnapshot #3`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -1981,7 +1933,7 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -2012,7 +1964,7 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -2029,7 +1981,7 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -2056,10 +2008,7 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -2427,10 +2376,7 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -2459,14 +2405,8 @@ exports[`text snapshot > toMatchSnapshot #4`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -2486,7 +2426,7 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -2517,7 +2457,7 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -2534,7 +2474,7 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -2561,10 +2501,7 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -2894,10 +2831,7 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -2926,14 +2860,8 @@ exports[`text snapshot > toMatchSnapshot #5`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -2953,7 +2881,7 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -2984,7 +2912,7 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -3001,7 +2929,7 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -3028,10 +2956,7 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -3385,10 +3310,7 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -3417,14 +3339,8 @@ exports[`text snapshot > toMatchSnapshot #6`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -3444,7 +3360,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -3475,7 +3391,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -3492,7 +3408,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -3519,10 +3435,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -5230,10 +5143,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
             class="bg-primary-lighter padding-x-6 padding-y-4 radius-md margin-top-5"
           >
             <div class="margin-bottom-1">
-              <img
-                alt="sam gov mark"
-                src="/assets/sam-gov-logo-51f061cc806d1c8ef3c62ed5f23737c4320008142eb3627f9c2ee1a97107b62b.png"
-              />
+              <img alt="sam gov mark" src="/assets/sam-gov-logo.png" />
             </div>
 
             <div
@@ -5528,10 +5438,7 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -5560,14 +5467,8 @@ exports[`text snapshot > toMatchSnapshot #7`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
 
@@ -5587,7 +5488,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
               <img
                 class="usa-banner__header-flag"
                 alt="U.S. flag"
-                src="/assets/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png"
+                src="/assets/us_flag_small.png"
               />
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
@@ -5618,7 +5519,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Dot gov"
-                  src="/assets/icon-dot-gov-54f6653a149c83b73515cc2ec032a18151b57d3ffe97ef04495ce6623e48d1bb.svg"
+                  src="/assets/icon-dot-gov.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -5635,7 +5536,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
                 ><img
                   class="usa-banner__icon usa-media-block__img"
                   alt="Https"
-                  src="/assets/icon-https-912daff95ce9cabae7d0195d39aa98d49c4bec3b975d404ac266534c069cee20.svg"
+                  src="/assets/icon-https.svg"
               /></span>
               <div class="usa-media-block__body">
                 <p>
@@ -5662,10 +5563,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
       <div class="usa-logo" id="extended-logo">
         <em>
           <a href="/" title="Home" aria-label="Home">
-            <img
-              alt="Shield with stars and stripes."
-              src="/assets/logo-37c9f958084c35b17f9dd3121eedf2b90e1fac27780972b9685464d07ba61989.svg"
-            />
+            <img alt="Shield with stars and stripes." src="/assets/logo.svg" />
           </a>
         </em>
       </div>
@@ -5729,10 +5627,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
       <div class="grid-container usa-section">
         <div class="grid-row grid-gap">
           <div class="tablet:grid-col-7">
-            <img
-              alt="collage of images"
-              src="/assets/waivers-50f8e5488cbabbd4b5513ab0a8d2452a3a4798e6c2ee47800f9ae81d31ab045f.png"
-            />
+            <img alt="collage of images" src="/assets/waivers.png" />
           </div>
           <div class="tablet:grid-col-5 text-base-lightest">
             <h2 class="font-heading-2xl font-family-sans">
@@ -5784,10 +5679,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
               </header>
               <div class="usa-card__media">
                 <div class="usa-card__img padding-6 minh-card">
-                  <img
-                    alt="sba mark"
-                    src="/assets/sba-logo-cf9ad891184e3b6cbe99ceb219a06aeb314ea9bfde37631615586adb8f56cd59.png"
-                  />
+                  <img alt="sba mark" src="/assets/sba-logo.png" />
                 </div>
               </div>
               <div class="usa-card__body text-base-darker">
@@ -5823,10 +5715,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
               </header>
               <div class="usa-card__media">
                 <div class="usa-card__img padding-6 minh-card">
-                  <img
-                    alt="sam gov mark"
-                    src="/assets/sam-gov-logo-51f061cc806d1c8ef3c62ed5f23737c4320008142eb3627f9c2ee1a97107b62b.png"
-                  />
+                  <img alt="sam gov mark" src="/assets/sam-gov-logo.png" />
                 </div>
               </div>
               <div class="usa-card__body text-base-darker">
@@ -5862,10 +5751,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
               </header>
               <div class="usa-card__media">
                 <div class="usa-card__img padding-5 minh-card">
-                  <img
-                    alt="gsa blue block"
-                    src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-                  />
+                  <img alt="gsa blue block" src="/assets/gsa-logo.png" />
                 </div>
               </div>
               <div class="usa-card__body text-base-darker">
@@ -5904,7 +5790,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
                 <img
                   alt="Executive Office of the President of the United States mark"
                   class="padding-y-3 desktop:padding-0"
-                  src="/assets/executive_office_ptos-2ecbf88bd629d196ee3e03145d0b10bc762eb8fef3140f3a162003318e3792b6.svg"
+                  src="/assets/executive_office_ptos.svg"
                 />
               </div>
               <div class="usa-card__body text-base-darker">
@@ -6250,10 +6136,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
           </div>
 
           <div class="tablet:grid-col-5 order-0 tablet:order-initial">
-            <img
-              alt="young woman working in a studio"
-              src="/assets/faqs-1f80945a4ac9b5139b661cbde999a7f2976ac452e38f24092e3d22d70190b854.jpg"
-            />
+            <img alt="young woman working in a studio" src="/assets/faqs.jpg" />
           </div>
         </div>
       </div>
@@ -6511,10 +6394,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
               target="_blank"
               class="flex-align-end text-no-underline text-base-darkest grid-row"
             >
-              <img
-                alt="gsa blue block"
-                src="/assets/gsa-logo-6868b2ec2c04cb647805010d129d01c9f2a60ce167c61d3161c76646f4b11407.png"
-              />
+              <img alt="gsa blue block" src="/assets/gsa-logo.png" />
               <span
                 class="width-card margin-left-1 display-block"
                 style="word-wrap: break-word;"
@@ -6543,13 +6423,7 @@ exports[`text snapshot > toMatchSnapshot #8`] = `
     src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"
   ></script>
 
-  <script
-    src="/assets/uswds.min-eb03e1e782596d0dd7da7974cacd056460456b408beaebd4741fec49d47a4646.js"
-    type="text/javascript"
-  ></script>
-  <script
-    src="/assets/app-d66d100449b8736582bd67c6deffc12fdabab2407b879b645a2f92ba2e33706e.js"
-    type="text/javascript"
-  ></script>
+  <script src="/assets/uswds.min.js" type="text/javascript"></script>
+  <script src="/assets/app.js" type="text/javascript"></script>
 </body>
 `;
