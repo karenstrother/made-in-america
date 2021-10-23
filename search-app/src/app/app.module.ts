@@ -13,9 +13,10 @@ import { ThemeSwitcherModule } from './shared/theme-switcher/theme-switcher.modu
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchResultModule } from './search-result/search-result.module';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PaginationComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -47,5 +48,6 @@ import { SearchResultModule } from './search-result/search-result.module';
     },
   ],
   bootstrap: [AppComponent],
+  exports: [PaginationComponent],
 })
 export class AppModule {}
