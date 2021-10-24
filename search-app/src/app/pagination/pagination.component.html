@@ -6,6 +6,8 @@
         href="javascript:void(0);"
         class="usa-pagination__link usa-pagination__previous-page"
         aria-label="Previous page"
+        [attr.disabled]="current === 1 ? true : null"
+        (click)="goTo(current - 1)"
       >
         <svg class="usa-icon" aria-hidden="true" role="img">
           <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
@@ -36,25 +38,26 @@
     </li>
 
     <!-- TODO: Render Neighbour links -->
-    <li class="usa-pagination__item usa-pagination__page-no"
-    *ngFor="for">
+    <li
+      class="usa-pagination__item usa-pagination__page-no"
+      *ngFor="let index of renderedButtons"
+    >
       <a
         href="javascript:void(0);"
         class="usa-pagination__button"
         aria-label="Page 1"
-        [ngClass]="{ 'usa-current': current === 1 }"
-        (click)="goTo(1)"
+        [ngClass]="{ 'usa-current': current === index }"
+        (click)="goTo(index)"
       >
-        1
+        {{ index }}
       </a>
     </li>
     <!-- Render Neighbour links -->
 
-
     <li
       class="usa-pagination__item usa-pagination__overflow"
       role="presentation"
-      [ngClass]="{ 'display-none': current >= last - 3 }"
+      [ngClass]="{ 'display-none': current >= last - 2 }"
     >
       <span> … </span>
     </li>
@@ -77,6 +80,8 @@
         href="javascript:void(0);"
         class="usa-pagination__link usa-pagination__next-page"
         aria-label="Next page"
+        [attr.disabled]="current === last ? true : null"
+        (click)="goTo(current + 1)"
       >
         <span class="usa-pagination__link-text"> Next </span>
 

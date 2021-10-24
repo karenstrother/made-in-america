@@ -23,5 +23,5 @@
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
   <search-result *ngFor="let val of data"></search-result>
-  <usa-pagination></usa-pagination>
+  <usa-pagination [current]='current' [last]='last'></usa-pagination>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'usa-pagination',
@@ -6,15 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class PaginationComponent implements OnInit {
-  current = 1;
-  last = 10;
+  @Input() current: number;
+  @Input() last: number;
+  renderedButtons: number[];
 
   constructor() {}
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.renderedButtons = [2, 3];
+  }
 
   goTo(index) {
-      this.current = index
+    this.current = index;
+
+    if ([1, 2].includes(this.current)) {
+      this.renderedButtons = [2, 3];
+    } else if ([this.last, this.last - 1].includes(this.current)) {
+      this.renderedButtons = [this.last - 2, this.last - 1];
+    } else {
+      this.renderedButtons = [this.current - 1, this.current, this.current + 1];
+    }
   }
 }

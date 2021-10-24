@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
     },
   ];
   selectedOption = '';
+  current = 1;
+  last = 100;
 
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
@@ -43,7 +45,10 @@ export class AppComponent implements OnInit {
       // withCredentials?: boolean,
     };
     // https://angular.io/guide/http#requesting-data-from-a-server
-    // this.http.get(url, options)
+    // this.http.get(url, options).subscribe((data: Config) => {
+    //     this.data = data;
+    //     this.last = data.length / 20
+    // };
 
     this.data = [{}, {}, {}];
   }
