@@ -11,7 +11,7 @@
       "diffLines": 3,                  
       "excludeFields": [],             
       "ignoreExtraArrayItems": false,  
-      "ignoreExtraFields": true,      
+      "ignoreExtraFields": false,      
       "normalizeJson": true,           
       "prettier": true,                
       "imageConfig": {
