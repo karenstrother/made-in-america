@@ -1,4 +1,7 @@
   /// <reference types="Cypress" />
+
+// const { groupBy } = require("cypress/types/lodash");
+
   let urls = [];
   before(() => {
     cy.request({
@@ -17,16 +20,20 @@
           .map((el) => el.innerText);
       });
   });
-  describe('DOM snapshot', () => {
-      it('toMatchSnapshot.2', () => { 
-        urls.forEach((url) => {
-          return cy.request(url)
-          .its('body')
-          .toMatchSnapshot('ignoreExtraFields: true');
-          })
-        });
-    });
+  describe('dom snapshot', () => {
+    it('toMatchSnapshot', () => {
+      urls.forEach((url) => {
+        cy.visit(url).then(() => {
+          cy.get('main')
+          .toMatchSnapshot({ignoreExtraFields: true,})
+        })
+      })
+    })
+  });
 
+      // cy.visit(url).then(() => {
+      //   cy.get('main')
+      //   .toMatchSnapshot();
 
 
  
