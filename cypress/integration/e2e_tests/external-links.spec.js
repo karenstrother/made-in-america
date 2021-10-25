@@ -22,14 +22,6 @@ describe('check external links', () => {
     // CY goes to each URL in the arry from site map 
     // checks to make sure that each anchor link is working
     urls.forEach((url) => {
-      // cy.request({
-      //   url: url,
-      //   headers: {
-      //     "Content-Type": "text/html",
-      //     accept: "*/*",
-      //     "user-agent":
-      //       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
-      //   },
       cy.visit(url).then(() => {
           cy.get('.usa-link--external')
           .should('have.attr', 'target', '_blank')
@@ -38,3 +30,27 @@ describe('check external links', () => {
   });
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // cy.request({
+      //   url: url,
+      //   headers: {
+      //     "Content-Type": "text/html",
+      //     accept: "*/*",
+      //     "user-agent":
+      //       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
+      //   },
