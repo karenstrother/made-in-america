@@ -9,16 +9,31 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'usa-components';
   data = [];
-  searchTerm = '';
-  sort = '';
-  dropdownOptions = [
+  filter = null;
+  sort = 'value1';
+  dropdownOptions1 = [
     {
-      label: 'Most Recent',
+      label: '-',
       value: null,
     },
     {
-      label: 'Alphabetical',
+      label: 'Submitted',
       value: 'value1',
+    },
+    {
+      label: 'Reviewed',
+      value: 'value1',
+    },
+  ];
+
+  dropdownOptions2 = [
+    {
+      label: 'Most Recent',
+      value: 'value1',
+    },
+    {
+      label: 'Alphabetical',
+      value: 'value2',
     },
   ];
   selectedOption = '';
@@ -54,9 +69,9 @@ export class AppComponent implements OnInit {
   }
 
   onSortChange($event) {
-    this.searchTerm = $event;
+    this.sort = $event;
   }
-  onSearchChange($event) {
-    this.selectedOption = $event;
+  onFilterChange($event) {
+    this.filter = $event;
   }
 }

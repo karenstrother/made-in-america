@@ -1,178 +1,409 @@
 [
   {
-    "Procurement Title": "T700 Turboshaft Engine",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "DLA AB",
-    "Contracting Office Agency Name": "Defense Logistics Agency - Aviation",
-    "Funding Agency ID": "DLA-A",
-    "Funding Agency Name": "DLA Aviation",
-    "Procurement Stage": "Post-Solicitation",
-    "North American Industry Classification System (NAICS)": "336412",
-    "Product Service Code (PSC)": "2840",
-    "Summary of Procurement": "Performance-based logistics contract supporting GE T700 Engine consumables for US Army Depot (CCAD) and World-wide/FMS customers.",
-    "Waiver Rationale Summary": "Mission failure due to inability to procure T700 Engine parts.",
-    "Expected Maximum Duration of Requested Waiver": "More than 5 years",
-    "Was a sources sought or Request for Information issued?": "Yes",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "No"
+    "_id": "61731718771978518b938977",
+    "data": {
+      "requestStatus": "submitted",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 111110, "NAICS_Title": "Soybean Farming" },
+      "psc": {
+        "pscId": 216,
+        "pscCode": "2210",
+        "pscName": "LOCOMOTIVES",
+        "pscFullName": "Locomotives",
+        "pscInclude": "Self-Propelled Cars.",
+        "activeInd": "Y",
+        "pscExclude": "Self-Propelled Cars.",
+        "pscNote": "This class includes only complete locomotives and  tenders.  End items, assemblies, parts, attachments, or accessories for use in or on locomotives and tenders are  classified in classes other than this class.",
+        "parentPscCode": "22",
+        "activeStartDate": "1978-10-15",
+        "updatedDate": "2017-08-03",
+        "level1Category": "7",
+        "level1CategoryName": "Transportation and Logistics Services",
+        "level2Category": "7.6",
+        "level2CategoryName": "Transportation Equipment",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=2210"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "Test of form ",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "N0FukNlXteGKfeKXHIH7byRUMbL9M+Vkf5DNLQ6aoA7I4VgpeXl976ZbkMHghsm6",
+      "waiverRationaleSummary": "Test of form ",
+      "expectedMaximumDurationOfTheRequestedWaiver": "moreThan5Years",
+      "ombDetermination": ""
+    },
+    "state": "submitted",
+    "created": "2021-10-22T19:55:04.752Z",
+    "modified": "2021-10-22T19:55:04.753Z"
   },
   {
-    "Procurement Title": "Procurement of Laboratory Information Management System (LIMS) Integrated Analytical Balance",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1650",
-    "Funding Agency Name": "Occupational Safety and Health Administration",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "333997",
-    "Product Service Code (PSC)": "6670",
-    "Summary of Procurement": "This is a request to purchase one LIMS Integrated Analytical Balance, to include installation, calibration, and a service plan.",
-    "Waiver Rationale Summary": "Multiple analytical balances were found that meet SLTC s requirements, but there were no products manufactured domestically. The two  models found are sold by U.S. based companies; Mettler-Toledo, LLC and Sartorius Corporation, however, their products are manufactured in Switzerland and Germany, respectively.",
-    "Expected Maximum Duration of Requested Waiver": "Instant Delivery Only",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "617170d5435601e93cbce3ab",
+    "data": {
+      "requestStatus": "reviewed",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": {
+        "NAICS_Code": 333517,
+        "NAICS_Title": "Machine Tool Manufacturing"
+      },
+      "psc": {
+        "pscId": 5640,
+        "pscCode": "Z1FE",
+        "pscName": "MAINTENANCE OF RELIGIOUS FACILITIES",
+        "activeInd": "Y",
+        "parentPscCode": "Z1",
+        "activeStartDate": "2011-10-01",
+        "updatedDate": "2017-08-03",
+        "level1Category": "4",
+        "level1CategoryName": "Facilities & Construction",
+        "level2Category": "4.4",
+        "level2CategoryName": "Facility Related Services",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=Z1FE"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdfas sadf asdf sadf a",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "no",
+      "waiverRationaleSummary": "asd fasdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between1And2Years",
+      "ombDetermination": "inconsistentWithPolicy"
+    },
+    "state": "submitted",
+    "created": "2021-10-21T13:53:25.461Z",
+    "modified": "2021-10-21T13:58:29.126Z"
   },
   {
-    "Procurement Title": "Pylon AB7 Monitor",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1650",
-    "Funding Agency Name": "Occupational Safety and Health Administration",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "334519",
-    "Product Service Code (PSC)": "5220",
-    "Summary of Procurement": "The OSHA SLTC Health Response Team (HRT) uses portable radiation monitors to support Compliance Safety and Health Officer (CSHO) inspections of worker exposures to airborne radon hazards in a variety of industries. OSHA SLTC requires one Pylon AB7 Portable Radiation Monitor system to replace its current radiation monitor (Pylon AB5) which has been in service for more than 20 years.",
-    "Waiver Rationale Summary": "The Pylon AB7 is the only portable radiation monitor that meets OSHA s requirement for evaluating airborne radon concentration in real-time. The Pylon AB7 is not produced in the U.S., and a formal market analysis revealed there is no comparable product produced in the U.S.",
-    "Expected Maximum Duration of Requested Waiver": "Instant Delivery Only",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "61707d6c42df72eefc8e0e6a",
+    "data": {
+      "requestStatus": "reviewed",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 111150, "NAICS_Title": "Corn Farming" },
+      "psc": {
+        "pscId": 11,
+        "pscCode": "1025",
+        "pscName": "GUNS, OVER 150MM THROUGH 200MM",
+        "pscFullName": "Guns, over 150 mm through 200 mm Includes Firing Platforms; Mounts; Gun Shields.",
+        "activeInd": "Y",
+        "parentPscCode": "10",
+        "activeStartDate": "2011-10-01",
+        "updatedDate": "2017-08-03",
+        "level1Category": "12",
+        "level1CategoryName": "Weapons & Ammunition",
+        "level2Category": "12.4",
+        "level2CategoryName": "Guns",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=1025"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdfasdf",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "TLz4w71gpMjVAnrGvVXEpoNlumO5yjM8yCYB2R0U+u5KWrHv2QZYQStK7pZt4rEu",
+      "waiverRationaleSummary": "asdfasfd  asdfas ",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between1And2Years",
+      "ombDetermination": "inconsistentWithPolicy"
+    },
+    "state": "submitted",
+    "created": "2021-10-20T20:34:52.134Z",
+    "modified": "2021-10-20T20:37:11.172Z"
   },
   {
-    "Procurement Title": "Powered Air Purifying Respirator (PAPR) and HEPA filter.",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1650",
-    "Funding Agency Name": "Occupational Safety and Health Administration",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "334519",
-    "Product Service Code (PSC)": "6636",
-    "Summary of Procurement": "This is a request to purchase Powered Air Purifying Respirator (PAPR) and HEPA filter.",
-    "Waiver Rationale Summary": "Powered Air Purifying Respoirator (PAPR) and HEPA filter were found that meet CTC's requirements, but there were no products manufactured domestically. The proposed models are manufactured by 3M, a U.S. based company, however, their products are manufactured in Poland and Canada, respectively.",
-    "Expected Maximum Duration of Requested Waiver": "Instant Delivery Only",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "616f499942df72eefc8d8726",
+    "data": {
+      "requestStatus": "reviewed",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 111140, "NAICS_Title": "Wheat Farming" },
+      "psc": {
+        "pscId": 103,
+        "pscCode": "1367",
+        "pscName": "TACTICAL SETS, KITS, AND OUTFITS",
+        "pscFullName": "A collection of items, which are used for a specific purpose.",
+        "pscInclude": "Each collection must include at least one item of ordnance classified in Group 13. Ordnance may be non-lethal (as defined in the Department of Defense Directive 3000.3)",
+        "activeInd": "Y",
+        "pscNote": "These sets,kits and outfits may include such items as uniforms, weapons, body armor, and the like. By themselves, each of these components belongs in an FSC other than 1367.",
+        "parentPscCode": "13",
+        "activeStartDate": "2005-05-01",
+        "updatedDate": "2017-08-03",
+        "level1Category": "12",
+        "level1CategoryName": "Weapons & Ammunition",
+        "level2Category": "12.1",
+        "level2CategoryName": "Ammunition & Explosives",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=1367"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdfasdfasasdf asd as asdf asd as as fasf ",
+      "sourcesSoughtOrRfiIssued": "no",
+      "isPricePreferenceIncluded": "no",
+      "waiverRationaleSummary": " asd fas asdf ",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between3And5Years",
+      "ombDetermination": "inconsistentWithPolicy"
+    },
+    "state": "submitted",
+    "created": "2021-10-19T22:41:29.833Z",
+    "modified": "2021-10-19T22:43:18.065Z"
   },
   {
-    "Procurement Title": "Procurement of Fourier Transformation Infrared (FTIR) Spectroscopy Analyzer",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1650",
-    "Funding Agency Name": "Occupational Safety an Health Administration",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "334513",
-    "Product Service Code (PSC)": "6630",
-    "Summary of Procurement": "This procurement is for Fourier Transformation Infrared (FTIR) Spectroscopy, in support of Occupational Safety and Health Administration (OSHA), used for inspections in response to identifying unknown chemical hazards.",
-    "Waiver Rationale Summary": "The FTIR is a unique piece of equipment.  While there are other types of this instrument produced, they cannot perform the same functuon across multiple analyses or in variable atmospheric conditions meanint they are unable to detect a wide variety of gases and vapors simultaneously.",
-    "Expected Maximum Duration of Requested Waiver": "Instant Delivery Only",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "616f485842df72eefc8d8665",
+    "data": {
+      "requestStatus": "submitted",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 111160, "NAICS_Title": "Rice Farming" },
+      "psc": {
+        "pscId": 752,
+        "pscCode": "6505",
+        "pscName": "DRUGS AND BIOLOGICALS",
+        "pscFullName": "Drugs and Biologicals",
+        "pscInclude": "All drugs, medicinal grade chemicals, and biologicals subject to the Federal Food, Drug and Cosmetic Act, Department of Agriculture (Veterinary Drugs and Biologicals), listed in the Monograph Section of the U.S. Pharmacopeia or the National Formulary or covered by the United States Adopted Names (USAN).",
+        "activeInd": "Y",
+        "pscExclude": "Medicated cosmetics and toiletries classifiable in FSC 6508 and in vitro diagnostic substances and reagents classifiable in FSC 6550.",
+        "parentPscCode": "65",
+        "activeStartDate": "1978-10-15",
+        "updatedDate": "2017-08-03",
+        "level1Category": "10",
+        "level1CategoryName": "Medical",
+        "level2Category": "10.1",
+        "level2CategoryName": "Drugs and Pharmaceutical Products",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=6505"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "summary of procurement this is a summary the quick brown fox jumped over the lazy dog.  ",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "no",
+      "waiverRationaleSummary": "rationaleasdf asdf asdfasdf asdf as asfd aasdf as dfasdf asdf asdf asdfas asdf asd as",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between2And3Years",
+      "ombDetermination": ""
+    },
+    "state": "submitted",
+    "created": "2021-10-19T22:36:08.648Z",
+    "modified": "2021-10-19T22:36:08.649Z"
   },
   {
-    "Procurement Title": "Brand Name Kensington BlackBelt Rugged Cases for Surface Pro with a common access card (CAC) Reader",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1625",
-    "Funding Agency Name": "Bureau of Labor Statistics",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "334118",
-    "Product Service Code (PSC)": "7520",
-    "Summary of Procurement": "The Bureau of Labor Statistics (BLS) Division of Technology and Network Management (DTNM) needs to procure Kensington BlackBelt Rugged Cases for Surface Pro with a CAC Reader to replace cases for tablets that are used in the field.",
-    "Waiver Rationale Summary": "Extensive market research has been conducted by reviewing available products within the General Services Administration (GSA), Multiple Award Schedule (MAS), National Aeronautics and Space Administration (NASA) Scientific and Engineering Workstation Procurement (SEWP), and Government-wide Acquisition Contract (GWAC). There are only two Microsoft Surface Pro cases on the market that can meet the Consumer Price Index (CPI) Office of Field Operations (OFO) requirements: the Kensington BlackBelt Rugged Case and the Griffin Survivor Security Case. Per GSA Advantage, neither of these cases are manufactured within the United States as both cases originate in Taiwan.",
-    "Expected Maximum Duration of Requested Waiver": "0 - 6 Months",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "61687ca265d176369ba59139",
+    "data": {
+      "requestStatus": "reviewed",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": {
+        "NAICS_Code": 323113,
+        "NAICS_Title": "Commercial Screen Printing"
+      },
+      "psc": {
+        "pscId": 819,
+        "pscCode": "6820",
+        "pscName": "DYES",
+        "pscFullName": "Dyes",
+        "pscInclude": "Household Tints",
+        "activeInd": "Y",
+        "parentPscCode": "68",
+        "activeStartDate": "1978-11-15",
+        "updatedDate": "2017-08-03",
+        "level1Category": "5",
+        "level1CategoryName": "Industrial Products & Services",
+        "level2Category": "5.6",
+        "level2CategoryName": "Basic Materials",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=6820"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdfasdf",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "yes",
+      "waiverRationaleSummary": "asdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between1And2Years",
+      "ombDetermination": "consistentWithPolicy"
+    },
+    "state": "submitted",
+    "created": "2021-10-14T18:53:22.746Z",
+    "modified": "2021-10-19T17:32:26.762Z"
   },
   {
-    "Procurement Title": "Procurement of Fluke Laser Distance Meters",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "1605",
-    "Contracting Office Agency Name": "Office of the Assistant Secretary for Administration and Management",
-    "Funding Agency ID": "1650",
-    "Funding Agency Name": "Occupational Safety an Health Administration",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "334519",
-    "Product Service Code (PSC)": "6640",
-    "Summary of Procurement": "The OSHA Cincinnati Technical Center (CTC) has identified a requirement for (52) Fluke 424D laser distance meters for OSHA field office enforcement inspections.",
-    "Waiver Rationale Summary": "Multiple distance meters are available however, none of these meet the CTC requirements. OSHA has equiment of this make and model throughout the agency. The agency possess institutional knowledge, training and experience to service the equipment on the agency's behalf, without incurring additional costs.",
-    "Expected Maximum Duration of Requested Waiver": "Instant Delivery Only",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "6168769765d176369ba58ce6",
+    "data": {
+      "requestStatus": "reviewed",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 111160, "NAICS_Title": "Rice Farming" },
+      "psc": {
+        "pscId": 114,
+        "pscCode": "1390",
+        "pscName": "FUZES AND PRIMERS",
+        "pscFullName": "Fuzes and Primers",
+        "pscInclude": "Fuzes and Primers for ammunition not classified in classes 1310, 1315, and 1320.",
+        "activeInd": "Y",
+        "pscExclude": "Fuzes and Primers for ammunition not classified in classes 1310, 1315, and 1320.",
+        "pscNote": "This class includes only fuzes and primers for use in ammunition classified in classes 1310, 1315, and 1320.",
+        "parentPscCode": "13",
+        "activeStartDate": "1978-10-15",
+        "updatedDate": "2017-08-03",
+        "level1Category": "12",
+        "level1CategoryName": "Weapons & Ammunition",
+        "level2Category": "12.1",
+        "level2CategoryName": "Ammunition & Explosives",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=1390"
+          }
+        ]
+      },
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdf",
+      "sourcesSoughtOrRfiIssued": "no",
+      "isPricePreferenceIncluded": "yes",
+      "waiverRationaleSummary": "asdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between2And3Years",
+      "ombDetermination": "conditionallyConsistentWithPolicy",
+      "conditionsApplicableToConsistencyDetermination": "Condition 1\nCondition 2"
+    },
+    "state": "submitted",
+    "created": "2021-10-14T18:27:35.677Z",
+    "modified": "2021-10-15T18:45:48.423Z"
   },
   {
-    "Procurement Title": "IDC under SAT, repair part",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "DLA Land and Maritime",
-    "Contracting Office Agency Name": "Defense Logistics Agency - Land and Maritime",
-    "Funding Agency ID": "DLA L&M",
-    "Funding Agency Name": "DLA Land and Maritime",
-    "Procurement Stage": "Post-Solicitation",
-    "North American Industry Classification System (NAICS)": "NA",
-    "Product Service Code (PSC)": "5985",
-    "Summary of Procurement": "This item is code and Part Number (PN) with only 2 approved/technically acceptable sources (cage 4H538 and 06090).  All offeors quoted CAGE 06090 which imports materials from Mexico.",
-    "Waiver Rationale Summary": "All offerors responding to this competitive solicitation quoated a PN that is considered a part out of Mexico.   There are no other alternatives.",
-    "Expected Maximum Duration of Requested Waiver": "Between 6 Months and 1 Year",
-    "Was a sources sought or Request for Information issued?": "No",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
+    "_id": "6168802b65d176369ba59413",
+    "data": {
+      "requestStatus": "submitted",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": {
+        "NAICS_Code": 484110,
+        "NAICS_Title": "General Freight Trucking, Local "
+      },
+      "psc": {
+        "pscId": 301,
+        "pscCode": "30",
+        "pscName": "MECHANICAL POWER TRANSMISSION EQPT",
+        "activeInd": "Y",
+        "activeStartDate": "1979-10-01",
+        "updatedDate": "2017-08-03",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=30"
+          }
+        ]
+      },
+      "procurementStage": "preSolicitation",
+      "summaryOfProcurement": "asdf",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "yes",
+      "waiverRationaleSummary": "asdfasdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between3And5Years",
+      "ombDetermination": ""
+    },
+    "state": "submitted",
+    "created": "2021-10-14T19:08:27.912Z",
+    "modified": "2021-10-14T19:08:27.913Z"
   },
   {
-    "Procurement Title": "Rayon",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "DLA DCSO",
-    "Contracting Office Agency Name": "Defense Logistics Agency - Contract Service Office",
-    "Funding Agency ID": "DLA SM",
-    "Funding Agency Name": "DLA Strategic Materials",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "325220",
-    "Product Service Code (PSC)": "9420",
-    "Summary of Procurement": "ENKA 300/60 AS Select rayon",
-    "Waiver Rationale Summary": "",
-    "Expected Maximum Duration of Requested Waiver": "",
-    "Was a sources sought or Request for Information issued?": "",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "No"
+    "_id": "61687432ad885019072b4ae9",
+    "data": {
+      "requestStatus": "submitted",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": { "NAICS_Code": 713950, "NAICS_Title": "Bowling Centers" },
+      "psc": {
+        "pscId": 339,
+        "pscCode": "3431",
+        "pscName": "ELECTRIC ARC WELDING EQUIPMENT",
+        "pscFullName": "Electric Arc Welding Equipment",
+        "pscInclude": "Gas Shielded Arc Welding Machines; Arc Bonding Machines; Semi-Automatic and Automatic Arc Welding Machines.",
+        "activeInd": "Y",
+        "pscExclude": "Welding Supplies, and Associated Equipment such as: Flux Recovery Machines; Flux Dispensers; Tacker Panels; Welding Panels.",
+        "parentPscCode": "34",
+        "activeStartDate": "1978-10-15",
+        "updatedDate": "2017-08-03",
+        "level1Category": "5",
+        "level1CategoryName": "Industrial Products & Services",
+        "level2Category": "5.1",
+        "level2CategoryName": "Machinery & Components",
+        "links": [
+          {
+            "rel": "self",
+            "href": "https://api.sam.gov/prod/locationservices/v1/api/publicpscdetails?searchby=psc&q=3431"
+          }
+        ]
+      },
+      "procurementStage": "preSolicitation",
+      "summaryOfProcurement": "asdf",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "yes",
+      "waiverRationaleSummary": "asdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between6MonthsAnd1Year",
+      "ombDetermination": ""
+    },
+    "state": "submitted",
+    "created": "2021-10-14T18:17:22.171Z",
+    "modified": "2021-10-14T18:17:22.173Z"
   },
   {
-    "Procurement Title": "TACTICAL PANTS FOR TSA FEDERAL AIR MARSHALS",
-    "Waiver Coverage": "Multi-Procurement Waiver",
-    "Contracting Office Agency ID": "7013",
-    "Contracting Office Agency Name": "Transportation Security Administration",
-    "Funding Agency ID": "7013",
-    "Funding Agency Name": "Transportation Security Administration",
-    "Procurement Stage": "Post-Solicitation",
-    "North American Industry Classification System (NAICS)": "424320",
-    "Product Service Code (PSC)": "8405",
-    "Summary of Procurement": "DELIVERY ORDER FOR UNIFORM ITEMS, I.E., TACTICAL PANTS FOR TSA FEDERAL AIR MARSHALS",
-    "Waiver Rationale Summary": "",
-    "Expected Maximum Duration of Requested Waiver": "",
-    "Was a sources sought or Request for Information issued?": "",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "Yes"
-  },
-  {
-    "Procurement Title": "Cerium Carbonate Powder",
-    "Waiver Coverage": "Individual Waiver",
-    "Contracting Office Agency ID": "DLA-DCSO",
-    "Contracting Office Agency Name": "Defense Logistics Agency - Contract Services Office",
-    "Funding Agency ID": "DLA-SM",
-    "Funding Agency Name": "DLA Strategic Materials",
-    "Procurement Stage": "Pre-Solicitation",
-    "North American Industry Classification System (NAICS)": "325180",
-    "Product Service Code (PSC)": "9620",
-    "Summary of Procurement": "The DLA Contracting Services Office - Fort Belvoir (DCSO-F2), proposes to purchase1,662 metric tons (MT) of Cerium Carbonate Powder. The estimated annual delivery schedule of 416 MT is valued at $2,220,854.00. The total estimated value is approximately\n$8,883,416.00 over a period of 48-months (one base and 3 option periods of 12\nmonths each).  The reason for requesting the waiver is that Cerium Carbonate meets the definition of a material which is not\nmined, produced, or manufactured in the United States in sufficient and reasonably\navailable commercial quantities and of a satisfactory quality.",
-    "Waiver Rationale Summary": "",
-    "Expected Maximum Duration of Requested Waiver": "",
-    "Was a sources sought or Request for Information issued?": "",
-    "Did / Will the solicitation include one of the standard BAA provisions (e.g., 52-225-1, Buy American- Supplies, 52.225 9, Buy American Construction Materials) announcing the agency s intention to provide a price preference for domestic end products and construction material?": "No"
+    "_id": "6168414dad885019072b32ef",
+    "data": {
+      "requestStatus": "submitted",
+      "contractingOfficeAgencyId": "97CG",
+      "contractingOfficeAgencyName": "DEPT OF DEFENSE",
+      "fundingAgencyId": "97CG",
+      "fundingAgencyName": "DEPT OF DEFENSE",
+      "naics": "naics",
+      "psc": "psc",
+      "procurementStage": "postSolicitation",
+      "summaryOfProcurement": "asdfasdfasdfasdf",
+      "sourcesSoughtOrRfiIssued": "yes",
+      "isPricePreferenceIncluded": "yes",
+      "waiverRationaleSummary": "asdf",
+      "expectedMaximumDurationOfTheRequestedWaiver": "between2And3Years",
+      "ombDetermination": ""
+    },
+    "state": "submitted",
+    "created": "2021-10-14T14:40:13.153Z",
+    "modified": "2021-10-14T14:40:13.154Z"
   }
 ]

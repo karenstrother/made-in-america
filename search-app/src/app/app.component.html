@@ -1,16 +1,17 @@
 <div class="grid-container padding-0 margin-bottom-3">
   <div class="grid-row flex-align-end" style="justify-content: space-between">
     <ng-content></ng-content>
-    <usa-search
-      [size]="'small'"
-      placeholder="Search Waivers"
-      class="flex-align-end"
-      (searchTextChange)="onSearchChange($event)"
-    ></usa-search>
     <uswds-dropdown
       [id]="'dropdown1'"
+      [label]="'Filter By'"
+      [options]="dropdownOptions1"
+      (optionChange)="onFilterChange($event)"
+    >
+    </uswds-dropdown>
+    <uswds-dropdown
+      [id]="'dropdown2'"
       [label]="'Sort By'"
-      [options]="dropdownOptions"
+      [options]="dropdownOptions2"
       (optionChange)="onSortChange($event)"
     >
     </uswds-dropdown>
@@ -18,5 +19,5 @@
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
   <search-result *ngFor="let val of data"></search-result>
-  <usa-pagination [current]='current' [last]='last'></usa-pagination>
+  <usa-pagination [current]="current" [last]="last"></usa-pagination>
 </div>
