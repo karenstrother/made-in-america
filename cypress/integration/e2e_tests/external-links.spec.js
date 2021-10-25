@@ -2,7 +2,6 @@
 let urls = [];
 before(() => {
   cy.request({
-    // url: "localhost:4000/sitemap.xml",
     url:'http://localhost:4000/sitemap.xml',
     headers: {
       "Content-Type": "text/xml; charset=utf-8",
@@ -18,8 +17,8 @@ before(() => {
         .map((el) => el.innerText);
     });
 });
-describe('check anchor links', () => {
-  it("check anchor links", () => {
+describe('check external links', () => {
+  it("check external links", () => {
     // CY goes to each URL in the arry from site map 
     // checks to make sure that each anchor link is working
     urls.forEach((url) => {

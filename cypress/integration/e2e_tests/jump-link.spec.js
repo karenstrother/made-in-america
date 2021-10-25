@@ -3,7 +3,7 @@
     before(('visit homepage', () => {
       cy.visit('http://localhost:4000')
     }))
-    it('check link', () => {
+    it('check anchor link', () => {
       cy.get('[href="/#gov-business"]').click({force: true})
       cy.url().should('include', '#gov-business')
     })
