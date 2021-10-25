@@ -6,7 +6,7 @@
       cy.visit('localhost:4000')
         .then(() => {
           cy.document()
-            .toMatchImageSnapshot({ clip: { x: 0, y: 0, width: 1280, height: 720 } });
+            .toMatchImageSnapshot({ clip: { x: 0, y: 0, width: 100, height: 100 } });
         });
     });
   });
