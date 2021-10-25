@@ -23,6 +23,8 @@
         class="usa-pagination__button"
         aria-label="Page 1"
         [ngClass]="{ 'usa-current': current === 1 }"
+        [attr.aria-current]="current === 1 ? 'page' : null"
+
         (click)="goTo(1)"
       >
         1
@@ -67,6 +69,8 @@
         class="usa-pagination__button"
         aria-label="Last page, page 24"
         [ngClass]="{ 'usa-current': current === last }"
+        [attr.aria-current]="current === last ? 'page' : null"
+
         (click)="goTo(last)"
       >
         {{ last }}
