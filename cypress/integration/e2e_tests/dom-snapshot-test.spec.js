@@ -1,7 +1,4 @@
   /// <reference types="Cypress" />
-
-// const { groupBy } = require("cypress/types/lodash");
-
   let urls = [];
   before(() => {
     cy.request({
@@ -25,7 +22,7 @@
       urls.forEach((url) => {
         cy.visit(url).then(() => {
           cy.get('main')
-          .toMatchSnapshot({ignoreExtraFields: true,})
+          .toMatchSnapshot({ignoreExtraFields: true})
         })
       })
     })

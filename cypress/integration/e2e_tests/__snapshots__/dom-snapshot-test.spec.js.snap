@@ -318,6 +318,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="2840"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -454,6 +455,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="6670"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -595,6 +597,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="5220"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -739,6 +742,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="6636"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -880,6 +884,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="6630"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1023,6 +1028,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="7520"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1171,6 +1177,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="6640"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1311,6 +1318,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="5985"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1448,6 +1456,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="9420"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1577,6 +1586,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="8405"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
@@ -1709,6 +1719,7 @@ exports[`dom snapshot > toMatchSnapshot #7`] = `
     <div
       id="9620"
       class="usa-accordion__content usa-prose border border-base-lighter radius-sm"
+      hidden=""
     >
       <div
         class="usa-prose padding-x-4 text-base-darker font-sans-sm margin-bottom-2"
