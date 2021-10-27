@@ -2,6 +2,7 @@
   "name": "federalist-uswds-jekyll",
   "version": "1.3.0",
   "scripts": {
+    "image": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
     "test": "npm run cy:run",
     "test-local": "npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
     "cy:open": "cypress open",
