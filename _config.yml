@@ -91,6 +91,8 @@ footer_navigation:
     children:
       - name: About This Site
         url: /about/
+      - name: Urgent Waivers
+        url: about/urgent-waivers
   - name: Policies
     children:
       - name: Accessibility
