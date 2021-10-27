@@ -92,7 +92,7 @@ footer_navigation:
       - name: About This Site
         url: /about/
       - name: Urgent Waivers
-        url: about/urgent-waivers
+        url: /about/urgent-waivers/
   - name: Policies
     children:
       - name: Accessibility

@@ -1,5 +1,5 @@
 ---
-permalink: /about/urgent-waivers
+permalink: /about/urgent-waivers/
 layout: page
 title: Urgent Waivers
 sidenav: true
