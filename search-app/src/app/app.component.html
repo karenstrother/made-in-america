@@ -8,7 +8,7 @@
     </div>
     <uswds-dropdown
       [id]="'dropdown1'"
-      [label]="'Filter By'"
+      [label]="'Filter By Status'"
       [options]="dropdownOptions1"
       (optionChange)="onFilterChange($event)"
     >
@@ -23,6 +23,6 @@
   </div>
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
-  <search-result *ngFor="let val of data"></search-result>
+  <search-result *ngFor="let val of data" [data]='data'></search-result>
   <usa-pagination [current]="current" [last]="last"></usa-pagination>
 </div>

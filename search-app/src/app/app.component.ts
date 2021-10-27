@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   sort = 'value1';
   dropdownOptions1 = [
     {
-      label: '-',
+      label: 'All',
       value: null,
     },
     {
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
   ];
   selectedOption = '';
   current = 1;
-  last = 100;
+  last = 3;
 
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
@@ -65,7 +65,12 @@ export class AppComponent implements OnInit {
     //     this.last = data.length / 20
     // };
 
-    this.data = [{}, {}, {}];
+    this.data = [
+        {id: 1}, {id: 2}, {id: 3},
+        {id: 4}, {id: 5}, {id: 6},
+        {id: 7}, {id: 8}, {id: 9},
+        {id: 10}, {id: 11}, {id: 12},
+    ];
   }
 
   onSortChange($event) {

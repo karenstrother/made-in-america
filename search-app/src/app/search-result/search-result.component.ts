@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'search-result',
   templateUrl: './search-result.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class SearchResultComponent implements OnInit {
+  @Input() data: number;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
