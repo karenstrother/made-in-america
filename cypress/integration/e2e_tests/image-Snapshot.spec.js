@@ -2,13 +2,23 @@
   
   describe('image snapshot', () => {
     // take a screen shot of the home page and compare it to what is documented 
-     it('toMatchImageSnapshot - home page', () => {
+     it('homepage should render on desktop', () => {   
+      cy.viewport(1080, 1200)
       cy.visit('localhost:4000')
         .then(() => {
           cy.document()
-            .toMatchImageSnapshot({ clip: {width: 1000, height: 4890 } });
+            .toMatchImageSnapshot({ "name": "homepage-desktop"});
+        });
+    });
+
+    it('homepage should render on mobile', () => {   
+      cy.viewport(320, 875)
+      cy.visit('localhost:4000')
+        .then(() => {
+          cy.document()
+            .toMatchImageSnapshot({ "name": "homepage-mobile"});
         });
     });
   });
 
-
+  
