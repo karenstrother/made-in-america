@@ -50,8 +50,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
-    this.displayedData = this.data;
-    this.last = Math.round(this.displayedData.length / 10);
+    this.displayedData = this.data.slice(0, 10);
+    this.last = Math.round(this.data.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
 
@@ -74,6 +74,7 @@ export class AppComponent implements OnInit {
   onSortChange($event) {
     this.sort = $event;
   }
+
   onFilterChange($event) {
     const filterValue = $event.value;
 
@@ -83,5 +84,9 @@ export class AppComponent implements OnInit {
         : this.data.filter((d) => d.data.requestStatus === filterValue);
 
     this.last = Math.round(this.displayedData.length / 10);
+  }
+  movePage(index) {
+    const waiverIndex = (index - 1) * 10;
+    this.displayedData = this.data.slice(waiverIndex, waiverIndex + 10);
   }
 }

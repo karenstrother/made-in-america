@@ -28,5 +28,6 @@
     [current]="current"
     [last]="last"
     *ngIf="last > 1"
+    (movePage)="movePage($event)"
   ></usa-pagination>
 </div>

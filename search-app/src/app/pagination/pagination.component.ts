@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'usa-pagination',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PaginationComponent implements OnInit {
   @Input() current: number;
   @Input() last: number;
+  @Output() movePage = new EventEmitter<boolean>();
   renderedButtons: number[];
 
   constructor() {}
@@ -28,5 +29,6 @@ export class PaginationComponent implements OnInit {
     } else {
       this.renderedButtons = [this.current - 1, this.current, this.current + 1];
     }
+    this.movePage.emit(index)
   }
 }
