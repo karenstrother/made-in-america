@@ -51,6 +51,7 @@ export class AppComponent implements OnInit {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
     this.displayedData = this.data;
+    this.last = Math.round(this.displayedData.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
 
@@ -75,13 +76,12 @@ export class AppComponent implements OnInit {
   }
   onFilterChange($event) {
     const filterValue = $event.value;
-    if (filterValue === 'all') {
-      this.displayedData = this.data;
-      return;
-    }
 
-    this.displayedData = this.data.filter(
-      (d) => d.data.requestStatus === filterValue
-    );
+    this.displayedData =
+      filterValue === 'all'
+        ? this.data
+        : this.data.filter((d) => d.data.requestStatus === filterValue);
+
+    this.last = Math.round(this.displayedData.length / 10);
   }
 }

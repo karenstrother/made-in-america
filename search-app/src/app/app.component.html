@@ -23,6 +23,10 @@
   </div>
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
-  <search-result *ngFor="let val of displayedData" [data]='val'></search-result>
-  <usa-pagination [current]="current" [last]="last"></usa-pagination>
+  <search-result *ngFor="let val of displayedData" [data]="val"></search-result>
+  <usa-pagination
+    [current]="current"
+    [last]="last"
+    *ngIf="last > 1"
+  ></usa-pagination>
 </div>

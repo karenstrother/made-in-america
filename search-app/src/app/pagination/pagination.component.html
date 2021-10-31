@@ -24,7 +24,6 @@
         aria-label="Page 1"
         [ngClass]="{ 'usa-current': current === 1 }"
         [attr.aria-current]="current === 1 ? 'page' : null"
-
         (click)="goTo(1)"
       >
         1
@@ -35,6 +34,7 @@
       class="usa-pagination__item usa-pagination__overflow"
       role="presentation"
       [ngClass]="{ 'display-none': current <= 3 }"
+      *ngIf="last > 4"
     >
       <span> … </span>
     </li>
@@ -59,6 +59,7 @@
       class="usa-pagination__item usa-pagination__overflow"
       role="presentation"
       [ngClass]="{ 'display-none': current >= last - 2 }"
+      *ngIf="last > 4"
     >
       <span> … </span>
     </li>
@@ -70,7 +71,6 @@
         aria-label="Last page, page 24"
         [ngClass]="{ 'usa-current': current === last }"
         [attr.aria-current]="current === last ? 'page' : null"
-
         (click)="goTo(last)"
       >
         {{ last }}
