@@ -4,9 +4,6 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [],
-    // TODO: Remove next 2 lines after moving to data by request 
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"]
