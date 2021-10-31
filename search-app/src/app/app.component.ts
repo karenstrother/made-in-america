@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
 import { HttpClient } from '@angular/common/http';
+import testData from '../data.json';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +10,25 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'usa-components';
   data = [];
+  displayedData = [];
   filter = null;
   sort = 'value1';
-  dropdownOptions1 = [
+  filterOptions = [
     {
       label: 'All',
-      value: null,
+      value: 'all',
     },
     {
       label: 'Submitted',
-      value: 'value1',
+      value: 'submitted',
     },
     {
       label: 'Reviewed',
-      value: 'value1',
+      value: 'reviewed',
     },
   ];
 
-  dropdownOptions2 = [
+  sortOptions = [
     {
       label: 'Most Recent',
       value: 'value1',
@@ -47,6 +49,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
+    this.data = testData;
+    this.displayedData = this.data;
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
 
@@ -64,19 +68,20 @@ export class AppComponent implements OnInit {
     //     this.data = data;
     //     this.last = data.length / 20
     // };
-
-    this.data = [
-        {id: 1}, {id: 2}, {id: 3},
-        {id: 4}, {id: 5}, {id: 6},
-        {id: 7}, {id: 8}, {id: 9},
-        {id: 10}, {id: 11}, {id: 12},
-    ];
   }
 
   onSortChange($event) {
     this.sort = $event;
   }
   onFilterChange($event) {
-    this.filter = $event;
+    const filterValue = $event.value;
+    if (filterValue === 'all') {
+      this.displayedData = this.data;
+      return;
+    }
+
+    this.displayedData = this.data.filter(
+      (d) => d.data.requestStatus === filterValue
+    );
   }
 }

@@ -7,22 +7,22 @@
       </p>
     </div>
     <uswds-dropdown
-      [id]="'dropdown1'"
+      [id]="'filtering'"
       [label]="'Filter By Status'"
-      [options]="dropdownOptions1"
+      [options]="filterOptions"
       (optionChange)="onFilterChange($event)"
     >
     </uswds-dropdown>
     <uswds-dropdown
-      [id]="'dropdown2'"
+      [id]="'sorting'"
       [label]="'Sort By'"
-      [options]="dropdownOptions2"
+      [options]="sortOptions"
       (optionChange)="onSortChange($event)"
     >
     </uswds-dropdown>
   </div>
 </div>
 <div class="grid-container padding-0 margin-bottom-3">
-  <search-result *ngFor="let val of data" [data]='data'></search-result>
+  <search-result *ngFor="let val of displayedData" [data]='val'></search-result>
   <usa-pagination [current]="current" [last]="last"></usa-pagination>
 </div>

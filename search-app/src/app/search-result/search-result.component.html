@@ -1,5 +1,5 @@
 <div class="margin-top-1">
-  <usa-accordion [headerLevel]="2" bordered="true" activeIds='data.id'>
+  <usa-accordion [headerLevel]="2" bordered="true" activeIds="data.id">
     <usa-accordion-item>
       <ng-template UsaAccordionHeader>
         <div class="grid-row flex-row">
@@ -28,35 +28,81 @@
             margin-bottom-2
           "
         >
-          <div class="margin-0 font-sans-lg text-bold">
-            Summary of Procurement
-          </div>
-
           <div
             class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
             style="justify-content: space-between"
           >
             <div class="tablet:grid-col-6 tablet:padding-right-4">
               <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Contracting Office Agency ID
+                <div class="margin-0 font-sans-lg text-bold">TITLE</div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.summaryOfProcurement }}
+                </p>
+              </div>
+
+              <div
+                class="margin-bottom-2"
+                style="
+                  display: 'flex';
+                  flex-direction: 'row';
+                  justify-content: space-between;
+                "
+              >
+                <div>
+                  <div class="margin-0 font-sans-xs text-bold">
+                    Sollicitation ID
+                  </div>
+                  <p class="margin-0 font-sans-xs"></p>
+                </div>
+                <div>
+                  <div class="margin-0 font-sans-xs text-bold">
+                    Procurement Stage
+                  </div>
+                  <p class="margin-0 font-sans-xs">
+                    {{ data.data.procurementStage }}
+                  </p>
+                </div>
+                <div>
+                  <div class="margin-0 font-sans-xs text-bold">
+                    OMD Determination
+                  </div>
+                  <p class="margin-0 font-sans-xs">
+                    {{ data.data.ombDetermination }}
+                  </p>
                 </div>
               </div>
+
+              <div
+                class="margin-bottom-2"
+                *ngIf="
+                  data.data.ombDetermination ===
+                  'conditionallyConsistentWithPolicy'
+                "
+              >
+                <div class="margin-0 font-sans-xs text-bold">
+                  Conditions Applicable to Consistency Determination
+                </div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.conditionsApplicableToConsistencyDetermination }}
+                </p>
+              </div>
+
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">
-                  Funding Agency ID
+                  Expected Maximum Duration of the Requested Waiver
                 </div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.expectedMaximumDurationOfTheRequestedWaiver }}
+                </p>
               </div>
+
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">
-                  Procurement Stage
+                  Waiver Coverage
                 </div>
+                <p class="margin-0 font-sans-xs"></p>
               </div>
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  North American Industry Classification System (NAICS)
-                </div>
-              </div>
+
               <div class="margin-bottom-2 margin-right-2">
                 <div class="margin-0 font-sans-xs text-bold">
                   Did / Will the solicitation include one of the standard BAA
@@ -70,36 +116,60 @@
             <!-- end col 1 -->
             <div class="tablet:grid-col-6">
               <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Contracting Office Agency Name
-                </div>
-                <p class="margin-0 font-sans-xs"></p>
+                <div class="margin-0 font-sans-xs text-bold">Industry</div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.naics.NAICS_Title }} ({{
+                    data.data.naics.NAICS_Code
+                  }})
+                </p>
               </div>
               <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Funding Agency Name
-                </div>
-                <p class="margin-0 font-sans-xs"></p>
+                <div class="margin-0 font-sans-xs text-bold">Product</div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.psc.pscFullName }} ({{ data.data.psc.pscCode }})
+                </p>
               </div>
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Expected Maximum Duration of the Requested Waiver
+
+              <div
+                class="margin-bottom-2"
+                style="
+                  display: 'flex';
+                  flex-direction: 'row';
+                  justify-content: space-between;
+                "
+              >
+                <div style="display: 'flex'; flex-direction: 'row'">
+                  <div class="margin-0 font-sans-xs text-bold">
+                    Contracting Department
+                  </div>
+                  <p class="margin-0 font-sans-xs">
+                    {{ data.data.contractingOfficeAgencyId }}
+                  </p>
+                </div>
+                <div style="display: 'flex'; flex-direction: 'row'">
+                  <div class="margin-0 font-sans-xs text-bold">
+                    Funding Agency
+                  </div>
+                  <p class="margin-0 font-sans-xs">
+                    {{ data.data.fundingAgencyId }}
+                  </p>
                 </div>
               </div>
+
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">
                   Was a sources sought or Request for Information issued?
                 </div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.sourcesSoughtOrRfiIssued }}
+                </p>
               </div>
+
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">
-                  Waiver Rationale Summary
+                  Did the contracting Agency compete this opportunity?
                 </div>
-              </div>
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Waiver Coverage
-                </div>
+                <p class="margin-0 font-sans-xs"></p>
               </div>
             </div>
           </div>
