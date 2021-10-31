@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "ng build --prod; mv ../_assets/js/app/main.js ../_assets/js/app/runtime.js ../_assets/js/app/polyfils.js -t ../_assets/js/",
+    "build": "ng build --prod; mv ../_assets/js/app/main.js ../_assets/js/app/runtime.js ../_assets/js/app/polyfills.js ../_assets/js/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
