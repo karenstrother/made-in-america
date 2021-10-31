@@ -19,7 +19,6 @@ import { UsaExpansionAnimations } from './accordion-animations';
     'class': 'usa-accordion',
     '[class.usa-accordion--bordered]': 'bordered',
     '[attr.aria-multiselectable]': 'singleSelect ? true : undefined',
-    'role': 'tablist',
   },
 })
 export class UsaAccordionComponent implements AfterContentChecked  {
