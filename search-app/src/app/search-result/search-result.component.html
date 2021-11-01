@@ -6,15 +6,28 @@
           <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p class="margin-0 text-normal">
-              <span class="text-base-light text-italic">Pending Title</span>
+              <span class="text-base-light text-italic">{{
+                data.data.procurementTitle !== ""
+                  ? data.data.procurementTitle
+                  : "Pending Title"
+              }}</span>
             </p>
           </div>
           <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Contracting Office Agency Name</b></p>
-            <p class="margin-0 text-normal"></p>
+            <p class="margin-0 text-normal">
+              <span class="text-base-light text-italic">{{
+                data.data.contractingOfficeAgencyName
+              }}</span>
+            </p>
           </div>
           <div class="desktop:grid-col-3 margin-y-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
+            <p class="margin-0 text-normal">
+              <span class="text-base-light text-italic">{{
+                data.data.psc.pscCode
+              }}</span>
+            </p>
           </div>
         </div>
       </ng-template>
@@ -34,7 +47,9 @@
           >
             <div class="tablet:grid-col-6 tablet:padding-right-4">
               <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-lg text-bold">TITLE</div>
+                <div class="margin-0 font-sans-lg text-bold">
+                  {{ data.data.procurementTitle }}
+                </div>
                 <p class="margin-0 font-sans-xs">
                   {{ data.data.summaryOfProcurement }}
                 </p>
@@ -52,7 +67,9 @@
                   <div class="margin-0 font-sans-xs text-bold">
                     Sollicitation ID
                   </div>
-                  <p class="margin-0 font-sans-xs"></p>
+                  <p class="margin-0 font-sans-xs">
+                    {{ data.data.solicitationId }}
+                  </p>
                 </div>
                 <div>
                   <div class="margin-0 font-sans-xs text-bold">
@@ -64,7 +81,7 @@
                 </div>
                 <div>
                   <div class="margin-0 font-sans-xs text-bold">
-                    OMD Determination
+                    OMB Determination
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{ data.data.ombDetermination }}
@@ -100,7 +117,9 @@
                 <div class="margin-0 font-sans-xs text-bold">
                   Waiver Coverage
                 </div>
-                <p class="margin-0 font-sans-xs"></p>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.waiverCoverage }}
+                </p>
               </div>
 
               <div class="margin-bottom-2 margin-right-2">
