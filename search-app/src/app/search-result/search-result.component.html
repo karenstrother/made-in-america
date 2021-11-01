@@ -3,7 +3,7 @@
     <usa-accordion-item>
       <ng-template UsaAccordionHeader>
         <div class="grid-row flex-row">
-          <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
+          <div class="desktop:grid-col-2 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p
               [ngClass]="
@@ -31,6 +31,12 @@
               {{ data.data.psc.pscCode }}
             </p>
           </div>
+          <div class="desktop:grid-col-2 margin-y-1">
+            <p class="margin-0"><b>Request Status</b></p>
+            <p class="margin-0 text-normal">
+              {{ data.data.requestStatus }}
+            </p>
+          </div>
         </div>
       </ng-template>
       <ng-template UsaAccordionContent>
@@ -43,20 +49,31 @@
             margin-bottom-2
           "
         >
+          <div class="margin-bottom-2">
+            <div
+              [ngClass]="
+                data.data.procurementTitle === ''
+                  ? 'margin-0 font-sans-lg text-bold text-base-light text-italic'
+                  : 'margin-0 font-sans-lg text-bold'
+              "
+            >
+              {{
+                data.data.procurementTitle != ""
+                  ? data.data.procurementTitle
+                  : "Pending Title"
+              }}
+              {{ data.data.procurementTitle }}
+            </div>
+            <p class="margin-0 font-sans-xs">
+              {{ data.data.summaryOfProcurement }}
+            </p>
+          </div>
+
           <div
             class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
             style="justify-content: space-between"
           >
             <div class="tablet:grid-col tablet:padding-right-4">
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-lg text-bold">
-                  {{ data.data.procurementTitle }}
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{ data.data.summaryOfProcurement }}
-                </p>
-              </div>
-
               <div
                 class="margin-bottom-2"
                 style="
@@ -132,6 +149,9 @@
                   intention to provide a price preference for domestic end
                   products and construction material?
                 </div>
+                <p class="margin-0 font-sans-xs">
+                  {{ data.data.isPricePreferenceIncluded }}
+                </p>
               </div>
             </div>
             <!-- end col 1 -->
@@ -159,20 +179,24 @@
                   justify-content: space-between;
                 "
               >
-                <div style="display: 'flex'; flex-direction: 'row'">
+                <div>
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Contracting Department
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.contractingOfficeAgencyId }}
+                    {{ data.data.contractingOfficeAgencyName }} ({{
+                      data.data.contractingOfficeAgencyId
+                    }})
                   </p>
                 </div>
-                <div style="display: 'flex'; flex-direction: 'row'">
+                <div>
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Funding Agency
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.fundingAgencyId }}
+                    {{ data.data.fundingAgencyName }} ({{
+                      data.data.fundingAgencyId
+                    }})
                   </p>
                 </div>
               </div>
