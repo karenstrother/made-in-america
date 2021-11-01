@@ -1,6 +1,6 @@
 <ng-template ngFor let-panel [ngForOf]="panels">
-    <div role="heading" id="{{panel.id}}-header" class="usa-accordion__heading" [attr.aria-level]="headerLevel">
-      <button class="usa-accordion__button"
+    <div role="heading" id="{{panel.id}}-header" class="usa-accordion__heading border border-base-lighter radius-sm" [attr.aria-level]="headerLevel">
+      <button class="usa-accordion__button bg-transparent"
         [UsaAccordionToggle]="panel"
         (keydown)="onKeyDown($event, panel)" 
         >
