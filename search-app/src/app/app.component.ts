@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
     this.displayedData = this.data.slice(0, 10);
-    this.last = Math.round(this.data.length / 10);
+    this.last = Math.ceil(this.data.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
 
