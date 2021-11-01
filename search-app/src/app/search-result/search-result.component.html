@@ -5,28 +5,30 @@
         <div class="grid-row flex-row">
           <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
-            <p class="margin-0 text-normal">
-              <span class="text-base-light text-italic">{{
-                data.data.procurementTitle !== ""
+            <p
+              [ngClass]="
+                data.data.procurementTitle === ''
+                  ? 'margin-0 text-base-light text-italic'
+                  : 'margin-0 text-normal'
+              "
+            >
+              {{
+                data.data.procurementTitle != ""
                   ? data.data.procurementTitle
                   : "Pending Title"
-              }}</span>
+              }}
             </p>
           </div>
           <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Contracting Office Agency Name</b></p>
             <p class="margin-0 text-normal">
-              <span class="text-base-light text-italic">{{
-                data.data.contractingOfficeAgencyName
-              }}</span>
+              {{ data.data.contractingOfficeAgencyName }}
             </p>
           </div>
           <div class="desktop:grid-col-3 margin-y-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
             <p class="margin-0 text-normal">
-              <span class="text-base-light text-italic">{{
-                data.data.psc.pscCode
-              }}</span>
+              {{ data.data.psc.pscCode }}
             </p>
           </div>
         </div>
@@ -45,7 +47,7 @@
             class="grid-row flex-row text-base-darker font-sans-sm margin-top-4"
             style="justify-content: space-between"
           >
-            <div class="tablet:grid-col-6 tablet:padding-right-4">
+            <div class="tablet:grid-col tablet:padding-right-4">
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-lg text-bold">
                   {{ data.data.procurementTitle }}
@@ -133,7 +135,7 @@
               </div>
             </div>
             <!-- end col 1 -->
-            <div class="tablet:grid-col-6">
+            <div class="tablet:grid-col">
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Industry</div>
                 <p class="margin-0 font-sans-xs">
