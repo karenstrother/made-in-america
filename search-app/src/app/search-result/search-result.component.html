@@ -84,15 +84,19 @@
                   justify-content: space-between;
                 "
               >
-                <div class="tablet:grid-col margin-bottom-2">
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Sollicitation ID
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ waiverData.data.solicitationId }}
+                    {{
+                        waiverData.data.solicitationId != ""
+                          ? waiverData.data.solicitationId
+                          : "N/A"
+                      }}
                   </p>
                 </div>
-                <div class="tablet:grid-col margin-bottom-2">
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Procurement Stage
                   </div>
@@ -104,7 +108,7 @@
                     }}
                   </p>
                 </div>
-                <div class="tablet:grid-col margin-bottom-2">
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     OMB Determination
                   </div>
@@ -208,7 +212,7 @@
                   justify-content: space-between;
                 "
               >
-                <div class="tablet:grid-col margin-bottom-2">
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Contracting Department
                   </div>
@@ -218,7 +222,7 @@
                     }})
                   </p>
                 </div>
-                <div class="tablet:grid-col margin-bottom-2">
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Funding Agency
                   </div>

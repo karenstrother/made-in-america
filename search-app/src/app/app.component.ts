@@ -72,9 +72,9 @@ export class AppComponent implements OnInit {
   }
 
   onSortChange($event) {
-    this.sort = $event;
+    this.sort = $event.value;
     this.displayedData =
-      $event === 'alphabetical'
+      $event.value === 'alphabetical'
         ? this.displayedData.sort((a, b) =>
             a.data.procurementTitle > b.data.procurementTitle
               ? 1
