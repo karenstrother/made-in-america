@@ -8,7 +8,7 @@
         <ng-template [ngTemplateOutlet]="panel.headerTpl?.templateRef"></ng-template>
       </button>
     </div>
-    <section #panelContent id="{{panel.id}}" class="usa-accordion__content overflow-hidden"
+    <section #panelContent id="{{panel.id}}" class="usa-accordion__content overflow-hidden border border-base-lighter radius-sm"
       [@.disabled]="!animation"
       [@bodyExpansion]="panel.isOpen ? 'expanded' : 'collapsed'"
       (@bodyExpansion.start)="onBodyExpansionStart($event, panelContent)"

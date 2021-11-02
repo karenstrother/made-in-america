@@ -1,40 +1,42 @@
 <div class="margin-top-1">
-  <usa-accordion [headerLevel]="2" bordered="true" activeIds="data.id">
-    <usa-accordion-item>
+  <usa-accordion [headerLevel]="2" [singleSelect]="true" activeIds="data.id">
+    <usa-accordion-item
+      *ngFor="let waiverData of data"
+    >
       <ng-template UsaAccordionHeader>
-        <div class="grid-row flex-row">
+        <div class="grid-row flex-row padding-x-3 padding-y-1">
           <div class="desktop:grid-col-2 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p
               [ngClass]="
-                data.data.procurementTitle === ''
+                waiverData.data.procurementTitle === ''
                   ? 'margin-0 text-base-light text-italic'
                   : 'margin-0 text-normal'
               "
             >
               {{
-                data.data.procurementTitle != ""
-                  ? data.data.procurementTitle
+                waiverData.data.procurementTitle != ""
+                  ? waiverData.data.procurementTitle
                   : "Pending Title"
               }}
             </p>
           </div>
-          <div class="desktop:grid-col-4 desktop:margin-right-4 margin-y-1">
-            <p class="margin-0"><b>Contracting Office Agency Name</b></p>
+          <div class="desktop:grid-col-3 desktop:margin-right-4 margin-y-1">
+            <p class="margin-0"><b>Contracting Department</b></p>
             <p class="margin-0 text-normal">
-              {{ data.data.contractingOfficeAgencyName }}
+              {{ waiverData.data.contractingOfficeAgencyName }}
             </p>
           </div>
-          <div class="desktop:grid-col-3 margin-y-1">
+          <div class="desktop:grid-col-4 margin-y-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
             <p class="margin-0 text-normal">
-              {{ data.data.psc.pscCode }}
+              {{ waiverData.data.psc.pscCode }}
             </p>
           </div>
           <div class="desktop:grid-col-2 margin-y-1">
             <p class="margin-0"><b>Request Status</b></p>
             <p class="margin-0 text-normal">
-              {{ data.data.requestStatus }}
+              {{ waiverData.data.requestStatus }}
             </p>
           </div>
         </div>
@@ -43,7 +45,7 @@
         <div
           class="
             usa-prose
-            padding-x-4
+            padding-x-6
             text-base-darker
             font-sans-sm
             margin-bottom-2
@@ -52,20 +54,20 @@
           <div class="margin-bottom-2">
             <div
               [ngClass]="
-                data.data.procurementTitle === ''
+                waiverData.data.procurementTitle === ''
                   ? 'margin-0 font-sans-lg text-bold text-base-light text-italic'
                   : 'margin-0 font-sans-lg text-bold'
               "
             >
               {{
-                data.data.procurementTitle != ""
-                  ? data.data.procurementTitle
+                waiverData.data.procurementTitle != ""
+                  ? waiverData.data.procurementTitle
                   : "Pending Title"
               }}
-              {{ data.data.procurementTitle }}
+              {{ waiverData.data.procurementTitle }}
             </div>
             <p class="margin-0 font-sans-xs">
-              {{ data.data.summaryOfProcurement }}
+              {{ waiverData.data.summaryOfProcurement }}
             </p>
           </div>
 
@@ -75,35 +77,43 @@
           >
             <div class="tablet:grid-col tablet:padding-right-4">
               <div
-                class="margin-bottom-2"
+                class="margin-bottom-2 grid-row"
                 style="
                   display: 'flex';
                   flex-direction: 'row';
                   justify-content: space-between;
                 "
               >
-                <div>
+                <div class="tablet:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Sollicitation ID
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.solicitationId }}
+                    {{ waiverData.data.solicitationId }}
                   </p>
                 </div>
-                <div>
+                <div class="tablet:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Procurement Stage
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.procurementStage }}
+                    {{
+                      waiverData.data.procurementStage != ""
+                        ? waiverData.data.procurementStage
+                        : "N/A"
+                    }}
                   </p>
                 </div>
-                <div>
+                <div class="tablet:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     OMB Determination
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.ombDetermination }}
+                    {{
+                      waiverData.data.ombDetermination != ""
+                        ? waiverData.data.ombDetermination
+                        : "N/A"
+                    }}
                   </p>
                 </div>
               </div>
@@ -111,7 +121,7 @@
               <div
                 class="margin-bottom-2"
                 *ngIf="
-                  data.data.ombDetermination ===
+                  waiverData.data.ombDetermination ===
                   'conditionallyConsistentWithPolicy'
                 "
               >
@@ -119,7 +129,10 @@
                   Conditions Applicable to Consistency Determination
                 </div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.conditionsApplicableToConsistencyDetermination }}
+                  {{
+                    waiverData.data
+                      .conditionsApplicableToConsistencyDetermination
+                  }}
                 </p>
               </div>
 
@@ -128,7 +141,13 @@
                   Expected Maximum Duration of the Requested Waiver
                 </div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.expectedMaximumDurationOfTheRequestedWaiver }}
+                  {{
+                    waiverData.data
+                      .expectedMaximumDurationOfTheRequestedWaiver != ""
+                      ? waiverData.data
+                          .expectedMaximumDurationOfTheRequestedWaiver
+                      : "N/A"
+                  }}
                 </p>
               </div>
 
@@ -137,7 +156,11 @@
                   Waiver Coverage
                 </div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.waiverCoverage }}
+                  {{
+                    waiverData.data.waiverCoverage != ""
+                      ? waiverData.data.waiverCoverage
+                      : "N/A"
+                  }}
                 </p>
               </div>
 
@@ -150,7 +173,11 @@
                   products and construction material?
                 </div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.isPricePreferenceIncluded }}
+                  {{
+                    waiverData.data.isPricePreferenceIncluded != ""
+                      ? waiverData.data.isPricePreferenceIncluded
+                      : "N/A"
+                  }}
                 </p>
               </div>
             </div>
@@ -159,43 +186,45 @@
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Industry</div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.naics.NAICS_Title }} ({{
-                    data.data.naics.NAICS_Code
+                  {{ waiverData.data.naics.NAICS_Title }} ({{
+                    waiverData.data.naics.NAICS_Code
                   }})
                 </p>
               </div>
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Product</div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.psc.pscFullName }} ({{ data.data.psc.pscCode }})
+                  {{ waiverData.data.psc.pscFullName }} ({{
+                    waiverData.data.psc.pscCode
+                  }})
                 </p>
               </div>
 
               <div
-                class="margin-bottom-2"
+                class="margin-bottom-2 grid-row"
                 style="
                   display: 'flex';
                   flex-direction: 'row';
                   justify-content: space-between;
                 "
               >
-                <div>
+                <div class="tablet:grid-col margin-bottom-2">
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Contracting Department
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.contractingOfficeAgencyName }} ({{
-                      data.data.contractingOfficeAgencyId
+                    {{ waiverData.data.contractingOfficeAgencyName }} ({{
+                      waiverData.data.contractingOfficeAgencyId
                     }})
                   </p>
                 </div>
-                <div>
+                <div class="tablet:grid-col margin-bottom-2">
                   <div class="margin-0 margin-right-2 font-sans-xs text-bold">
                     Funding Agency
                   </div>
                   <p class="margin-0 font-sans-xs">
-                    {{ data.data.fundingAgencyName }} ({{
-                      data.data.fundingAgencyId
+                    {{ waiverData.data.fundingAgencyName }} ({{
+                      waiverData.data.fundingAgencyId
                     }})
                   </p>
                 </div>
@@ -206,7 +235,11 @@
                   Was a sources sought or Request for Information issued?
                 </div>
                 <p class="margin-0 font-sans-xs">
-                  {{ data.data.sourcesSoughtOrRfiIssued }}
+                  {{
+                    waiverData.data.sourcesSoughtOrRfiIssued != ""
+                      ? waiverData.data.sourcesSoughtOrRfiIssued
+                      : "N/A"
+                  }}
                 </p>
               </div>
 

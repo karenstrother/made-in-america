@@ -31,11 +31,11 @@ export class AppComponent implements OnInit {
   sortOptions = [
     {
       label: 'Most Recent',
-      value: 'value1',
+      value: 'recent',
     },
     {
       label: 'Alphabetical',
-      value: 'value2',
+      value: 'alphabetical',
     },
   ];
   selectedOption = '';
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
     this.last = Math.ceil(this.data.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
-
+    this.onSortChange('recent')
     // curl --location --request GET 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission' --header 'x-token: <token>'
     const options = {
       // headers?: HttpHeaders | {[header: string]: string | string[]},
@@ -73,6 +73,18 @@ export class AppComponent implements OnInit {
 
   onSortChange($event) {
     this.sort = $event;
+    this.displayedData =
+      $event === 'alphabetical'
+        ? this.displayedData.sort((a, b) =>
+            a.data.procurementTitle > b.data.procurementTitle
+              ? 1
+              : b.data.procurementTitle > a.data.procurementTitle
+              ? -1
+              : 0
+          )
+        : this.displayedData.sort((a, b) =>
+            a.modified > b.modified ? 1 : b.modified > a.modified ? -1 : 0
+          );
   }
 
   onFilterChange($event) {
