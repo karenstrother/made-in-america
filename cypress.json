@@ -5,6 +5,7 @@
   ],
   "video": false,
   "chromeWebSecurity": false,
+  "experimentalSourceRewriting": true,
   "nodeVersion": "system"
 }
 
