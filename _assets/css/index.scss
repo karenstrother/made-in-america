@@ -14,7 +14,6 @@ $theme-type-scale-sm: 5;
 $theme-body-font-size: "sm";
 $theme-body-line-height: 5;
 
-
 @import "uswds";
 
 .usa-hero {
@@ -70,7 +69,6 @@ $theme-body-line-height: 5;
 }
 
 .usa-prose {
-
   h1 {
     line-height: 1.2;
   }
@@ -79,14 +77,15 @@ $theme-body-line-height: 5;
   h2 {
     font-family: sans-serif;
   }
-
 }
 
-.usa-layout-docs__main a:not(.usa-button) {
+.usa-layout-docs__main a:not(.usa-button, .usa-pagination__button) {
   text-decoration: none;
   color: #005ea2;
+  .usa-current {
+    color: white;
+  }
 }
-
 
 footer {
   .usa-accordion__heading:not(:first-child) {
