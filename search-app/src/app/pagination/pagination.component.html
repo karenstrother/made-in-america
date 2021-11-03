@@ -6,7 +6,7 @@
         href="javascript:void(0);"
         class="usa-pagination__link usa-pagination__previous-page"
         aria-label="Previous page"
-        [attr.disabled]="current === 1 ? true : null"
+        [ngStyle]="{ visibility: current === 1 ? 'hidden' : 'initial' }"
         (click)="goTo(current - 1)"
       >
         <svg class="usa-icon" aria-hidden="true" role="img">
@@ -83,6 +83,7 @@
         href="javascript:void(0);"
         class="usa-pagination__link usa-pagination__next-page"
         aria-label="Next page"
+        [ngStyle]="{ visibility: current === last ? 'hidden' : 'initial' }"
         [attr.disabled]="current === last ? true : null"
         (click)="goTo(current + 1)"
       >
