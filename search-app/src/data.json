@@ -2,7 +2,7 @@
     {
         "_id": "6180719f209bd7bdde4beb15",
         "data": {
-            "requestStatus": "submitted",
+            "requestStatus": "Submitted",
             "contractingOfficeAgencyId": "DLA AB",
             "fundingAgencyId": "97CG",
             "contractingOfficeAgencyName": "Defense Logistics Agency - Aviation",
@@ -23,7 +23,7 @@
             "expectedMaximumDurationOfTheRequestedWaiver": "More than 5 years",
             "ombDetermination": ""
         },
-        "state": "submitted",
+        "state": "Submitted",
         "created": "2021-11-01T23:00:47.117Z",
         "modified": "2021-11-01T23:00:47.118Z"
     },
