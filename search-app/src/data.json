@@ -10,7 +10,7 @@
                 "NAICS_Code": 336412
             },
             "psc": {
-                "pscCode": "2840"     
+                "pscCode": "2840"
             },
             "procurementStage": "Post-Solicitation",
             "solicitationId": "",
@@ -38,7 +38,7 @@
                 "NAICS_Code": 424320
             },
             "psc": {
-                "pscCode": "8405"     
+                "pscCode": "8405"
             },
             "procurementStage": "Post-Solicitation",
             "solicitationId": "N/A - DELIVERY ORDER AGAINST DHS UNIFORMS II STRATEGICALLY SOURCED CONTRACT",
@@ -63,10 +63,10 @@
             "fundingAgencyId": "DLA SM",
             "contractingOfficeAgencyName": "Defense Logistics Agency - Contract Service Office",
             "naics": {
-                "NAICS_Code":325220 
+                "NAICS_Code":325220
             },
             "psc": {
-                "pscCode": "9420"     
+                "pscCode": "9420"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "",
@@ -84,34 +84,6 @@
         "modified": "2021-08-30T20:20:00.000Z"
     },
     {
-        "_id": "b4d48556924c4e45bf0a33c741e08b3e",
-        "data": {
-            "requestStatus": "Reviewed",
-            "contractingOfficeAgencyId": "DLA DCSO",
-            "fundingAgencyId": "DLA SM",
-            "contractingOfficeAgencyName": "Defense Logistics Agency - Contract Service Office",
-            "naics": {
-                "NAICS_Code":325220 
-            },
-            "psc": {
-                "pscCode": "9420"     
-            },
-            "procurementStage": "Pre-Solicitation",
-            "solicitationId": "",
-            "procurementTitle": "Rayon",
-            "summaryOfProcurement": "ENKA 300/60 AS Select rayon",
-            "sourcesSoughtOrRfiIssued": "",
-            "isPricePreferenceIncluded": "",
-            "waiverCoverage": "Individual Waiver",
-            "waiverRationaleSummary": "Domestic production insufficient",
-            "expectedMaximumDurationOfTheRequestedWaiver": "",
-            "ombDetermination": "Consistent with Policy"
-        },
-        "state": "Reviewed",
-        "created": "2021-08-23T20:20:00.000Z",
-        "modified": "2021-08-30T20:20:00.000Z"
-    },
-    {
         "_id": "03f9013822cf45d89a28bd36d4166331",
         "data": {
             "requestStatus": "Assigned",
@@ -122,7 +94,7 @@
                 "NAICS_Code": 0
             },
             "psc": {
-                "pscCode": "5985"     
+                "pscCode": "5985"
             },
             "procurementStage": "Post-Solicitation",
             "solicitationId": "SPE7M5-21-U-0380",
@@ -150,7 +122,7 @@
                 "NAICS_Code": 334519
             },
             "psc": {
-                "pscCode": "6640"     
+                "pscCode": "6640"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "",
@@ -178,7 +150,7 @@
                 "NAICS_Code": 334118
             },
             "psc": {
-                "pscCode": "7520"     
+                "pscCode": "7520"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "1605TB-21-Q-00114",
@@ -206,7 +178,7 @@
                 "NAICS_Code": 334513
             },
             "psc": {
-                "pscCode": "6630"     
+                "pscCode": "6630"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "",
@@ -234,7 +206,7 @@
                 "NAICS_Code": 334519
             },
             "psc": {
-                "pscCode": "6636"     
+                "pscCode": "6636"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "TBD",
@@ -262,7 +234,7 @@
                 "NAICS_Code": 334519
             },
             "psc": {
-                "pscCode": "5220"     
+                "pscCode": "5220"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "TBD",
@@ -290,7 +262,7 @@
                 "NAICS_Code": 333997
             },
             "psc": {
-                "pscCode": "6670"     
+                "pscCode": "6670"
             },
             "procurementStage": "Pre-Solicitation",
             "solicitationId": "TBD",
