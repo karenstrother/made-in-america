@@ -10,16 +10,16 @@
       [id]="'filtering'"
       [label]="'Filter By Status'"
       [options]="filterOptions"
-      (optionChange)="onFilterChange($event)"
+      (optionChange)="handleSelectedOptions($event)"
     >
     </uswds-dropdown>
-    <!-- <uswds-dropdown
+    <uswds-dropdown
       [id]="'sorting'"
       [label]="'Sort By'"
       [options]="sortOptions"
-      (optionChange)="onSortChange($event)"
+      (optionChange)="handleSelectedOptions($event)"
     >
-    </uswds-dropdown> -->
+    </uswds-dropdown>
   </div>
 </div>
 <div class="grid-container padding-0 margin-bottom-3">

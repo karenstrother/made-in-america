@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   data = [];
   filteredData = [];
   displayedData = [];
-  filter = null;
-  sort = 'recent';
+  filter = '';
+  sort = '';
   filterOptions = [];
   sortOptions = [
     {
@@ -25,7 +25,10 @@ export class AppComponent implements OnInit {
       value: 'alphabetical',
     },
   ];
-  selectedOption = '';
+  selectedOptions = {
+    filter: this.filter,
+    sort: this.sort
+  };
   current = 1;
   last = 3;
 
@@ -37,6 +40,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
+    this.selectedOptions = {
+      filter: 'all',
+      sort: 'recent'
+    };
     this.filterOptions = [
       { label: 'All', value: 'all' },
       ...this.createFilters(this.data),
@@ -70,11 +77,10 @@ export class AppComponent implements OnInit {
       return { label: d, value: d };
     });
   }
-  onSortChange($event) {
+  onSortChange(selectedOption) {
     const d = this.filteredData.length > 0 ? this.filteredData : this.data
-    // this.sort = $event.value;
     const sortedData =
-      $event.value === 'alphabetical'
+      selectedOption === 'alphabetical'
         ? d.slice().sort((a, b) =>
             a.data.procurementTitle > b.data.procurementTitle
               ? 1
@@ -88,14 +94,32 @@ export class AppComponent implements OnInit {
     this.displayedData = sortedData.slice(0, 10);
   }
 
-  onFilterChange($event) {
-    const filterValue = $event.value;
+  onFilterChange(selectedOption) {
     this.filteredData =
-      filterValue === 'all'
+      selectedOption === 'all'
         ? this.data
-        : this.data.filter((d) => d.data.requestStatus === filterValue);
+        : this.data.filter((d) => d.data.requestStatus === selectedOption);
     this.displayedData = this.filteredData.slice(0, 10);
     this.last = Math.ceil(this.filteredData.length / 10);
+  }
+
+  handleSelectedOptions($event) {
+
+    this.filterOptions.findIndex(
+          obj => Object.values(obj).includes($event.value)
+        ) !== -1 ?
+       this.selectedOptions = {
+          filter: $event.value,
+          sort: this.selectedOptions.sort
+        } :
+        this.selectedOptions = {
+          filter: this.selectedOptions.filter,
+          sort: $event.value
+        }
+
+    this.onFilterChange(this.selectedOptions.filter)
+    this.onSortChange(this.selectedOptions.sort)
+
   }
 
   movePage(index) {
