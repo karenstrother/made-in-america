@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   filteredData = [];
   displayedData = [];
   filter = null;
-  sort = 'value1';
+  sort = 'recent';
   filterOptions = [];
   sortOptions = [
     {
@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
-    this.filteredData = this.data;
     this.filterOptions = [
       { label: 'All', value: 'all' },
       ...this.createFilters(this.data),
@@ -46,7 +45,7 @@ export class AppComponent implements OnInit {
     this.last = Math.ceil(this.data.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
-    this.onSortChange('recent');
+    this.onSortChange(this.sortOptions[0]);
     // curl --location --request GET 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission' --header 'x-token: <token>'
     const options = {
       // headers?: HttpHeaders | {[header: string]: string | string[]},
@@ -72,20 +71,21 @@ export class AppComponent implements OnInit {
     });
   }
   onSortChange($event) {
-    this.sort = $event.value;
-    this.filteredData =
+    const d = this.filteredData.length > 0 ? this.filteredData : this.data
+    // this.sort = $event.value;
+    const sortedData =
       $event.value === 'alphabetical'
-        ? this.data.sort((a, b) =>
+        ? d.slice().sort((a, b) =>
             a.data.procurementTitle > b.data.procurementTitle
               ? 1
               : b.data.procurementTitle > a.data.procurementTitle
               ? -1
               : 0
           )
-        : this.data.sort((a, b) =>
+        : d.slice().sort((a, b) =>
             a.modified > b.modified ? 1 : b.modified > a.modified ? -1 : 0
           );
-    this.displayedData = this.filteredData.slice(0, 10);
+    this.displayedData = sortedData.slice(0, 10);
   }
 
   onFilterChange($event) {
@@ -97,6 +97,7 @@ export class AppComponent implements OnInit {
     this.displayedData = this.filteredData.slice(0, 10);
     this.last = Math.ceil(this.filteredData.length / 10);
   }
+
   movePage(index) {
     const waiverIndex = (index - 1) * 10;
     this.displayedData = this.filteredData.slice(waiverIndex, waiverIndex + 10);
