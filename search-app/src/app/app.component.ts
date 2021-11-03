@@ -19,12 +19,12 @@ export class AppComponent implements OnInit {
       value: 'all',
     },
     {
-      label: 'Submitted',
-      value: 'submitted',
+      label: 'Assigned',
+      value: 'Assigned',
     },
     {
       label: 'Reviewed',
-      value: 'reviewed',
+      value: 'Reviewed',
     },
   ];
 
