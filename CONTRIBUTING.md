@@ -15,3 +15,79 @@ We adhere to the [18F Open Source Policy](https://github.com/18f/open-source-pol
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
+
+## Guides
+
+Follow the [18F Front End Coding Style Guide](https://pages.18f.gov/frontend/) and [Accessibility Guide](https://pages.18f.gov/accessibility/checklist/)
+
+
+## Branch Management
+
+### Branches
+
+> We deploy and branch off `main`
+>
+> We group release work together on `develop`
+
+### Workflow
+
+Your Workflow should look like this,
+
+```
+^
+|
+|-----.
+|     |_____.
+|     |     |
+|     |     |
+|     |     |
+|     |     |
+|--------feature/
+|     |
+|--develop
+|
+main
+```
+
+### Naming
+
+The following branch naming conventions can be pre-pended to your branch name
+- `feature/`
+- `bug/`
+- `content/`
+- `hotfix/`
+- `test/`
+- `docs/`
+
+Additionally, branch names should follow the following convention
+
+`<brief-ticket-description>-<ticket-number>`
+
+an example of a properly formatted branch name looks like this,
+
+`feature/appends-icon-TKT-633`
+
+### Code Review
+
+To prepare for code review, please follow the following checks.
+
+- branch has detailed description of work/updates
+- title format follows: `[Ticket Number] : Brief statement describing what this pull request solves`.
+- passed all integrated testing
+- pipeline has completed successfully
+- federalist preview has been generated
+- code review/design review requested as appropriate
+- branch/preview link updated in ticket
+
+
+<!-- TODO: set this template up with .github -->
+### Ticket Details Template
+<!-- Please feel free to remove whatever sections/lines in this aren’t relevant. -->
+
+## Description
+
+<!-- Include a high-level description of the issue your pull request fixes; include only one issue per pull request. Please also link to the Ticket it resolves if available. -->
+
+## Additional information
+
+<!-- Relevant research and support documents, Type of content review needed: stylistic or copy editing, Screenshot images, Notes -->
