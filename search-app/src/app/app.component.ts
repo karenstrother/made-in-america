@@ -10,24 +10,11 @@ import testData from '../data.json';
 export class AppComponent implements OnInit {
   title = 'usa-components';
   data = [];
+  filteredData = [];
   displayedData = [];
   filter = null;
   sort = 'value1';
-  filterOptions = [
-    {
-      label: 'All',
-      value: 'all',
-    },
-    {
-      label: 'Assigned',
-      value: 'Assigned',
-    },
-    {
-      label: 'Reviewed',
-      value: 'Reviewed',
-    },
-  ];
-
+  filterOptions = [];
   sortOptions = [
     {
       label: 'Most Recent',
@@ -50,11 +37,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.data = testData;
+    this.filteredData = this.data;
+    this.filterOptions = [
+      { label: 'All', value: 'all' },
+      ...this.createFilters(this.data),
+    ];
     this.displayedData = this.data.slice(0, 10);
     this.last = Math.ceil(this.data.length / 10);
     const url =
       'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission';
-    this.onSortChange('recent')
+    this.onSortChange('recent');
     // curl --location --request GET 'https://api.forms.gov/agencydemo-prod/madeinamericawaiverrequest/submission' --header 'x-token: <token>'
     const options = {
       // headers?: HttpHeaders | {[header: string]: string | string[]},
@@ -71,34 +63,42 @@ export class AppComponent implements OnInit {
     // };
   }
 
+  createFilters(data) {
+    const uniqueRequestStatus = Array.from(
+      new Set(data.map((d) => d.data.requestStatus))
+    );
+    return uniqueRequestStatus.map((d) => {
+      return { label: d, value: d };
+    });
+  }
   onSortChange($event) {
     this.sort = $event.value;
-    this.displayedData =
+    this.filteredData =
       $event.value === 'alphabetical'
-        ? this.displayedData.sort((a, b) =>
+        ? this.data.sort((a, b) =>
             a.data.procurementTitle > b.data.procurementTitle
               ? 1
               : b.data.procurementTitle > a.data.procurementTitle
               ? -1
               : 0
           )
-        : this.displayedData.sort((a, b) =>
+        : this.data.sort((a, b) =>
             a.modified > b.modified ? 1 : b.modified > a.modified ? -1 : 0
           );
+    this.displayedData = this.filteredData.slice(0, 10);
   }
 
   onFilterChange($event) {
     const filterValue = $event.value;
-
-    this.displayedData =
+    this.filteredData =
       filterValue === 'all'
         ? this.data
         : this.data.filter((d) => d.data.requestStatus === filterValue);
-
-    this.last = Math.round(this.displayedData.length / 10);
+    this.displayedData = this.filteredData.slice(0, 10);
+    this.last = Math.ceil(this.filteredData.length / 10);
   }
   movePage(index) {
     const waiverIndex = (index - 1) * 10;
-    this.displayedData = this.data.slice(waiverIndex, waiverIndex + 10);
+    this.displayedData = this.filteredData.slice(waiverIndex, waiverIndex + 10);
   }
 }
