@@ -100,6 +100,7 @@ export class AppComponent implements OnInit {
 
   movePage(index) {
     const waiverIndex = (index - 1) * 10;
-    this.displayedData = this.filteredData.slice(waiverIndex, waiverIndex + 10);
+    const d = this.filteredData.length > 0 ? this.filteredData : this.data
+    this.displayedData = d.slice(waiverIndex, waiverIndex + 10);
   }
 }
