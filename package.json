@@ -2,11 +2,10 @@
   "name": "federalist-uswds-jekyll",
   "version": "1.3.0",
   "scripts": {
-    "test": "npm run cy:run",
+    "test": "cypress run",
     "test-local": "npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
     "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
     "build-data": "node csvtojson.js",
     "build": "bundle exec jekyll build --trace",
     "clean": "bundle exec jekyll clean",
