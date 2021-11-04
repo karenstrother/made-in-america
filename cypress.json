@@ -6,7 +6,14 @@
   "video": false,
   "chromeWebSecurity": false,
   "experimentalSourceRewriting": true,
-  "nodeVersion": "system"
+  "nodeVersion": "system",
+  "env": {
+    "cypress-plugin-snapshots": {
+      "autoCleanUp": true, 
+      "updateSnapshots": true,
+      "normalizeJson": true
+    }
+  }
 }
 
 

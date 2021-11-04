@@ -17,13 +17,25 @@
           .map((el) => el.innerText);
       });
   });
-  describe('dom snapshot', () => {
+  describe('heaotneoiha', () => {
     it('toMatchSnapshot', () => {
       urls.forEach((url) => {
+        console.log(url)
         cy.visit(url).then(() => {
           cy.get('main')
-          .toMatchSnapshot({ignoreExtraFields: true})
+          .toMatchSnapshot({ignoreExtraFields: true,
+            "replace": {"key": url}})
         })
       })
     })
-  });
+    // describe('dom snapshot', () => {
+    //   it('toMatchSnapshot', () => {
+    //     urls.forEach((url) => {
+    //       cy.visit(url).then(() => {
+    //         cy.get('main')
+    //         .toMatchSnapshot({ignoreExtraFields: true})
+    //       })
+    //     })
+    //   })
+    // })
+  })
