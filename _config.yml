@@ -202,6 +202,7 @@ defaults:
       image: true
 
 exclude:
+  - search-app
   - package.json
   - package-lock.json
   - README.md
