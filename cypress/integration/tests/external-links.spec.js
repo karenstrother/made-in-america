@@ -20,7 +20,7 @@ before(() => {
 describe('check external links', () => {
   it("check external links", () => {
     // CY goes to each URL in the arry from site map 
-    // checks to make sure that each anchor link is working
+    // checks to make sure that each external link is opening to a new tab 
     urls.forEach((url) => {
       cy.visit(url).then(() => {
           cy.get('.usa-link--external')
