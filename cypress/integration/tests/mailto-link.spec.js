@@ -23,12 +23,25 @@
       // checks to make sure that each mailto link is working
       urls.forEach((url) => {
         cy.visit('https://stage.madeinamerica.gov/').then(() => {
+          // if(find('[href="mailto:MadeInAmerica@omb.eop.gov:"]')) {
             cy.get('[href="mailto:MadeInAmerica@omb.eop.gov:"]')
-            .should('have.attr', 'target', '_blank')
+            .should('have.attr', 'target', '_blank')  
+          // } 
         });
       });
     });
   })
 
 
+              // cy.get('[href="mailto:MadeInAmerica@omb.eop.gov:"]')
+            // .should('have.attr', 'target', '_blank') 
+
+
+            // cy.get([href="mailto:MadeInAmerica@omb.eop.gov:"])
+            // .should('have.attr', 'target', '_blank')
+            // .then((href) => {
+            //   return href.test(href)
+            // })
   
+
+
