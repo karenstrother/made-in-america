@@ -1,8 +1,6 @@
 <div class="margin-top-1">
   <usa-accordion [headerLevel]="2" [singleSelect]="true" activeIds="data.id">
-    <usa-accordion-item
-      *ngFor="let waiverData of data"
-    >
+    <usa-accordion-item *ngFor="let waiverData of data">
       <ng-template UsaAccordionHeader>
         <div class="grid-row flex-row padding-x-3 padding-y-1">
           <div class="desktop:grid-col-2 desktop:margin-right-4 margin-y-1">
@@ -89,10 +87,10 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                        waiverData.data.solicitationId != ""
-                          ? waiverData.data.solicitationId
-                          : "N/A"
-                      }}
+                      waiverData.data.solicitationId != ""
+                        ? waiverData.data.solicitationId
+                        : "N/A"
+                    }}
                   </p>
                 </div>
                 <div class="desktop:grid-col margin-bottom-2">
@@ -141,7 +139,7 @@
 
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">
-                  Expected Maximum Duration of the Requested Waiver
+                  Expected Maximum Duration of the Proposed Waiver
                 </div>
                 <p class="margin-0 font-sans-xs">
                   {{
@@ -170,10 +168,9 @@
               <div class="margin-bottom-2 margin-right-2">
                 <div class="margin-0 font-sans-xs text-bold">
                   Did / Will the solicitation include one of the standard BAA
-                  provisions (e.g., 52-225-1, Buy American- Supplies, 52.225–9,
-                  Buy American—Construction Materials) announcing the agency’s
-                  intention to provide a price preference for domestic end
-                  products and construction material?
+                  provisions announcing the agency’s intention to provide a
+                  price preference for domestic end products and construction
+                  material?
                 </div>
                 <p class="margin-0 font-sans-xs">
                   {{
