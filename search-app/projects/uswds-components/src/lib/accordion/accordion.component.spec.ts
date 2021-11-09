@@ -20,15 +20,15 @@ const createTestComponent = (html: string) =>
     createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
 
 function getPanels(element: HTMLElement): HTMLDivElement[] {
-  return <HTMLDivElement[]>Array.from(element.querySelectorAll('.usa-accordion__heading'));
+  return <HTMLDivElement[]>Array.from(element.querySelectorAll('.mia-usa-accordion__heading'));
 }
 
 function getPanelsButton(element: HTMLElement): HTMLButtonElement[] {
-  return <HTMLButtonElement[]>Array.from(element.querySelectorAll('.usa-accordion__button'));
+  return <HTMLButtonElement[]>Array.from(element.querySelectorAll('.mia-usa-accordion__button'));
 }
 
 function getPanelsContent(element: HTMLElement): HTMLDivElement[] {
-  return <HTMLDivElement[]>Array.from(element.querySelectorAll('.usa-accordion__content'));
+  return <HTMLDivElement[]>Array.from(element.querySelectorAll('.mia-usa-accordion__content'));
 }
 
 function getPanelsTitle(element: HTMLElement): string[] {
@@ -71,7 +71,7 @@ describe('Accordion Component', () => {
   beforeEach(() => {
     TestBed.configureTestingModule(
       {
-        declarations: [TestComponent], 
+        declarations: [TestComponent],
         imports: [UsaAccordionModule, BrowserAnimationsModule]
       }
     );
