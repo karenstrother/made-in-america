@@ -43,6 +43,7 @@ $theme-body-line-height: 5;
   height: auto;
   margin: auto;
   max-height: 100%;
+  object-fit: contain;
 }
 
 // default mode hide banner
@@ -63,7 +64,6 @@ $theme-body-line-height: 5;
     max-width: 240px;
   }
 }
-
 .usa-nav__secondary {
   height: 100%;
 }
@@ -195,4 +195,10 @@ footer {
   .paginate-button {
     display: block;
   }
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  overflow-wrap: break-word;
 }
