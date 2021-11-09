@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "usa",
+      "prefix": "mia",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -28,21 +28,12 @@
             "extractCss": true,
             "outputHashing": "none",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
-            ],
+            "assets": ["src/assets"],
             "styles": [
               {
                 "input": "src/styles/uswds-styles.scss",
                 "inject": false,
                 "bundleName": "uswds-styles"
-              },
-              {
-                "input": "src/styles/sam.scss",
-                "inject": false,
-                "bundleName": "sam-styles"
               }
             ],
             "scripts": []
@@ -75,8 +66,7 @@
                   "maximumError": "10kb"
                 }
               ],
-              "serviceWorker": true,
-              "ngswConfigPath": "ngsw-config.json"
+              "serviceWorker": false
             }
           }
         },

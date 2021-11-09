@@ -1,7 +1,7 @@
-import { 
-  Component, ContentChildren, 
-  Input, QueryList, ElementRef, AfterContentChecked, 
-  EventEmitter, Output, Renderer2 
+import {
+  Component, ContentChildren,
+  Input, QueryList, ElementRef, AfterContentChecked,
+  EventEmitter, Output, Renderer2
 } from '@angular/core';
 import { Key, KeyCode, MicrosfotKeys } from '../util/key';
 import { isString, findLast, getNextItemInList } from '../util/util';
@@ -16,8 +16,8 @@ import { UsaExpansionAnimations } from './accordion-animations';
   templateUrl: './accordion.component.html',
   animations: [UsaExpansionAnimations.bodyExpansion],
   host: {
-    'class': 'usa-accordion',
-    '[class.usa-accordion--bordered]': 'bordered',
+    'class': 'mia-accordion',
+    '[class.mia-accordion--bordered]': 'bordered',
     '[attr.aria-multiselectable]': 'singleSelect ? true : undefined',
   },
 })
@@ -81,7 +81,7 @@ export class UsaAccordionComponent implements AfterContentChecked  {
   @Output() hidden = new EventEmitter<string>();
 
   constructor(
-      config: UsaAccordionConfig, 
+      config: UsaAccordionConfig,
       private _element: ElementRef,
       private _renderer: Renderer2
     ) {

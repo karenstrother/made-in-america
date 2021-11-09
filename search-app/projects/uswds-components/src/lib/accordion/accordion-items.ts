@@ -1,11 +1,11 @@
-import { 
-  AfterContentChecked, 
-  ContentChildren, 
-  Directive, 
-  EventEmitter, 
-  Input, 
-  Output, 
-  QueryList, 
+import {
+  AfterContentChecked,
+  ContentChildren,
+  Directive,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
   TemplateRef } from "@angular/core";
 
 let nextId = 0;
@@ -44,7 +44,7 @@ export class UsaAccordionContent {
 /**
  * A directive that wraps the accordion header content.
  */
-@Directive({ 
+@Directive({
   selector: 'ng-template[UsaAccordionHeader]',
 })
 export class UsaAccordionHeader {
