@@ -43,24 +43,21 @@ export class AppComponent implements OnInit {
       sort: 'recent',
     };
     const url =
-      'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json';
+      'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=main';
     this.onSortChange(this.sortOptions[0]);
-    const options = {
-      headers: { 'x-token': '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' },
-    };
-    this.http.get(url, options).subscribe({
-      next: (t) => {
-        console.log(t);
-        this.data = t;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then(({ content }) => {
+        const dataString = atob(content);
+        this.data = JSON.parse(dataString);
         this.filterOptions = [
           { label: 'All', value: 'all' },
           ...this.createFilters(this.data),
         ];
         this.displayedData = this.data.slice(0, 10);
         this.last = Math.ceil(this.data.length / 10);
-      },
-      error: (t) => console.log(t),
-    });
+      });
   }
 
   createFilters(data) {
@@ -71,6 +68,7 @@ export class AppComponent implements OnInit {
       return { label: d, value: d };
     });
   }
+
   onSortChange(selectedOption) {
     const d = this.filteredData.length > 0 ? this.filteredData : this.data;
     const sortedData =
