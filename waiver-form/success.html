@@ -1,5 +1,5 @@
 ---
-permalink: /waiver-form
+permalink: /waiver-form/success
 title: Waiver Form
 ---
 
@@ -7,7 +7,7 @@ title: Waiver Form
 <html lang="en">
   <head>
     <title>waiver-form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -65,23 +65,11 @@ title: Waiver Form
       </div>
     </div>
     <div class="pageContainer">
-      <div id="formio"></div>
-
-      <script type="text/javascript">
-        window.onload = function () {
-          Formio.use(premium);
-          Formio.use(uswds);
-          Formio.createForm(
-            document.getElementById("formio"),
-            "https://submission.forms.gov/mia-live/madeinamericanonavailabilitywaiverrequest"
-          ).then(function (form) {
-            // Submit the form
-            form.on("submit", function (submission) {
-              window.location.href = "/waiver-form/success";
-            });
-          });
-        };
-      </script>
+      <div class="usa-alert usa-alert--success" style="margin-top: 16px">
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading">Submission Complete</h4>
+        </div>
+      </div>
     </div>
   </body>
 </html>
