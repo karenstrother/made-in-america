@@ -44,8 +44,6 @@ export class AppComponent implements OnInit {
     };
     const url =
       'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=main';
-    this.onSortChange(this.sortOptions[0]);
-
     fetch(url)
       .then((response) => response.json())
       .then(({ content }) => {
@@ -57,6 +55,9 @@ export class AppComponent implements OnInit {
         ];
         this.displayedData = this.data.slice(0, 10);
         this.last = Math.ceil(this.data.length / 10);
+      })
+      .then(() => {
+        this.onSortChange(this.sortOptions[0]);
       });
   }
 
