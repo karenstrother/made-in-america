@@ -91,6 +91,8 @@ footer_navigation:
     children:
       - name: About This Site
         url: /about/
+      - name: Urgent Waivers
+        url: /about/urgent-waivers/
   - name: Policies
     children:
       - name: Accessibility
@@ -198,8 +200,13 @@ defaults:
       path: "images"
     values:
       image: true
+  - scope:
+      path:  "waiver-form/*"
+    values:
+      sitemap: false
 
 exclude:
+  - search-app
   - package.json
   - package-lock.json
   - README.md
@@ -212,6 +219,7 @@ exclude:
   - Gemfile.lock
 
 assets:
+  digest: false
   sources:
     - favicons
     - node_modules/uswds/dist/img
