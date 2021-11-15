@@ -200,6 +200,10 @@ defaults:
       path: "images"
     values:
       image: true
+  - scope:
+      path:  "waiver-form/*"
+    values:
+      sitemap: false
 
 exclude:
   - search-app
@@ -221,4 +225,3 @@ assets:
     - node_modules/uswds/dist/img
     - node_modules/uswds/dist/js
     - node_modules/uswds/dist/scss
-    - waiver-form
