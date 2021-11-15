@@ -1,13 +1,13 @@
 ---
 permalink: /waiver-form/success
-title: Waiver Form
+title: Wiaver Form Success
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>waiver-form</title>
-
+    <title>Wiaver Form Success</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       type="text/css"
@@ -28,48 +28,36 @@ title: Waiver Form
       type="text/css"
       href="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.css"
     />
-    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}premium.css"> -->
 
     <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.12.1/js/uswds.min.js"></script>
     <script src="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.js"></script>
-    <!-- <script src="{{ site.baseurl }}premium.min.js"></script> -->
-    {% asset premium.css %} {% asset premium.min.js %}
+    {% asset premium.css %}
+    {% asset premium.min.js %}
   </head>
-  <style>
-    .pageContainer {
-      margin: 0 auto;
-      width: 80%;
-      left: 10%;
-      background-color: white;
-    }
-    .header {
-      background-color: #f8f9fa;
-    }
-    .header-wrapper {
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-  </style>
-
-  <body>
-    <div class="header">
-      <div class="header-wrapper">
-        {% include logo.html %}
-        <h1 style="margin: 0">
-          Made in America Nonavailability Proposed Waiver
-        </h1>
-      </div>
-    </div>
-    <div class="pageContainer">
-      <div class="usa-alert usa-alert--success" style="margin-top: 16px">
-        <div class="usa-alert__body">
-          <h4 class="usa-alert__heading">Submission Complete</h4>
+  <body class="margin-0">
+    <div class="bg-base-lightest">
+      <div class="grid-container">
+        <div class="grid-row grid-gap flex-align-center flex-no-wrap">
+          <div class="grid-col-4 width-card">
+            {% include logo.html %}
+          </div>
+          <div class="grid-col-8">
+            <h1 class="font-sans-lg desktop:margin-bottom-0">
+              Made in America Nonavailability Proposed Waiver
+            </h1>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="grid-container">
+      <main>
+        <div class="usa-alert usa-alert--success" style="margin-top: 16px">
+          <div class="usa-alert__body">
+            <h2 class="usa-alert__heading margin-0 margin-top-05 font-sans-md">Submission Complete</h2>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
