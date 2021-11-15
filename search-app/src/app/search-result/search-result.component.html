@@ -87,7 +87,7 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                      waiverData.data.solicitationId != ""
+                        waiverData.data?.solicitationId &&waiverData.data.solicitationId != ""
                         ? waiverData.data.solicitationId
                         : "N/A"
                     }}
@@ -111,7 +111,7 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                      waiverData.data.ombDetermination != ""
+                        waiverData.data?.ombDetermination && waiverData.data.ombDetermination != ""
                         ? waiverData.data.ombDetermination
                         : "N/A"
                     }}
@@ -194,7 +194,7 @@
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Product</div>
                 <p class="margin-0 font-sans-xs">
-                  {{ waiverData.data.psc.pscFullName }} ({{
+                  {{ waiverData.data.psc.pscName }} ({{
                     waiverData.data.psc.pscCode
                   }})
                 </p>
