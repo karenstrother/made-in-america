@@ -36,7 +36,7 @@ Below is contact information for agencies subject to the Chief Financial Officer
 | Office of Personnel Management                |                                        <media@opm.gov>                                         |
 | Small Business Administration                 |                                     <press_office@sba.gov>                                     |
 
-For all other agencies covered by Executive Order 14005, please find contact information at [https://www.usa.gov/federal-agencies](https://www.usa.gov/federal-agencies){:target="\_blank" rel="noreferrer" class="usa-link--external"}.
+For all other agencies covered by Executive Order 14005, please find contact information at <https://www.usa.gov/federal-agencies>{:target="\_blank" rel="noreferrer" class="usa-link--external"}.
 
 Other resources:
 
