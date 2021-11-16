@@ -1,7 +1,7 @@
 import 'cypress-plugin-snapshots/commands';
 
 Cypress.Commands.add('getUrlsArray', () => {
-  let urls = [];
+
   cy.request({
     url:'http://localhost:4000/sitemap.xml',
     headers: {
@@ -12,15 +12,10 @@ Cypress.Commands.add('getUrlsArray', () => {
   })
     .as("sitemap")
     .then((response) => {
-      urls = Cypress.$(response.body)
+     return Cypress.$(response.body)
         .find("loc")
         .toArray()
         .map((el) => el.innerText);
-        // console.log(urls) 
-        // return urls  
-        if (urls.length > 0) {
-          return urls
-        }    
     });
 
 
