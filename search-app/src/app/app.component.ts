@@ -47,7 +47,14 @@ export class AppComponent implements OnInit {
     fetch(url)
       .then((response) => response.json())
       .then(({ content }) => {
-        const dataString = atob(content);
+        const dataString = decodeURIComponent(
+          Array.prototype.map
+            .call(
+              atob(content),
+              (c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+            )
+            .join('')
+        );
         this.data = JSON.parse(dataString);
         this.filterOptions = [
           { label: 'All', value: 'all' },
