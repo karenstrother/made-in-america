@@ -73,6 +73,19 @@
             style="justify-content: space-between"
           >
             <div class="tablet:grid-col tablet:padding-right-4">
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">
+                  Waiver Rationale Summary
+                </div>
+                <p class="margin-0 font-sans-xs">
+                  {{
+                    waiverData.data.waiverRationaleSummary != ""
+                      ? waiverData.data.waiverRationaleSummary
+                      : "N/A"
+                  }}
+                </p>
+              </div>
+
               <div
                 class="margin-bottom-2 grid-row"
                 style="
@@ -87,7 +100,8 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                        waiverData.data?.solicitationId &&waiverData.data.solicitationId != ""
+                      waiverData.data?.solicitationId &&
+                      waiverData.data.solicitationId != ""
                         ? waiverData.data.solicitationId
                         : "N/A"
                     }}
@@ -111,7 +125,8 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                        waiverData.data?.ombDetermination && waiverData.data.ombDetermination != ""
+                      waiverData.data?.ombDetermination &&
+                      waiverData.data.ombDetermination != ""
                         ? waiverData.data.ombDetermination
                         : "N/A"
                     }}
