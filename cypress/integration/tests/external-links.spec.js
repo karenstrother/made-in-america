@@ -1,6 +1,8 @@
-  /// <reference types="Cypress" />
-let urls = [];
+ /// <reference types="Cypress" />
+const urls = [];
+
 before(() => {
+
   cy.request({
     url:'http://localhost:4000/sitemap.xml',
     headers: {
@@ -17,7 +19,9 @@ before(() => {
         .map((el) => el.innerText);
     });
 });
+
 describe('check external links', () => {
+
   it("check external links", () => {
     // CY goes to each URL in the arry from site map 
     // checks to make sure that each external link is opening to a new tab 
