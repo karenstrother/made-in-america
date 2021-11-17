@@ -95,8 +95,19 @@
                 "
               >
                 <div class="desktop:grid-col margin-bottom-2">
+                  <div class="margin-0 font-sans-xs text-bold">PIID's</div>
+                  <p class="margin-0 font-sans-xs">
+                    {{
+                      waiverData?.data?.piids?.length > 0
+                        ? mapPiids(waiverData?.data?.piids)
+                        : "N/A"
+                    }}
+                  </p>
+                </div>
+
+                <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
-                    Sollicitation ID
+                    Solicitation ID
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
@@ -107,6 +118,7 @@
                     }}
                   </p>
                 </div>
+
                 <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Procurement Stage
@@ -119,21 +131,21 @@
                     }}
                   </p>
                 </div>
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 font-sans-xs text-bold">
-                    OMB Determination
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{
-                      waiverData.data?.ombDetermination &&
-                      waiverData.data.ombDetermination != ""
-                        ? waiverData.data.ombDetermination
-                        : "N/A"
-                    }}
-                  </p>
-                </div>
               </div>
 
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">
+                  OMB Determination
+                </div>
+                <p class="margin-0 font-sans-xs">
+                  {{
+                    waiverData.data?.ombDetermination &&
+                    waiverData.data.ombDetermination != ""
+                      ? waiverData.data.ombDetermination
+                      : "N/A"
+                  }}
+                </p>
+              </div>
               <div
                 class="margin-bottom-2"
                 *ngIf="
