@@ -9,5 +9,8 @@ export class SearchResultComponent {
   @Input() data: number;
   constructor() {}
 
-  mapPiids = (piids) => piids.map(x => x.piid)
+  mapPiids = (piids) => {
+    const piidString = piids.map((x) => x.piid).join(', ');
+    return piidString === '' ? 'N/A' : piidString;
+  };
 }
