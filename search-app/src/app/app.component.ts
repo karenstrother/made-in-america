@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   filter = '';
   sort = '';
   filterOptions = [];
+  last = 0;
   sortOptions = [
     {
       label: 'Most Recent',
@@ -29,11 +30,9 @@ export class AppComponent implements OnInit {
     sort: this.sort,
   };
   current = 1;
-  last = 3;
 
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
-    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -93,9 +92,10 @@ export class AppComponent implements OnInit {
         : d
             .slice()
             .sort((a, b) =>
-              a.modified > b.modified ? 1 : b.modified > a.modified ? -1 : 0
+              a.created > b.created ? 1 : b.created > a.created ? -1 : 0
             );
-    this.displayedData = sortedData.slice(0, 10);
+    this.filteredData = sortedData
+    this.displayedData = this.filteredData.slice(0, 10);
   }
 
   onFilterChange(selectedOption) {
@@ -119,12 +119,13 @@ export class AppComponent implements OnInit {
           filter: this.selectedOptions.filter,
           sort: $event.value,
         });
-
     this.onFilterChange(this.selectedOptions.filter);
     this.onSortChange(this.selectedOptions.sort);
+    this.movePage(1)
   }
 
   movePage(index) {
+    this.current = index
     const waiverIndex = (index - 1) * 10;
     const d = this.filteredData.length > 0 ? this.filteredData : this.data;
     this.displayedData = d.slice(waiverIndex, waiverIndex + 10);
