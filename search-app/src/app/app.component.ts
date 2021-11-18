@@ -93,7 +93,7 @@ export class AppComponent implements OnInit {
         : d
             .slice()
             .sort((a, b) =>
-              a.modified > b.modified ? 1 : b.modified > a.modified ? -1 : 0
+              a.created > b.created ? 1 : b.created > a.created ? -1 : 0
             );
     this.displayedData = sortedData.slice(0, 10);
   }
