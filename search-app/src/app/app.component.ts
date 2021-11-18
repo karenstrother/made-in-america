@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   filter = '';
   sort = '';
   filterOptions = [];
+  last = 0;
   sortOptions = [
     {
       label: 'Most Recent',
@@ -29,7 +30,6 @@ export class AppComponent implements OnInit {
     sort: this.sort,
   };
   current = 1;
-  last = 3;
 
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
