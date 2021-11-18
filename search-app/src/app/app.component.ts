@@ -95,7 +95,8 @@ export class AppComponent implements OnInit {
             .sort((a, b) =>
               a.created > b.created ? 1 : b.created > a.created ? -1 : 0
             );
-    this.displayedData = sortedData.slice(0, 10);
+    this.filteredData = sortedData
+    this.displayedData = this.filteredData.slice(0, 10);
   }
 
   onFilterChange(selectedOption) {
@@ -119,9 +120,9 @@ export class AppComponent implements OnInit {
           filter: this.selectedOptions.filter,
           sort: $event.value,
         });
-
     this.onFilterChange(this.selectedOptions.filter);
     this.onSortChange(this.selectedOptions.sort);
+    this.movePage(1)
   }
 
   movePage(index) {
