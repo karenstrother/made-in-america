@@ -73,6 +73,19 @@
             style="justify-content: space-between"
           >
             <div class="tablet:grid-col tablet:padding-right-4">
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">
+                  Waiver Rationale Summary
+                </div>
+                <p class="margin-0 font-sans-xs">
+                  {{
+                    waiverData.data.waiverRationaleSummary != ""
+                      ? waiverData.data.waiverRationaleSummary
+                      : "N/A"
+                  }}
+                </p>
+              </div>
+
               <div
                 class="margin-bottom-2 grid-row"
                 style="
@@ -83,16 +96,31 @@
               >
                 <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
-                    Sollicitation ID
+                    Procurement Instrument Identifier (PIID)
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                        waiverData.data?.solicitationId &&waiverData.data.solicitationId != ""
+                      waiverData?.data?.piids?.length > 0
+                        ? mapPiids(waiverData?.data?.piids)
+                        : "N/A"
+                    }}
+                  </p>
+                </div>
+
+                <div class="desktop:grid-col margin-bottom-2">
+                  <div class="margin-0 font-sans-xs text-bold">
+                    Solicitation ID
+                  </div>
+                  <p class="margin-0 font-sans-xs">
+                    {{
+                      waiverData.data?.solicitationId &&
+                      waiverData.data.solicitationId != ""
                         ? waiverData.data.solicitationId
                         : "N/A"
                     }}
                   </p>
                 </div>
+
                 <div class="desktop:grid-col margin-bottom-2">
                   <div class="margin-0 font-sans-xs text-bold">
                     Procurement Stage
@@ -105,20 +133,21 @@
                     }}
                   </p>
                 </div>
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 font-sans-xs text-bold">
-                    OMB Determination
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{
-                        waiverData.data?.ombDetermination && waiverData.data.ombDetermination != ""
-                        ? waiverData.data.ombDetermination
-                        : "N/A"
-                    }}
-                  </p>
-                </div>
               </div>
 
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">
+                  OMB Determination
+                </div>
+                <p class="margin-0 font-sans-xs">
+                  {{
+                    waiverData.data?.ombDetermination &&
+                    waiverData.data.ombDetermination != ""
+                      ? waiverData.data.ombDetermination
+                      : "N/A"
+                  }}
+                </p>
+              </div>
               <div
                 class="margin-bottom-2"
                 *ngIf="
