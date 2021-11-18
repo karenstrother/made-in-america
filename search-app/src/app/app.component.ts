@@ -33,7 +33,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
-    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -126,6 +125,7 @@ export class AppComponent implements OnInit {
   }
 
   movePage(index) {
+    this.current = index
     const waiverIndex = (index - 1) * 10;
     const d = this.filteredData.length > 0 ? this.filteredData : this.data;
     this.displayedData = d.slice(waiverIndex, waiverIndex + 10);
