@@ -91,9 +91,11 @@ export class AppComponent implements OnInit {
             )
         : d
             .slice()
-            .sort((a, b) =>
-              a.created > b.created ? 1 : b.created > a.created ? -1 : 0
-            );
+            .sort((a, b) => {
+              const date1 = new Date(a.created)
+              const date2 = new Date(b.created)
+              return date2.getTime() - date1.getTime()
+            });
     this.filteredData = sortedData
     this.displayedData = this.filteredData.slice(0, 10);
   }
