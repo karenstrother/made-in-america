@@ -1,6 +1,6 @@
  /// <reference types="Cypress" />
-describe('nonavailability', () => {
-  it('non-availability should not be present', () => {
+describe('non-availability check', () => {
+  it('non-availability should not be present on site', () => {
     cy.getUrlsArray().then(($urls) => {
       $urls.forEach((url) => {
         cy.visit(url)

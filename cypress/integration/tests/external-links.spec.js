@@ -1,6 +1,6 @@
  /// <reference types="Cypress" />
 describe('check external links', () => {
-  it('check external links', () => {
+  it('should open in new tab', () => {
     cy.getUrlsArray().then(($urls) => {
       $urls.forEach((url) => {
         cy.visit(url).then(() => {
