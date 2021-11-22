@@ -43,14 +43,27 @@ site.
 
 ### Testing
 
-#### With locally installed `node` and `ruby`
+#### With locally installed `node` and `ruby` 
     $ npm test-local
+
+#### Testing locally with Cypress 
+See [Installing Cypress Documataion](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
+Cypress testing commands:
+    run Cypress in the browser 
+    $ npm run cy:open 
+    run all Cypress integration tests headless
+    $ npm run test 
+    run Cypress visual regression tests 
+    $ npm run cy:vis-regression
+    run full pipeline locally
+    $ npm run test-local
 
 ## Technologies you should be familiarize yourself with
 
 - [Jekyll](https://jekyllrb.com/docs/) - The primary site engine that builds your code and content.
 - [Front Matter](https://jekyllrb.com/docs/frontmatter) - The top of each page/post includes keywords within `--` tags. This is meta data that helps Jekyll build the site, but you can also use it to pass custom variables.
 - [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov)
+- [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
 
 
 ## Contributing
