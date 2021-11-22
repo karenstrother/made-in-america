@@ -47,7 +47,7 @@ site.
     $ npm test-local
 
 #### Testing locally with Cypress 
-See [Installing Cypress Documataion](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
+See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
 Cypress testing commands:
     run Cypress in the browser 
     $ npm run cy:open 
