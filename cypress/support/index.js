@@ -17,6 +17,4 @@ Cypress.Commands.add('getUrlsArray', () => {
         .toArray()
         .map((el) => el.innerText);
     });
-
-
 })

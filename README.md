@@ -43,19 +43,24 @@ site.
 
 ### Testing
 
-#### With locally installed `node` and `ruby` 
+#### With locally installed `node` and `ruby`
     $ npm test-local
 
-#### Testing locally with Cypress 
+## Testing locally with Cypress 
 See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
-Cypress testing commands:
-    run Cypress in the browser 
-    $ npm run cy:open 
-    run all Cypress integration tests headless
-    $ npm run test 
-    run Cypress visual regression tests 
+
+### Cypress testing commands:
+
+#### Run Cypress in the browser 
+    $ npm run cy:open
+
+#### Run all Cypress integration tests headless
+    $ npm run test
+
+#### Run Cypress visual regression tests 
     $ npm run cy:vis-regression
-    run full pipeline locally
+
+#### Run full pipeline locally
     $ npm run test-local
 
 ## Technologies you should be familiarize yourself with

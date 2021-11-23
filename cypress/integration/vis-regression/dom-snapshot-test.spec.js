@@ -23,7 +23,7 @@ before(() => {
 describe('heaotneoiha', () => {
   it('toMatchSnapshot', () => {
     urls.forEach((url) => {
-      console.log(url)
+      // console.log(url)
       cy.visit(url).then(() => {
         cy.get('main')
         .toMatchSnapshot({ignoreExtraFields: true,
