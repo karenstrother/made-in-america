@@ -1,5 +1,5 @@
  /// <reference types="Cypress" />
-const urls = [];
+let urls = [];
 
 before(() => {
 
@@ -26,8 +26,7 @@ describe('heaotneoiha', () => {
       // console.log(url)
       cy.visit(url).then(() => {
         cy.get('main')
-        .toMatchSnapshot({ignoreExtraFields: true,
-          "replace": {"key": url}})
+        .toMatchSnapshot({ignoreExtraFields: true, replace: {"key": url}})
       })
     })
   })
