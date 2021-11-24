@@ -49,6 +49,21 @@ site.
 ## Testing locally with Cypress 
 See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
 
+### Command line for download 
+    $ npm install cypress --save-dev
+*Make sure that you have already run npm init or have a node_modules folder or package.json file in the root of your project to ensure cypress is installed in the correct directory.*
+
+### Add the following scripts to your package.json file 
+* "test": "cypress run --spec 'cypress/integration/tests/*'",
+* "test-local": "npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
+* "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
+* "cy:open": "cypress open",
+
+### Before starting your tests 
+#### Before you can run any test the following command needs to be ran 
+    $ npm run start
+* After that spilt the terminal and the testing commands below can be used
+
 ### Cypress testing commands:
 
 #### Run Cypress in the browser 
