@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeSwitcherService } from './shared/theme-switcher/theme-switcher.service';
-import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -39,8 +39,7 @@ export class AppComponent implements OnInit {
       filter: 'all',
       sort: 'recent'
     };
-    const url =
-      'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=main';
+    const url = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`;
     fetch(url)
       .then(response => response.json())
       .then(({ content }) => {
