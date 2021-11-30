@@ -73,7 +73,8 @@ export class AppComponent implements OnInit {
   }
 
   onSortChange(selectedOption) {
-    const currentData = this.filteredData.length > 0 ? this.filteredData : this.data;
+    const currentData =
+      this.filteredData.length > 0 ? this.filteredData : this.data;
     const sortedData =
       selectedOption === 'alphabetical'
         ? this.sortAlphabetically(currentData)
@@ -102,7 +103,7 @@ export class AppComponent implements OnInit {
     return data
       .slice()
       .sort(({ created: created1 }, { created: created2 }) =>
-        created1 > created2 ? 1 : created2 > created1 ? -1 : 0
+        created1 > created2 ? -1 : created1 < created2 ? 1 : 0
       );
   }
 
