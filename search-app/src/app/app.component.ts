@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   title = 'usa-components';
@@ -18,46 +18,44 @@ export class AppComponent implements OnInit {
   sortOptions = [
     {
       label: 'Most Recent',
-      value: 'recent',
+      value: 'recent'
     },
     {
       label: 'Alphabetical',
-      value: 'alphabetical',
-    },
+      value: 'alphabetical'
+    }
   ];
   selectedOptions = {
     filter: this.filter,
-    sort: this.sort,
+    sort: this.sort
   };
   current = 1;
 
-  constructor(
-    private themeSwitcherService: ThemeSwitcherService,
-  ) {}
+  constructor(private themeSwitcherService: ThemeSwitcherService) {}
 
   ngOnInit() {
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
     this.selectedOptions = {
       filter: 'all',
-      sort: 'recent',
+      sort: 'recent'
     };
     const url =
       'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=main';
     fetch(url)
-      .then((response) => response.json())
+      .then(response => response.json())
       .then(({ content }) => {
         const dataString = decodeURIComponent(
           Array.prototype.map
             .call(
               atob(content),
-              (c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+              c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
             )
             .join('')
         );
         this.data = JSON.parse(dataString);
         this.filterOptions = [
           { label: 'All', value: 'all' },
-          ...this.createFilters(this.data),
+          ...this.createFilters(this.data)
         ];
         this.displayedData = this.data.slice(0, 10);
         this.last = Math.ceil(this.data.length / 10);
@@ -69,63 +67,74 @@ export class AppComponent implements OnInit {
 
   createFilters(data) {
     const uniqueRequestStatus = Array.from(
-      new Set(data.map((d) => d.data.requestStatus))
+      new Set(data.map(d => d.data.requestStatus))
     );
-    return uniqueRequestStatus.map((d) => {
-      return { label: d, value: d };
-    });
+    return uniqueRequestStatus.map(d => ({ label: d, value: d }));
   }
 
   onSortChange(selectedOption) {
-    const d = this.filteredData.length > 0 ? this.filteredData : this.data;
+    const currentData =
+      this.filteredData.length > 0 ? this.filteredData : this.data;
     const sortedData =
       selectedOption === 'alphabetical'
-        ? d
-            .slice()
-            .sort((a, b) =>
-              a.data.procurementTitle > b.data.procurementTitle
-                ? 1
-                : b.data.procurementTitle > a.data.procurementTitle
-                ? -1
-                : 0
-            )
-        : d
-            .slice()
-            .sort((a, b) =>
-              a.created > b.created ? 1 : b.created > a.created ? -1 : 0
-            );
-    this.filteredData = sortedData
+        ? this.sortAlphabetically(currentData)
+        : this.sortChronologically(currentData);
+    this.filteredData = sortedData;
     this.displayedData = this.filteredData.slice(0, 10);
+  }
+
+  sortAlphabetically(data) {
+    return data
+      .slice()
+      .sort(
+        (
+          { data: { procurementTitle: procurementTitle1 } },
+          { data: { procurementTitle: procurementTitle2 } }
+        ) =>
+          procurementTitle1 > procurementTitle2
+            ? 1
+            : procurementTitle2 > procurementTitle1
+            ? -1
+            : 0
+      );
+  }
+
+  sortChronologically(data) {
+    return data
+      .slice()
+      .sort(({ created: created1 }, { created: created2 }) =>
+        created1 > created2 ? -1 : created1 < created2 ? 1 : 0
+      );
   }
 
   onFilterChange(selectedOption) {
     this.filteredData =
       selectedOption === 'all'
         ? this.data
-        : this.data.filter((d) => d.data.requestStatus === selectedOption);
+        : this.data.filter(d => d.data.requestStatus === selectedOption);
     this.displayedData = this.filteredData.slice(0, 10);
     this.last = Math.ceil(this.filteredData.length / 10);
   }
 
   handleSelectedOptions($event) {
-    this.filterOptions.findIndex((obj) =>
+    this.filterOptions.findIndex(obj =>
       Object.values(obj).includes($event.value)
     ) !== -1
       ? (this.selectedOptions = {
           filter: $event.value,
-          sort: this.selectedOptions.sort,
+          sort: this.selectedOptions.sort
         })
       : (this.selectedOptions = {
           filter: this.selectedOptions.filter,
-          sort: $event.value,
+          sort: $event.value
         });
     this.onFilterChange(this.selectedOptions.filter);
     this.onSortChange(this.selectedOptions.sort);
-    this.movePage(1)
+    this.movePage(1);
   }
 
   movePage(index) {
-    this.current = index
+    this.current = index;
     const waiverIndex = (index - 1) * 10;
     const d = this.filteredData.length > 0 ? this.filteredData : this.data;
     this.displayedData = d.slice(waiverIndex, waiverIndex + 10);
