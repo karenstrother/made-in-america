@@ -46,3 +46,6 @@ jobs:
 
       - name: Run htmlproofer.
         run: npm run htmlproofer
+
+      - name: Run e2e test.
+        run: npm run test      
