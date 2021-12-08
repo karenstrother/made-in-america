@@ -67,6 +67,14 @@
                 }
               ],
               "serviceWorker": false
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
             }
           }
         },
@@ -78,7 +86,10 @@
           "configurations": {
             "production": {
               "browserTarget": "usa-components:build:production"
-            }
+            },
+            "development": {
+                "browserTarget": "usa-components:build:development"
+              }
           }
         },
         "extract-i18n": {
@@ -99,9 +110,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "src/styles/styles.scss"
-            ],
+            "styles": ["src/styles/styles.scss"],
             "scripts": []
           }
         },
@@ -113,9 +122,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -165,12 +172,11 @@
               "projects/uswds-components/tsconfig.lib.json",
               "projects/uswds-components/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "usa-components"
 }
