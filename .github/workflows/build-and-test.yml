@@ -48,4 +48,4 @@ jobs:
         run: npm run test
 
       - name: Run search-app test.
-        run: cd search-app && yarn install && npm run test
+        run: cd search-app && npm ci && npm run test
