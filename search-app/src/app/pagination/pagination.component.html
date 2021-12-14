@@ -46,7 +46,7 @@
       <a
         href="javascript:void(0);"
         class="usa-pagination__button"
-        aria-label="Page 1"
+        attr.aria-label="Page {{ index }}"
         [ngClass]="{ 'usa-current': current === index }"
         [attr.aria-current]="current === index ? 'page' : null"
         (click)="goTo(index)"
@@ -68,7 +68,7 @@
       <a
         href="javascript:void(0);"
         class="usa-pagination__button"
-        aria-label="Last page, page 24"
+        attr.aria-label="Last page, page {{ last }}"
         [ngClass]="{ 'usa-current': current === last }"
         [attr.aria-current]="current === last ? 'page' : null"
         (click)="goTo(last)"
