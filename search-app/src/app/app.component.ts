@@ -35,7 +35,9 @@ export class AppComponent implements OnInit {
   constructor(private themeSwitcherService: ThemeSwitcherService) {}
 
   ngOnInit() {
+    environment.production === false &&
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
+
     this.selectedOptions = {
       filter: 'all',
       sort: 'recent'
