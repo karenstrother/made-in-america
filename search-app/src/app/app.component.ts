@@ -4,7 +4,8 @@ import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [ThemeSwitcherService],
 })
 export class AppComponent implements OnInit {
   title = 'usa-components';
