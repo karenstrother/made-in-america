@@ -3,7 +3,7 @@ describe('filter by status', () => {
 before('visit site', () => {
   cy.visit('localhost:4000/waivers')
 })
-before('create alias', () => {
+beforeEach('create alias', () => {
   cy.get('[data-test="filter-select"] select').children().as('filter-options')
 })
 it('UI changes when filter is selected', () => {
