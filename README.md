@@ -41,38 +41,43 @@ This project strives to be compliant with requirements set by [21st Century IDEA
 Open your web browser to [localhost:4000](http://localhost:4000/) to view your
 site.
 
+### Search App
+This project contains a progressively decoupled application built in Angular and located in `/search-app`.  It is rendered in the template under the `/search` directory.
+
+Please review the application [README](search-app/README.md) to get started.
+
 ### Testing
 
 #### With locally installed `node` and `ruby`
     $ npm test-local
 
-## Testing locally with Cypress 
-See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local 
+## Testing locally with Cypress
+See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local
 
-### Command line for download 
+### Command line for download
     $ npm install cypress --save-dev
 *Make sure that you have already run npm init or have a node_modules folder or package.json file in the root of your project to ensure cypress is installed in the correct directory.*
 
-### Add the following scripts to your package.json file 
+### Add the following scripts to your package.json file
 * "test": "cypress run --spec 'cypress/integration/tests/*'",
 * "test-local": "npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
 * "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
 * "cy:open": "cypress open",
 
-### Before starting your tests 
-#### Before you can run any test the following command needs to be ran 
+### Before starting your tests
+#### Before you can run any test the following command needs to be ran
     $ npm run start
 * After that spilt the terminal and the testing commands below can be used
 
 ### Cypress testing commands:
 
-#### Run Cypress in the browser 
+#### Run Cypress in the browser
     $ npm run cy:open
 
 #### Run all Cypress integration tests headless
     $ npm run test
 
-#### Run Cypress visual regression tests 
+#### Run Cypress visual regression tests
     $ npm run cy:vis-regression
 
 #### Run full pipeline locally
