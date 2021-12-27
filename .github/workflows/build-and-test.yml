@@ -34,12 +34,15 @@ jobs:
 
       - name: Install NPM dependencies.
         run: npm install
-      
+
       # - name: Seach App init
       #   run: cd search-app ; yarn ; yarn build; cd ..
 
       - name: Build and start up jekyll server.
         run: npm run build && npm run start-detached
+
+      - name: Code style
+        run: npm run stylelint
 
       - name: Run pa11y-ci.
         run: npm run pa11y-ci:sitemap
@@ -48,4 +51,4 @@ jobs:
         run: npm run htmlproofer
 
       - name: Run e2e test.
-        run: npm run test      
+        run: npm run test
