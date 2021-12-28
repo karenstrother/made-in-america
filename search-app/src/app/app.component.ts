@@ -4,7 +4,8 @@ import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [ThemeSwitcherService],
 })
 export class AppComponent implements OnInit {
   title = 'usa-components';
@@ -34,7 +35,9 @@ export class AppComponent implements OnInit {
   constructor(private themeSwitcherService: ThemeSwitcherService) {}
 
   ngOnInit() {
+    environment.production === false &&
     this.themeSwitcherService.setStyle('theme', 'uswds-styles.css');
+
     this.selectedOptions = {
       filter: 'all',
       sort: 'recent'
