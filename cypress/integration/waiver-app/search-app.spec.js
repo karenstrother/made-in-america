@@ -12,6 +12,7 @@ describe('search results', () => {
   })
   beforeEach('setting up test alias', () => {
     cy.get('[data-test="filter-select"] select').children().as('filter-options')
+    cy.get('usa-accordion').children().as('accordion-elements')
   })
 
   it('accordons should open when clicked', () => {
@@ -39,7 +40,21 @@ describe('search results', () => {
       })
     })
   })
-
+  it('psc code is a number, is included in product details', () => {
+    cy.get('@accordion-elements').then((accordionElements) => {
+      console.log(accordionElements[0])
+      cy.get(accordionElements[0]).find('[data-test="psc-code"]')
+      .invoke('text')
+      .should(($pscCode) => {
+        expect($pscCode).to.match(/^[0-9\s]*$/)
+      })
+      .then(($pscCode) => {
+        cy.get(accordionElements[1]).find('[data-test="product-details-group"]')
+        .invoke('text')
+        .should('contains', $pscCode.trim())
+      })
+    })
+  })
 })
 
 

@@ -27,7 +27,7 @@
           </div>
           <div class="desktop:grid-col-4 margin-y-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
-            <p class="margin-0 text-normal">
+            <p class="margin-0 text-normal" data-test="psc-code">
               {{ waiverData.data.psc.pscCode }}
             </p>
           </div>
@@ -222,7 +222,7 @@
               </div>
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Product</div>
-                <p class="margin-0 font-sans-xs" data-test="psc">
+                <p class="margin-0 font-sans-xs" data-test="product-details-group">
                   {{ waiverData.data.psc.pscName }} ({{
                     waiverData.data.psc.pscCode
                   }})
