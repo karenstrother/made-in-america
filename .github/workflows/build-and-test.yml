@@ -38,6 +38,9 @@ jobs:
       - name: Build and start up jekyll server.
         run: npm run build && npm run start-detached
 
+      - name: Code style
+        run: npm run stylelint
+
       - name: Run pa11y-ci.
         run: npm run pa11y-ci:sitemap
 
