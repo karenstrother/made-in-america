@@ -1,11 +1,11 @@
 {
-  "name": "usa-components",
-  "version": "0.0.7",
+  "name": "mia-search-app",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "start-dev": "ng serve -c development",
-    "build": "ng build --prod; mv ../_assets/js/app/main.js ../_assets/js/app/runtime.js ../_assets/js/app/polyfills.js ../_assets/js/",
+    "build": "ng build -c production; mv ../_assets/js/app/main.js ../_assets/js/app/runtime.js ../_assets/js/app/polyfills.js ../_assets/js/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
