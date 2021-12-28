@@ -2,7 +2,7 @@
   <usa-accordion [headerLevel]="2" [singleSelect]="true" activeIds="id">
     <usa-accordion-item *ngFor="let waiverData of data">
       <ng-template UsaAccordionHeader>
-        <div class="grid-row flex-row padding-x-3 padding-y-1" data-test="button">
+        <div class="grid-row flex-row padding-x-3 padding-y-1" data-test="accordion-header">
           <div class="desktop:grid-col-2 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p
@@ -33,7 +33,7 @@
           </div>
           <div class="desktop:grid-col-2 margin-y-1">
             <p class="margin-0"><b>Request Status</b></p>
-            <p class="margin-0 text-normal" data-test="requst-status">
+            <p class="margin-0 text-normal">
               {{ waiverData.data.requestStatus }}
             </p>
           </div>
@@ -135,7 +135,7 @@
                 </div>
               </div>
 
-              <div class="margin-bottom-2" data-test="omb">
+              <div class="margin-bottom-2" data-test="omb-determination">
                 <div class="margin-0 font-sans-xs text-bold">
                   OMB Determination
                 </div>
@@ -222,7 +222,7 @@
               </div>
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Product</div>
-                <p class="margin-0 font-sans-xs">
+                <p class="margin-0 font-sans-xs" data-test="psc">
                   {{ waiverData.data.psc.pscName }} ({{
                     waiverData.data.psc.pscCode
                   }})
