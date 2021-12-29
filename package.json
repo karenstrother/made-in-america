@@ -23,9 +23,12 @@
       "npx prettier --write",
       "npx eslint"
     ],
-    "*.{scss,css,md,html}": [
+    "*.{scss,css,html}": [
       "npx prettier --write",
       "npx stylelint"
+    ],
+    "*.md": [
+      "npx prettier --write"
     ]
   },
   "dependencies": {
