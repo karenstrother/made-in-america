@@ -14,12 +14,10 @@ describe('search results', () => {
     cy.get('[data-test="filter-select"] select').children().as('filter-options')
     cy.get('usa-accordion').children().as('accordion-elements')
   })
-
-  it('accordons should open when clicked', () => {
+  it('accordion should open when clicked', () => {
     cy.get('[data-test="accordion-header"]').click({ multiple: true })
     .get('[data-test="omb-determination"]').should('be.visible')
   })
- 
   it('omb determination should be based on status', () => {
     cy.get('@filter-options').then((filterOptions) => {
       filterOptions.each(option => {
@@ -42,7 +40,6 @@ describe('search results', () => {
   })
   it('psc code is a number, is included in product details', () => {
     cy.get('@accordion-elements').then((accordionElements) => {
-      console.log(accordionElements[0])
       cy.get(accordionElements[0]).find('[data-test="psc-code"]')
       .invoke('text')
       .should(($pscCode) => {
@@ -52,6 +49,18 @@ describe('search results', () => {
         cy.get(accordionElements[1]).find('[data-test="product-details-group"]')
         .invoke('text')
         .should('contains', $pscCode.trim())
+      })
+    })
+  })
+  
+  it('NAICS code should be present in descriptor', () => {
+    cy.get('@accordion-elements').then((accordionElements) => {
+      cy.get(accordionElements[1]).find('[data-test="industry-details-group"]')
+      .invoke('text')
+      .should(($detailsText) => {
+        const regExp = /\(([^)]+)\)/g
+        const pscCode = regExp.exec($detailsText)
+        expect(pscCode[1]).to.match(/^[0-9\s]*$/)
       })
     })
   })
