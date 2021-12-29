@@ -9,6 +9,7 @@
     "build": "bundle exec jekyll build --trace",
     "clean": "bundle exec jekyll clean",
     "stylelint": "npx stylelint ./_assets/**/*.scss",
+    "prettier": "npx prettier --write .",
     "reset": "npx rimraf .git",
     "start": "bundle exec jekyll serve",
     "start-detached": "bundle exec jekyll serve --detach",
@@ -23,6 +24,7 @@
     "cypress": "^9.0.0",
     "cypress-plugin-snapshots": "^1.4.4",
     "pa11y-ci": "^2.4.0",
+    "prettier": "2.5.1",
     "rimraf": "^3.0.2",
     "stylelint": "^14.2.0"
   }
