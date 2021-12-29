@@ -1,6 +1,3 @@
 {
-  "extends": [
-    "@18f/identity-stylelint-config",
-    "stylelint-config-prettier-scss"
-  ]
+  "extends": "@18f/identity-stylelint-config"
 }
