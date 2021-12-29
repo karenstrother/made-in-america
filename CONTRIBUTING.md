@@ -69,6 +69,8 @@ an example of a properly formatted branch name looks like this,
 
 ### Code Review
 
+We run precommit hooks with husky to handle prettier and lint errors.
+
 To prepare for code review, please follow the following checks.
 
 - branch has detailed description of work/updates
