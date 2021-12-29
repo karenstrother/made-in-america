@@ -39,7 +39,7 @@ jobs:
         run: npm run build && npm run start-detached
 
       - name: Code style
-        run: npm run stylelint
+        run: npm run stylelint && npx prettier --check
 
       - name: Run pa11y-ci.
         run: npm run pa11y-ci:sitemap
