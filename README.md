@@ -58,11 +58,11 @@ See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-st
     $ npm install cypress --save-dev
 *Make sure that you have already run npm init or have a node_modules folder or package.json file in the root of your project to ensure cypress is installed in the correct directory.*
 
-### Add the following scripts to your package.json file
-* "test": "cypress run --spec 'cypress/integration/tests/*'",
-* "test-local": "npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
-* "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
-* "cy:open": "cypress open",
+### testing scripts and their use
+* "test": runs all integration tests for site
+* "test-local": will run the full pipeline on your local 
+* "cy:vis-regression": will run all visual regression tests for site
+* "cy:open": opens the cypress runner 
 
 ### Before starting your tests
 #### Before you can run any test the following command needs to be ran
