@@ -20,7 +20,6 @@ All contributions to this project will be released under the CC0 dedication. By 
 
 Follow the [18F Front End Coding Style Guide](https://pages.18f.gov/frontend/) and [Accessibility Guide](https://pages.18f.gov/accessibility/checklist/)
 
-
 ## Branch Management
 
 ### Branches
@@ -52,6 +51,7 @@ main
 ### Naming
 
 The following branch naming conventions can be pre-pended to your branch name
+
 - `feature/`
 - `bug/`
 - `content/`
@@ -79,9 +79,10 @@ To prepare for code review, please follow the following checks.
 - code review/design review requested as appropriate
 - branch/preview link updated in ticket
 
-
 <!-- TODO: set this template up with .github -->
+
 ### Ticket Details Template
+
 <!-- Please feel free to remove whatever sections/lines in this aren’t relevant. -->
 
 ## Description

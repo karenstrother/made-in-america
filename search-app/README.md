@@ -1,18 +1,22 @@
 # NgxUSWDS
+
 This project takes components in uswds and implements them through angular.
 Original USWDS components can be found here - https://designsystem.digital.gov/components
 Current progress / documentation of this project can be found here - https://gsa.github.io/ngx-uswds
 
 ## Quick Start
+
 ```
 npm install
 npm run start
 ```
 
 ## Building for Production
+
 `npm run build`
 
 ## Additional commands through the angular cli
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

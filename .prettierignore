@@ -54,6 +54,7 @@ Thumbs.db
 
 search-app/dist
 search-app/projects
+_includes/sidenav.html
 _assets/js/app
 _assets/css/premium.css
 _assets/js/main.js
