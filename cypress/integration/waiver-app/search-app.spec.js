@@ -1,4 +1,5 @@
 /// <reference types="Cypress" /> 
+
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
   // failing the test
@@ -17,6 +18,18 @@ describe('search results', () => {
   it('accordion should open when clicked', () => {
     cy.get('[data-test="accordion-header"]').click({ multiple: true })
     .get('[data-test="omb-determination"]').should('be.visible')
+  })
+  it('check that no fields are empty', () => {
+    cy.get('@accordion-elements').then((accordionElements) => {
+      cy.get(accordionElements[0]).find('[data-test="accordion-header"]').children().children()
+      .each(child => {
+        child[0].innerText.length > 0
+      })
+      cy.get(accordionElements[1]).find('[data-test="accordion-content"]').find('p')
+      .each(detail => {
+        detail[0].innerText.length > 0
+      })
+      })
   })
   it('omb determination should be based on status', () => {
     cy.get('@filter-options').then((filterOptions) => {
@@ -52,7 +65,6 @@ describe('search results', () => {
       })
     })
   })
-  
   it('NAICS code should be present in descriptor', () => {
     cy.get('@accordion-elements').then((accordionElements) => {
       cy.get(accordionElements[1]).find('[data-test="industry-details-group"]')
@@ -65,16 +77,3 @@ describe('search results', () => {
     })
   })
 })
-
-
-
-// before you run tests - go and fetch the lastest data 
-// cypress way to fetch - look that up 
-// when you get the data back you only want one (make sure it is in the correct order)
-// sort in order 
-// go and get just one item (first index)
-// thats your object and that should be what is rendered on the front end
-// assin as alias or a const 
-
-
-// understand what is being call (develop)
