@@ -4,11 +4,9 @@ describe('check external links', () => {
     cy.getUrlsArray().then($urls => {
       $urls.forEach(url => {
         cy.visit(url).then(() => {
-          cy.get('.usa-link--external').should(
-            'have.attr',
-            'target',
-            '_blank' || '_blank'
-          )
+          cy.get('.usa-link--external')
+            .should('have.attr', 'target')
+            .and('match', /.?[_blank]/)
         })
       })
     })
