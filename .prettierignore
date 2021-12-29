@@ -54,6 +54,14 @@ testem.log
 .DS_Store
 Thumbs.db
 
+*.njk
+*.woff*
+*.svg
+*.ttf
+*.png
+*.ico
+*.gif
+
 search-app/dist
 search-app/projects
 _includes/sidenav.html
