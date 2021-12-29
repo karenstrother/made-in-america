@@ -55,3 +55,6 @@ testem.log
 Thumbs.db
 
 _assets/js/app
+
+#Cypress
+cypress/screenshots
