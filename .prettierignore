@@ -53,6 +53,7 @@ testem.log
 Thumbs.db
 
 search-app/dist
+search-app/projects
 _assets/js/app
 _assets/css/premium.css
 _assets/js/main.js
