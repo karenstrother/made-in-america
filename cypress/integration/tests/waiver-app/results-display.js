@@ -6,7 +6,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
   return false
   // accordon structure error from USWDS we are ingoreing
 })
-console.log("blurt")
+
 describe("search results", () => {
   before("let site load", () => {
     cy.visit("localhost:4000/waivers")
