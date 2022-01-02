@@ -20,7 +20,6 @@ All contributions to this project will be released under the CC0 dedication. By 
 
 Follow the [18F Front End Coding Style Guide](https://pages.18f.gov/frontend/) and [Accessibility Guide](https://pages.18f.gov/accessibility/checklist/)
 
-
 ## Branch Management
 
 ### Branches
@@ -52,6 +51,7 @@ main
 ### Naming
 
 The following branch naming conventions can be pre-pended to your branch name
+
 - `feature/`
 - `bug/`
 - `content/`
@@ -69,6 +69,8 @@ an example of a properly formatted branch name looks like this,
 
 ### Code Review
 
+We run precommit hooks with husky to handle prettier and lint errors.
+
 To prepare for code review, please follow the following checks.
 
 - branch has detailed description of work/updates
@@ -78,16 +80,3 @@ To prepare for code review, please follow the following checks.
 - federalist preview has been generated
 - code review/design review requested as appropriate
 - branch/preview link updated in ticket
-
-
-<!-- TODO: set this template up with .github -->
-### Ticket Details Template
-<!-- Please feel free to remove whatever sections/lines in this aren’t relevant. -->
-
-## Description
-
-<!-- Include a high-level description of the issue your pull request fixes; include only one issue per pull request. Please also link to the Ticket it resolves if available. -->
-
-## Additional information
-
-<!-- Relevant research and support documents, Type of content review needed: stylistic or copy editing, Screenshot images, Notes -->

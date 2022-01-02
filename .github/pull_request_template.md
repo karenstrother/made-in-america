@@ -6,16 +6,16 @@ Include a high-level description of the issue your pull request fixes; include o
 
 ## How to test
 
-* Steps on how to test the integration/feature/fix
+- Steps on how to test the integration/feature/fix
 
 ## Additional information
 
 Include any of the following (as necessary):
 
-* Relevant research and support documents
-* Type of content review needed: stylistic or copy editing
-* Screenshot images
-* Notes
+- Relevant research and support documents
+- Type of content review needed: stylistic or copy editing
+- Screenshot images
+- Notes
 
 To prepare for code review, please follow the following checks.
 
