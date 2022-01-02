@@ -13,7 +13,7 @@
     "test": "cypress run --spec 'cypress/integration/tests/**/*.spec.js'",
     "test-local": "npm run stylelint && npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
     "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
-    "cy:open": "cypress open",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "uswds": "~2.12.1"
