@@ -2,15 +2,15 @@
   <usa-accordion [headerLevel]="2" [singleSelect]="true" activeIds="id">
     <usa-accordion-item *ngFor="let waiverData of data">
       <ng-template UsaAccordionHeader>
-        <div class="grid-row flex-row padding-x-3 padding-y-1">
+        <div class="grid-row flex-row padding-x-3 padding-y-1" data-test="accordion-header">
           <div class="desktop:grid-col-2 desktop:margin-right-4 margin-y-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p
-              [ngClass]="
+              [ngClass]=" 
                 waiverData.data.procurementTitle === ''
                   ? 'margin-0 text-base-light text-italic'
-                  : 'margin-0 text-normal'
-              "
+                  : 'margin-0 text-normal' 
+              " data-test="procurement-title"
             >
               {{
                 waiverData.data.procurementTitle != ""
@@ -27,7 +27,7 @@
           </div>
           <div class="desktop:grid-col-4 margin-y-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
-            <p class="margin-0 text-normal">
+            <p class="margin-0 text-normal" data-test="psc-code">
               {{ waiverData.data.psc.pscCode }}
             </p>
           </div>
@@ -48,6 +48,7 @@
             font-sans-sm
             margin-bottom-2
           "
+          data-test="accordion-content"
         >
           <div class="margin-bottom-2">
             <div
@@ -135,7 +136,7 @@
                 </div>
               </div>
 
-              <div class="margin-bottom-2">
+              <div class="margin-bottom-2" data-test="omb-determination">
                 <div class="margin-0 font-sans-xs text-bold">
                   OMB Determination
                 </div>
@@ -214,7 +215,7 @@
             <div class="tablet:grid-col">
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Industry</div>
-                <p class="margin-0 font-sans-xs">
+                <p class="margin-0 font-sans-xs" data-test="industry-details-group">
                   {{ waiverData.data.naics.NAICS_Title }} ({{
                     waiverData.data.naics.NAICS_Code
                   }})
@@ -222,7 +223,7 @@
               </div>
               <div class="margin-bottom-2">
                 <div class="margin-0 font-sans-xs text-bold">Product</div>
-                <p class="margin-0 font-sans-xs">
+                <p class="margin-0 font-sans-xs" data-test="product-details-group">
                   {{ waiverData.data.psc.pscName }} ({{
                     waiverData.data.psc.pscCode
                   }})

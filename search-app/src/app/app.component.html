@@ -11,6 +11,7 @@
       [label]="'Filter By Status'"
       [options]="filterOptions"
       (optionChange)="handleSelectedOptions($event)"
+      data-test="filter-select"
     >
     </uswds-dropdown>
     <uswds-dropdown
@@ -18,6 +19,7 @@
       [label]="'Sort By'"
       [options]="sortOptions"
       (optionChange)="handleSelectedOptions($event)"
+      data-test="sort-select"
     >
     </uswds-dropdown>
   </div>
