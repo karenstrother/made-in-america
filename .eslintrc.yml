@@ -3,6 +3,7 @@ extends:
 plugins:
   - import
   - prettier
+  - json
 env:
   node: true
   browser: true

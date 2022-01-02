@@ -2,19 +2,19 @@
   "name": "federalist-uswds-jekyll",
   "version": "1.3.0",
   "scripts": {
+    "build": "bundle exec jekyll build --trace",
+    "start": "bundle exec jekyll serve",
+    "start-detached": "bundle exec jekyll serve --detach",
+    "clean": "bundle exec jekyll clean",
+    "reset": "npx rimraf .git",
+    "stylelint": "npx stylelint ./_assets/**/*.scss",
+    "prettier": "npx prettier --write .",
+    "htmlproofer": "bundle exec htmlproofer _site",
+    "pa11y-ci:sitemap": "pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-exclude \"/*.pdf\"  --sitemap-exclude \"/admin\" --sitemap-exclude \"/search-app\"",
     "test": "cypress run --spec 'cypress/integration/tests/*'",
     "test-local": "npm run stylelint && npx prettier --check . && npm run test && npm run pa11y-ci:sitemap && npm run htmlproofer",
     "cy:vis-regression": "cypress run --spec cypress/integration/e2e_tests/image-Snapshot.spec.js",
     "cy:open": "cypress open",
-    "build": "bundle exec jekyll build --trace",
-    "clean": "bundle exec jekyll clean",
-    "stylelint": "npx stylelint ./_assets/**/*.scss",
-    "prettier": "npx prettier --write .",
-    "reset": "npx rimraf .git",
-    "start": "bundle exec jekyll serve",
-    "start-detached": "bundle exec jekyll serve --detach",
-    "htmlproofer": "bundle exec htmlproofer _site",
-    "pa11y-ci:sitemap": "pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-exclude \"/*.pdf\"  --sitemap-exclude \"/admin\" --sitemap-exclude \"/search-app\"",
     "precommit": "npx lint-staged --allow-empty",
     "postinstall": "husky install"
   },
@@ -23,11 +23,11 @@
       "npx prettier --write",
       "npx eslint"
     ],
-    "*.{scss,css,html}": [
+    "*.{scss,css}": [
       "npx prettier --write",
       "npx stylelint"
     ],
-    "*.md": [
+    "*.{md,html}": [
       "npx prettier --write"
     ]
   },
@@ -40,9 +40,10 @@
     "@typescript-eslint/parser": "^5.8.1",
     "cypress": "^9.0.0",
     "cypress-plugin-snapshots": "^1.4.4",
-    "eslint": "^8.5.0",
+    "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.4",
