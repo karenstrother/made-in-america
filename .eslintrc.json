@@ -1,0 +1,17 @@
+{
+  "extends": ["airbnb-base", "prettier", "plugin:json/recommended"],
+  "plugins": ["import", "prettier", "json"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  }
+}
