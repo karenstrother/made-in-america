@@ -1,24 +1,22 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-// eslint-disable @typescript-eslint/no-var-requires
-import * as path from 'path'
 
-const karmaConfig = config => {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
-      'karma-jasmine',
-      'karma-chrome-launcher',
-      'karma-jasmine-html-reporter',
-      'karma-coverage-istanbul-reporter',
-      '@angular-devkit/build-angular/plugins/karma',
+      require('karma-jasmine'), // eslint-disable-line
+      require('karma-chrome-launcher'), // eslint-disable-line
+      require('karma-jasmine-html-reporter'), // eslint-disable-line
+      require('karma-coverage-istanbul-reporter'), // eslint-disable-line
+      require('@angular-devkit/build-angular/plugins/karma'), // eslint-disable-line
     ],
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: path.join(__dirname, './coverage/usa-components'),
+      dir: require('path').join(__dirname, './coverage/usa-components'), // eslint-disable-line
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true,
     },
@@ -26,9 +24,9 @@ const karmaConfig = config => {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    browsers: ['ChromeHeadless'],
-    singleRun: true,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    restartOnFileChange: true,
   })
 }
-
-export default karmaConfig
