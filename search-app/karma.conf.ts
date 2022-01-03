@@ -1,6 +1,6 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-
+// eslint-disable @typescript-eslint/no-var-requires
 import * as path from 'path'
 
 const karmaConfig = config => {
@@ -31,4 +31,4 @@ const karmaConfig = config => {
   })
 }
 
-export default karmaConfig()
+export default karmaConfig
