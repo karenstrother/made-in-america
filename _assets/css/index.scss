@@ -4,17 +4,17 @@
 */
 
 $theme-show-notifications: false;
-$theme-hero-image: asset_path("mia-hero.png");
-$theme-grid-container-max-width: "widescreen";
-$theme-header-max-width: "widescreen";
-$theme-banner-max-width: "widescreen";
+$theme-hero-image: asset_path('mia-hero.png');
+$theme-grid-container-max-width: 'widescreen';
+$theme-header-max-width: 'widescreen';
+$theme-banner-max-width: 'widescreen';
 $theme-respect-user-font-size: true;
-$theme-font-type-sans: "public-sans";
+$theme-font-type-sans: 'public-sans';
 $theme-type-scale-sm: 5;
-$theme-body-font-size: "sm";
+$theme-body-font-size: 'sm';
 $theme-body-line-height: 5;
 
-@import "uswds";
+@import 'uswds';
 
 .usa-hero {
   min-height: 178px;
@@ -138,7 +138,7 @@ footer {
 }
 
 .text-base-lightest.usa-link--external::after {
-  background-image: url("../img/usa-icons-bg/launch--white.svg") !important;
+  background-image: url('../img/usa-icons-bg/launch--white.svg') !important;
 }
 
 @media screen and (max-width: 1126px) {

@@ -12,19 +12,11 @@
     "importHelpers": true,
     "target": "es5",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "uswds-components": [
-        "projects/uswds-components/src/public-api.ts"
-      ]
+      "uswds-components": ["projects/uswds-components/src/public-api.ts"]
     },
     "rootDir": "."
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
