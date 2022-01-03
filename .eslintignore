@@ -1,7 +1,6 @@
 package-lock.json
 package.json
 **/*.spec.js
-**/*.spec.ts
 cypress/
 search-app/
 _assets/js/app
