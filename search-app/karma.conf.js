@@ -6,27 +6,25 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('karma-jasmine'), // eslint-disable-line
+      require('karma-chrome-launcher'), // eslint-disable-line
+      require('karma-jasmine-html-reporter'), // eslint-disable-line
+      require('karma-coverage-istanbul-reporter'), // eslint-disable-line
+      require('@angular-devkit/build-angular/plugins/karma'), // eslint-disable-line
     ],
     client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/usa-components'),
+      dir: require('path').join(__dirname, './coverage/usa-components'), // eslint-disable-line
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
-  });
-};
+    browsers: ['ChromeHeadless'],
+    singleRun: true,
+  })
+}

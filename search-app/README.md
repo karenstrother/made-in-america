@@ -1,7 +1,21 @@
 # NgxUSWDS
-This project takes components in uswds and implements them through angular.  
-Original USWDS components can be found here - https://designsystem.digital.gov/components  
-Current progress / documentation of this project can be found here - https://gsa.github.io/ngx-uswds   
+
+This project takes components in uswds and implements them through angular.
+Original USWDS components can be found here - https://designsystem.digital.gov/components
+Current progress / documentation of this project can be found here - https://gsa.github.io/ngx-uswds
+
+## Quick Start
+
+```
+npm install
+npm run start
+```
+
+## Building for Production
+
+`npm run build`
+
+## Additional commands through the angular cli
 
 ## Development server
 
@@ -18,10 +32,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

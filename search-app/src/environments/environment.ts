@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  dataBranch: 'main'
-};
+  dataBranch: 'main',
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

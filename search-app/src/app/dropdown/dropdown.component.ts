@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { DropdownOptionsModel } from 'uswds-components';
+import { Component } from '@angular/core'
+import { DropdownOptionsModel } from 'uswds-components'
 
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent {
-
   dropdownOptions: DropdownOptionsModel[] = [
     {
       label: '--Select--',
@@ -15,30 +13,29 @@ export class DropdownComponent {
     },
     {
       label: 'Option A',
-      value: 'value1'
+      value: 'value1',
     },
     {
       label: 'Option B',
-      value: 'value2'
+      value: 'value2',
     },
     {
       label: 'Option C',
-      value: 'value3'
+      value: 'value3',
     },
     {
       label: 'Option D',
-      value: 'value4'
+      value: 'value4',
     },
     {
       label: 'Option E',
-      value: 'value5'
-    }
+      value: 'value5',
+    },
   ]
 
-  selectedOption: DropdownOptionsModel;
+  selectedOption: DropdownOptionsModel
 
   onOptionChange($event) {
-    this.selectedOption = $event;
+    this.selectedOption = $event
   }
-
 }
