@@ -7,30 +7,54 @@ describe('sort waivers by alphabetical order', () => {
     cy.get('[data-test="sort-select"] select').children().as('sort-options')
     cy.get('[data-test="procurement-title"]')
       .then(elements => {
-        const titles = elements.map((element, i) => {
-          return elements[element].innerText
+        const titles = elements.map(elementIndex => {
+          return elements[elementIndex].innerText
         })
         return titles
       })
-      .as('title')
-    cy.get('@title')
-      .then(titles => {
-        titles.sort()
-      })
-      .as('alphaSort')
+      .as('titles')
   })
   it('waivers are in alphabetical order after being sorted', () => {
     cy.get('@sort-options').then(sortOptions => {
       sortOptions.each(option => {
-        if (sortOptions[option].value !== 'recent') {
+        if (sortOptions[option].value !== 'alphabetical') {
           cy.get('[data-test="sort-select"] select').select(
             sortOptions[option].value
           )
-          cy.get('@title').then(titles => {
-            expect(titles).to.equal(titles.sort())
+
+          // cy.get('@titles').then(titles => {
+          //   console.log('og titles', titles)
+
+          cy.get('[data-test="procurement-title"]').should(elements => {
+            const t = elements.map(elementIndex => {
+              return elements[elementIndex].innerText
+            })
+
+            // console.log("t",t)
+
+            // console.log("t sort", t.sort())
+            expect(t).to.eq(t.sort())
+
+            // return t
           })
+
+          // console.log('titles', sortedTitles)
+          // console.log('sorted', titles.sort())
+          // console.log('titles.2', titlesArray)
+
+          // })
         }
       })
     })
   })
 })
+
+// alphabetical
+
+//   const filetypes = ['Access', 'Excel', 'Text/CSV','PDF','JSON','dsdsd'];
+//   cy.get('.data-sourcename').should(($els) => {
+// // map jquery elements to array of their innerText
+// const elsText = $els.toArray().map(el => el.innerText)
+// expect(elsText).to.deep.eq(filetypes)
+
+// })
