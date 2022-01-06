@@ -32,13 +32,11 @@ describe('pagination of waiver page', () => {
   it('usa current matches first page', () => {
     cy.get('[data-test="first-page"]')
       .click()
-      .invoke('attr', 'class')
-      .should('match', /usa-pagination__button usa-current/)
+      .should('have.class', 'usa-current')
   })
   it('usa current matches last page', () => {
     cy.get('[data-test="last-page"]')
       .click()
-      .invoke('attr', 'class')
-      .should('match', /usa-pagination__button usa-current/)
+      .should('have.class', 'usa-current')
   })
 })
