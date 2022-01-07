@@ -1,6 +1,6 @@
 {
   "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"],
-  "video": false,
+  "video": true,
   "chromeWebSecurity": false,
   "experimentalSourceRewriting": true,
   "env": {
