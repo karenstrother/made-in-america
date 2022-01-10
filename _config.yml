@@ -201,6 +201,10 @@ defaults:
     values:
       image: true
   - scope:
+      path: 'urgent-waivers'
+    values:
+      image: true
+  - scope:
       path: 'waiver-form/*'
     values:
       sitemap: false
