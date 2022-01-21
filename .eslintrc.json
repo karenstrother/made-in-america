@@ -10,7 +10,7 @@
     "plugin:json/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["import", "prettier", "json", "@typescript-eslint"],
+  "plugins": ["import", "prettier", "json", "@typescript-eslint", "jsdoc"],
   "env": {
     "node": true,
     "browser": true,
@@ -25,13 +25,13 @@
   },
   "rules": {
     "import/no-extraneous-dependencies": [
-      "error",
+      2,
       {
-        "devDependencies": true
+        "devDependencies": false
       }
     ],
     "import/extensions": [
-      "error",
+      2,
       "ignorePackages",
       {
         "js": "never",
@@ -39,6 +39,36 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "array-type": 0,
+    "arrow-body-style": 2,
+    "curly": 0,
+    "eol-last": 2,
+    "no-restricted-imports": [2, "rxjs/Rx"],
+    "max-classes-per-file": 0,
+    "@typescript-eslint/member-ordering": 2,
+    "no-console": 2,
+    "no-empty": 0,
+    "@typescript-eslint/no-inferrable-types": 2,
+    "@typescript-eslint/no-non-null-assertion": 2,
+    "jsdoc/no-types": 2,
+    "no-fallthrough": 2,
+    "no-var-requires": 0,
+    "quote-props": [2, "as-needed"],
+    "quotes": [2, "single"],
+    "@typescript-eslint/semi": ["error"],
+    "space-before-function-paren": [
+      0,
+      {
+        "options": {
+          "anonymous": "never",
+          "asyncArrow": "always",
+          "constructor": "never",
+          "method": "never",
+          "named": "never"
+        }
+      }
+    ],
+    "@typescript-eslint/typedef": 2
   }
 }
