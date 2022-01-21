@@ -57,7 +57,6 @@
     "no-var-requires": 0,
     "quote-props": [2, "as-needed"],
     "quotes": [2, "single"],
-    "@typescript-eslint/semi": ["error"],
     "space-before-function-paren": [
       0,
       {

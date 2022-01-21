@@ -99,8 +99,8 @@
                   </div>
                   <p class="margin-0 font-sans-xs">
                     {{
-                      waiverData?.data?.piids?.length > 0
-                        ? mapPiids(waiverData?.data?.piids)
+                      waiverData?.data.piids[0].piid.length > 0
+                        ? waiverData?.data.piids[0].piid
                         : 'N/A'
                     }}
                   </p>
