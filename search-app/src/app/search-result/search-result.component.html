@@ -24,16 +24,15 @@
             </p>
             <div class="margin-top-1">
               <div
-                [ngClass]=""
                 *ngIf="
                   waiverData.data.requestStatus == Submitted;
                   else reviewed
                 "
               >
-                Submitted Date: {{ waiverData.created | 'mediumDate' }}
+                Submitted Date: {{ waiverData.created | date: 'mediumDate' }}
               </div>
               <ng-template #reviewed>
-                Reviwed Date:
+                Reviewed Date:
                 <p class="margin-0 text-normal">
                   {{ waiverData.modified | date: 'mediumDate' }}
                 </p>
