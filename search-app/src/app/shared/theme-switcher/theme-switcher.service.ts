@@ -19,6 +19,7 @@ export class ThemeSwitcherService {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   removeStyleWithHref(href: string) {
     const existingLinkElement = document.head.querySelector(
       `link[rel="stylesheet"][href="${href}]`
@@ -49,6 +50,7 @@ export class ThemeSwitcherService {
     return linkEl
   }
 
+  // eslint-disable-next-line class-methods-use-this
   private getClassNameForKey(key: string) {
     return `app-${key}`
   }
