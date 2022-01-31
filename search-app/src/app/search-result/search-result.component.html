@@ -3,10 +3,10 @@
     <usa-accordion-item *ngFor="let waiverData of data">
       <ng-template UsaAccordionHeader>
         <div
-          class="grid-row padding-x-1 padding-y-1 flex-justify desktop:flex-row"
+          class="grid-row flex-row flex-justify padding-x-1 padding-y-1"
           data-test="accordion-header"
         >
-          <div class="desktop:flex-justify margin-y-1">
+          <div class="desktop:grid-col-3 margin-y-1 margin-right-1">
             <p class="margin-0"><b>Procurement Title</b></p>
             <p
               [ngClass]="
@@ -23,7 +23,7 @@
               }}
             </p>
           </div>
-          <div class="desktop:margin-y-1">
+          <div class="desktop:grid-col-1 margin-y-1 margin-right-1">
             <div
               class="margin-0"
               *ngIf="
@@ -43,19 +43,19 @@
               </p>
             </ng-template>
           </div>
-          <div class="desktop: margin-y-1">
+          <div class="desktop:grid-col-3 margin-y-1 margin-right-1">
             <p class="margin-0"><b>Contracting Department</b></p>
             <p class="margin-0 text-normal">
               {{ waiverData.data.contractingOfficeAgencyName }}
             </p>
           </div>
-          <div class="margin-y-1">
+          <div class="desktop:grid-col-2 margin-y-1 margin-right-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
             <p class="margin-0 text-normal" data-test="psc-code">
               {{ waiverData.data.psc.pscCode }}
             </p>
           </div>
-          <div class="margin-y-1">
+          <div class="desktop:grid-col-2 margin-y-1 margin-right-1">
             <p class="margin-0"><b>Request Status</b></p>
             <p class="margin-0 text-normal">
               {{ waiverData.data.requestStatus }}
