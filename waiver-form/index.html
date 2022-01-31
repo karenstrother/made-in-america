@@ -29,7 +29,6 @@ title: Waiver Form
       type="text/css"
       href="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.css"
     />
-
     <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.12.1/js/uswds.min.js"></script>
     <script src="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.js"></script>
@@ -53,6 +52,7 @@ title: Waiver Form
         <div id="formio"></div>
       </div>
     </main>
+
     <script type="text/javascript">
       window.onload = function () {
         Formio.use(premium)
@@ -60,7 +60,13 @@ title: Waiver Form
         Formio.createForm(
           document.getElementById('formio'),
           'https://submission.forms.gov/mia-live/madeinamericanonavailabilitywaiverrequest'
-        ).then(function (form) {
+        ).then(function (form, event) {
+          form.on('nextPage', function (event) {
+            window.scrollTo(0, 0)
+          })
+          form.on('prevPage', function (event) {
+            window.scrollTo(0, 0)
+          })
           // Submit the form
           form.on('submit', function (submission) {
             window.location.href = '/waiver-form/success.html'
