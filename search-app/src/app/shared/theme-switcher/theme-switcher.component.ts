@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core'
 import { ThemeSwitcherService } from './theme-switcher.service'
 
 @Component({
-  selector: `usa-theme-switcher`,
+  selector: 'usa-theme-switcher',
   template: `
     <select
       #select
@@ -19,6 +19,7 @@ export class ThemeSwitcherComponent implements AfterViewInit {
 
   currentStyle = 'uswds'
 
+  // eslint-disable-next-line no-useless-constructor
   constructor(private themeSwitcherService: ThemeSwitcherService) {}
 
   ngAfterViewInit() {
