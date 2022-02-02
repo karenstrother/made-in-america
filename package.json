@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "uswds": "~2.13.0"
+    "uswds": "~2.13.1"
   },
   "devDependencies": {
     "@18f/identity-stylelint-config": "^1.0.0",
