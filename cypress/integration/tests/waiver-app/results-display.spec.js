@@ -15,6 +15,13 @@ describe('results display', () => {
     cy.get('[data-test="filter-select"] select').children().as('filter-options')
     cy.get('usa-accordion').children().as('accordion-elements')
   })
+  it('check that accordion header has text present', () => {
+    cy.get('[data-test="accordion-header"]')
+      .children()
+      .each(child => {
+        child[0].innerText.length > 0
+      })
+  })
   it('check term Non-availability is not present on waiver page', () => {
     cy.get('[data-test="waiver-page-content"]')
       .should('not.contain.text', 'Non-availability')
