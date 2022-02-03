@@ -11,9 +11,11 @@ describe('check that the to improve site button works', () => {
           cy.get(
             '[href="https://www.gsa.gov/reference/gsa-privacy-program/privacy-act-statement-for-design-research"]'
           ).should('have.attr', 'target', '_blank')
-          cy.get(
-            '[href="https://www.gsa.gov/reference/gsa-privacy-program/privacy-act-statement-for-design-research"]'
-          ).should('have.attr', 'target', '_blank')
+          cy.get('[href="https://touchpoints.app.cloud.gov/"]').should(
+            'have.attr',
+            'target',
+            '_blank'
+          )
         })
       })
     })
