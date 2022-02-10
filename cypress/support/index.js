@@ -1,4 +1,7 @@
 import 'cypress-plugin-snapshots/commands'
+import { addCustomCommand } from 'cy-verify-downloads'
+
+addCustomCommand()
 
 Cypress.Commands.add('getUrlsArray', () => {
   cy.request({
