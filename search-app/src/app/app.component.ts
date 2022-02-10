@@ -93,7 +93,10 @@ export class AppComponent implements OnInit {
       sort: 'recent',
     }
     const waiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
-    const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waiverscsv.csv?ref=${environment.dataBranch}`
+    // set to develop to test purposes
+    // TODO: revert back to environment.dataBranch
+    const waiversCsvUrl =
+      'https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=develop'
 
     fetch(waiversJsonUrl)
       .then(response => response.json())
