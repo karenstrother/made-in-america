@@ -4,6 +4,6 @@ const { isFileExist } = require('cy-verify-downloads')
 
 module.exports = (on, config) => {
   initPlugin(on, config)
-  isFileExist(on)
+  on('task', { isFileExist })
   return config
 }
