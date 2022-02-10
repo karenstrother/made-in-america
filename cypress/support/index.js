@@ -1,7 +1,5 @@
 import 'cypress-plugin-snapshots/commands'
-import { addCustomCommand } from 'cy-verify-downloads'
-
-addCustomCommand()
+import { addCustomCommand as verifyFileDownload } from 'cy-verify-downloads'
 
 Cypress.Commands.add('getUrlsArray', () => {
   cy.request({
@@ -20,3 +18,5 @@ Cypress.Commands.add('getUrlsArray', () => {
         .map(el => el.innerText)
     })
 })
+
+verifyFileDownload()
