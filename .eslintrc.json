@@ -1,16 +1,6 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "extends": [
-    "airbnb-base",
-    "prettier",
-    "plugin:json/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "plugins": ["import", "prettier", "json", "@typescript-eslint", "jsdoc"],
+  "extends": ["airbnb-base", "prettier", "plugin:json/recommended"],
+  "plugins": ["prettier", "json", "jsdoc"],
   "env": {
     "node": true,
     "browser": true,
@@ -19,56 +9,100 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js"]
       }
     }
   },
   "rules": {
     "import/prefer-default-export": 0,
-    "import/no-extraneous-dependencies": [
-      2,
-      {
-        "devDependencies": false
-      }
-    ],
-    "import/extensions": [
-      2,
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
     "array-type": 0,
     "arrow-body-style": 2,
     "curly": 0,
     "eol-last": 2,
-    "no-restricted-imports": [2, "rxjs/Rx"],
-    "max-classes-per-file": 0,
-    "@typescript-eslint/member-ordering": 2,
     "no-console": 2,
-    "no-empty": 0,
-    "@typescript-eslint/no-inferrable-types": 2,
-    "@typescript-eslint/no-non-null-assertion": 2,
-    "jsdoc/no-types": 2,
-    "no-fallthrough": 2,
-    "no-var-requires": 0,
-    "quote-props": [2, "as-needed"],
-    "quotes": [2, "single"],
-    "space-before-function-paren": [
-      0,
-      {
-        "options": {
-          "anonymous": "never",
-          "asyncArrow": "always",
-          "constructor": "never",
-          "method": "never",
-          "named": "never"
+    "quotes": [2, "single"]
+  },
+  "overrides": [
+    {
+      "files": ["./search-app/**/*.{ts,tsx}"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "tsconfigRootDir": "./search-app/",
+        "project": "./tsconfig.json"
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
         }
+      },
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "plugins": ["import", "@typescript-eslint"],
+      "rules": {
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": [
+          2,
+          {
+            "devDependencies": false
+          }
+        ],
+        "import/extensions": [
+          2,
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "array-type": 0,
+        "arrow-body-style": 2,
+        "curly": 0,
+        "eol-last": 2,
+        "no-restricted-imports": [2, "rxjs/Rx"],
+        "max-classes-per-file": 0,
+        "@typescript-eslint/member-ordering": 2,
+        "no-console": 2,
+        "no-empty": 0,
+        "@typescript-eslint/no-inferrable-types": 2,
+        "@typescript-eslint/no-non-null-assertion": 2,
+        "jsdoc/no-types": 2,
+        "no-fallthrough": 2,
+        "no-var-requires": 0,
+        "quote-props": [2, "as-needed"],
+        "quotes": [2, "single"],
+        "space-before-function-paren": [
+          0,
+          {
+            "options": {
+              "anonymous": "never",
+              "asyncArrow": "always",
+              "constructor": "never",
+              "method": "never",
+              "named": "never"
+            }
+          }
+        ],
+        "@typescript-eslint/typedef": 2
       }
-    ],
-    "@typescript-eslint/typedef": 2
-  }
+    },
+    {
+      "files": ["cypress/**/*.spec.js", "cypress/**/*.js"],
+      "env": {
+        "cypress/globals": true
+      },
+      "extends": ["plugin:cypress/recommended"],
+      "plugins": ["cypress"],
+      "rules": {
+        "cypress/no-assigning-return-values": "error",
+        "cypress/no-unnecessary-waiting": "error",
+        "cypress/assertion-before-screenshot": "warn",
+        "cypress/no-force": "warn",
+        "cypress/no-async-tests": "error",
+        "cypress/no-pause": "error"
+      }
+    }
+  ]
 }

@@ -25,7 +25,10 @@ describe('sort waivers by alphabetical order', () => {
             case 'recent':
               expect(titles).to.not.deep.equal(alphabeticalTitles)
               break
+            default:
+              return null
           }
+          return null
         })
       })
     })
