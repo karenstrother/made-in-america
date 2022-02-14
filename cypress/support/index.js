@@ -11,12 +11,12 @@ Cypress.Commands.add('getUrlsArray', () => {
     },
   })
     .as('sitemap')
-    .then(response => {
-      return Cypress.$(response.body)
+    .then(response =>
+      Cypress.$(response.body)
         .find('loc')
         .toArray()
         .map(el => el.innerText)
-    })
+    )
 })
 
 verifyFileDownload()

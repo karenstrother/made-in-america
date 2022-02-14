@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+// eslint-disable-next-line import/no-unresolved
 import { DropdownOptionsModel } from 'uswds-components'
 
 @Component({

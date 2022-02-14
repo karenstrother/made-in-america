@@ -33,18 +33,19 @@
     ]
   },
   "dependencies": {
-    "uswds": "~2.13.1"
+    "uswds": "~2.13.1",
+    "cypress-plugin-snapshots": "^1.4.4",
+    "cy-verify-downloads": "0.0.6"
   },
   "devDependencies": {
     "@18f/identity-stylelint-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.9.0",
-    "cy-verify-downloads": "0.0.6",
     "cypress": "^9.4.1",
-    "cypress-plugin-snapshots": "^1.4.4",
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsdoc": "^37.6.3",
     "eslint-plugin-json": "^3.1.0",

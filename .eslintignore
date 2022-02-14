@@ -1,8 +1,7 @@
 package-lock.json
 package.json
-**/*.spec.js
-**/*.spec.ts
-cypress
+search-app/**/*.spec.js
+search-app/**/*.spec.ts
 search-app/projects
 _assets/js/app
 _assets/css/premium.css

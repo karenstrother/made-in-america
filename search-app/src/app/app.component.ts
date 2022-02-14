@@ -64,15 +64,7 @@ export class AppComponent implements OnInit {
         (
           { data: { procurementTitle: procurementTitle1 } },
           { data: { procurementTitle: procurementTitle2 } }
-        ) => {
-          if (procurementTitle1 > procurementTitle2) {
-            return 1
-          }
-          if (procurementTitle2 > procurementTitle1) {
-            return -1
-          }
-          return 0
-        }
+        ) => procurementTitle1.localeCompare(procurementTitle2)
       )
   }
 

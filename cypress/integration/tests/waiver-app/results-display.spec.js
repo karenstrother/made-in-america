@@ -1,11 +1,13 @@
 /// <reference types="Cypress" />
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false
+Cypress.on(
+  'uncaught:exception',
+  () =>
+    // returning false here prevents Cypress from
+    // failing the test
+    false
   // accordon structure error from USWDS we are ingoreing
-})
+)
 
 describe('results display', () => {
   before('let site load', () => {
@@ -18,9 +20,7 @@ describe('results display', () => {
   it('check that accordion header has text present', () => {
     cy.get('[data-test="accordion-header"]')
       .children()
-      .each(child => {
-        child[0].innerText.length > 0
-      })
+      .each(child => child[0].innerText.length > 0)
   })
   it('check term Non-availability is not present on waiver page', () => {
     cy.get('[data-test="waiver-page-content"]')
@@ -40,15 +40,11 @@ describe('results display', () => {
         .find('[data-test="accordion-header"]')
         .children()
         .children()
-        .each(child => {
-          child[0].innerText.length > 0
-        })
+        .each(child => child[0].innerText.length > 0)
       cy.get(accordionElements[1])
         .find('[data-test="accordion-content"]')
         .find('p')
-        .each(detail => {
-          detail[0].innerText.length > 0
-        })
+        .each(detail => detail[0].innerText.length > 0)
     })
   })
   it('omb determination should be based on status', () => {
