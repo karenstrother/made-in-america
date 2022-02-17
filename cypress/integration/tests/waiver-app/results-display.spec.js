@@ -1,11 +1,13 @@
 /// <reference types="Cypress" />
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false
+Cypress.on(
+  'uncaught:exception',
+  () =>
+    // returning false here prevents Cypress from
+    // failing the test
+    false
   // accordon structure error from USWDS we are ingoreing
-})
+)
 
 describe('results display', () => {
   before('let site load', () => {
@@ -14,6 +16,17 @@ describe('results display', () => {
   beforeEach('setting up test alias', () => {
     cy.get('[data-test="filter-select"] select').children().as('filter-options')
     cy.get('usa-accordion').children().as('accordion-elements')
+  })
+  it('check that accordion header has text present', () => {
+    cy.get('[data-test="accordion-header"]')
+      .children()
+      .each(child => child[0].innerText.length > 0)
+  })
+  it('check term Non-availability is not present on waiver page', () => {
+    cy.get('[data-test="waiver-page-content"]')
+      .should('not.contain.text', 'Non-availability')
+      .should('not.contain.text', 'non-availability')
+    // this test provides covearge for the waivers page, since it is a dymanic page the test attributes have been added to areas of the page that have content. This test will skip over waivers present on the page since those are changing based on submissions.  Please see 'non-availability-check.spec.js' for full site coverage
   })
   it('accordion should open when clicked', () => {
     cy.get('[data-test="accordion-header"]')
@@ -27,15 +40,11 @@ describe('results display', () => {
         .find('[data-test="accordion-header"]')
         .children()
         .children()
-        .each(child => {
-          child[0].innerText.length > 0
-        })
+        .each(child => child[0].innerText.length > 0)
       cy.get(accordionElements[1])
         .find('[data-test="accordion-content"]')
         .find('p')
-        .each(detail => {
-          detail[0].innerText.length > 0
-        })
+        .each(detail => detail[0].innerText.length > 0)
     })
   })
   it('omb determination should be based on status', () => {

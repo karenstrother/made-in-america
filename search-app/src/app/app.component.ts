@@ -9,13 +9,21 @@ import { environment } from '../environments/environment'
 })
 export class AppComponent implements OnInit {
   title = 'usa-components'
+
   data = []
+
   filteredData = []
+
   displayedData = []
+
   filter = ''
+
   sort = ''
+
   filterOptions = []
+
   last = 0
+
   sortOptions = [
     {
       label: 'Most Recent',
@@ -26,17 +34,51 @@ export class AppComponent implements OnInit {
       value: 'alphabetical',
     },
   ]
+
   selectedOptions = {
     filter: this.filter,
     sort: this.sort,
   }
+
   current = 1
 
-  constructor(private themeSwitcherService: ThemeSwitcherService) {}
+  // eslint-disable-next-line no-useless-constructor
+  constructor(private themeSwitcherService: ThemeSwitcherService) {} // only kicks on the styles for local dev
+
+  static sortChronologically(data) {
+    return data.slice().sort(({ created: created1 }, { created: created2 }) => {
+      if (created1 > created2) {
+        return -1
+      }
+      if (created1 < created2) {
+        return 1
+      }
+      return 0
+    })
+  }
+
+  static sortAlphabetically(data) {
+    return data
+      .slice()
+      .sort(
+        (
+          { data: { procurementTitle: procurementTitle1 } },
+          { data: { procurementTitle: procurementTitle2 } }
+        ) => procurementTitle1.localeCompare(procurementTitle2)
+      )
+  }
+
+  static createFilters(data) {
+    const uniqueRequestStatus = Array.from(
+      new Set(data.map(d => d.data.requestStatus))
+    )
+    return uniqueRequestStatus.map(d => ({ label: d, value: d }))
+  }
 
   ngOnInit() {
-    environment.production === false &&
+    if (environment.production === false) {
       this.themeSwitcherService.setStyle('theme', 'uswds-styles.css')
+    }
 
     this.selectedOptions = {
       filter: 'all',
@@ -50,14 +92,14 @@ export class AppComponent implements OnInit {
           Array.prototype.map
             .call(
               atob(content),
-              c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
             )
             .join('')
         )
         this.data = JSON.parse(dataString)
         this.filterOptions = [
           { label: 'All', value: 'all' },
-          ...this.createFilters(this.data),
+          ...AppComponent.createFilters(this.data),
         ]
         this.displayedData = this.data.slice(0, 10)
         this.last = Math.ceil(this.data.length / 10)
@@ -67,46 +109,15 @@ export class AppComponent implements OnInit {
       })
   }
 
-  createFilters(data) {
-    const uniqueRequestStatus = Array.from(
-      new Set(data.map(d => d.data.requestStatus))
-    )
-    return uniqueRequestStatus.map(d => ({ label: d, value: d }))
-  }
-
   onSortChange(selectedOption) {
     const currentData =
       this.filteredData.length > 0 ? this.filteredData : this.data
     const sortedData =
       selectedOption === 'alphabetical'
-        ? this.sortAlphabetically(currentData)
-        : this.sortChronologically(currentData)
+        ? AppComponent.sortAlphabetically(currentData)
+        : AppComponent.sortChronologically(currentData)
     this.filteredData = sortedData
     this.displayedData = this.filteredData.slice(0, 10)
-  }
-
-  sortAlphabetically(data) {
-    return data
-      .slice()
-      .sort(
-        (
-          { data: { procurementTitle: procurementTitle1 } },
-          { data: { procurementTitle: procurementTitle2 } }
-        ) =>
-          procurementTitle1 > procurementTitle2
-            ? 1
-            : procurementTitle2 > procurementTitle1
-            ? -1
-            : 0
-      )
-  }
-
-  sortChronologically(data) {
-    return data
-      .slice()
-      .sort(({ created: created1 }, { created: created2 }) =>
-        created1 > created2 ? -1 : created1 < created2 ? 1 : 0
-      )
   }
 
   onFilterChange(selectedOption) {
@@ -119,17 +130,21 @@ export class AppComponent implements OnInit {
   }
 
   handleSelectedOptions($event) {
-    this.filterOptions.findIndex(obj =>
-      Object.values(obj).includes($event.value)
-    ) !== -1
-      ? (this.selectedOptions = {
-          filter: $event.value,
-          sort: this.selectedOptions.sort,
-        })
-      : (this.selectedOptions = {
-          filter: this.selectedOptions.filter,
-          sort: $event.value,
-        })
+    if (
+      this.filterOptions.findIndex(obj =>
+        Object.values(obj).includes($event.value)
+      ) !== -1
+    ) {
+      this.selectedOptions = {
+        filter: $event.value,
+        sort: this.selectedOptions.sort,
+      }
+    } else {
+      this.selectedOptions = {
+        filter: this.selectedOptions.filter,
+        sort: $event.value,
+      }
+    }
     this.onFilterChange(this.selectedOptions.filter)
     this.onSortChange(this.selectedOptions.sort)
     this.movePage(1)
