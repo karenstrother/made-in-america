@@ -5,5 +5,7 @@ describe('check status date', () => {
   })
   it('check that date is present and formatted correctly', () => {
     cy.get('[data-test="status-date"]')
+      .should('be.visible')
+      .and('match', 'MM/dd/yyyy')
   })
 })
