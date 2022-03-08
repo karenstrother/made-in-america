@@ -28,6 +28,10 @@ export class PaginationComponent implements OnInit {
     this.renderedButtons = PaginationComponent.handleButtonValues(this.last)
   }
 
+  ngDoCheck() {
+    this.renderedButtons = PaginationComponent.handleButtonValues(this.last)
+  }
+
   goTo(index) {
     this.current = index
     window.scroll(0, 0)
