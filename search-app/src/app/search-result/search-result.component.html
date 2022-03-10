@@ -32,13 +32,13 @@
               "
             >
               Date:
-              <p class="margin-0 text-normal">
+              <p class="margin-0 text-normal" data-test="status-date">
                 {{ waiverData.created | date: 'MM/dd/yyyy' }}
               </p>
             </div>
             <ng-template #reviewed>
               Date:
-              <p class="margin-0 text-normal">
+              <p class="margin-0 text-normal" data-test="status-date">
                 {{ waiverData.modified | date: 'MM/dd/yyyy' }}
               </p>
             </ng-template>
