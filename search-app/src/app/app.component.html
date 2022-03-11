@@ -2,6 +2,16 @@
   <div class="grid-row flex-align-end" style="justify-content: space-between">
     <div class="tablet:grid-col-6" data-test="waiver-page-content">
       <h1 class="margin-0 font-family-sans">Nonavailability Waivers</h1>
+      <a
+        id="waivers-download"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-test="csv-download"
+      >
+        <button class="usa-button usa-button--outline margin-top-2">
+          Download .CSV File
+        </button>
+      </a>
     </div>
     <uswds-dropdown
       [id]="'filtering'"
