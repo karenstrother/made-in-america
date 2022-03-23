@@ -14,3 +14,6 @@ For additional information on these waivers, please contact the issuing agency u
 
 - January 4, 2022
   - [Navy Jacket Hoods Urgent Requirement Waiver N6883622F0029](/urgent-waivers/Navy-Jacket-hoods-Urgent-Requirement-Waiver-N6883622F0029-4-Jan-22-for-posting.xlsx)
+
+- March 22, 2022
+  - [SSA COVID Home Tests Urgent Requirement Waiver 28321322D00060013](/urgent-waivers/SSA-COVID-Home-Tests-Urgent-Requirement-Waiver-28321322D00060013.xlsx) 
