@@ -13,7 +13,15 @@ When agencies are obligated by law to act more quickly than the review procedure
 For additional information on these waivers, please contact the issuing agency using the points of contact at our _[resources page.](https://www.madeinamerica.gov/customer-service/resources/){:target="\_blank" rel="noreferrer"}_
 
 - January 4, 2022
+
   - [Navy Jacket Hoods Urgent Requirement Waiver N6883622F0029](/urgent-waivers/Navy-Jacket-hoods-Urgent-Requirement-Waiver-N6883622F0029-4-Jan-22-for-posting.xlsx)
 
 - March 22, 2022
-  - [SSA COVID Home Tests Urgent Requirement Waiver 28321322D00060013](/urgent-waivers/SSA-COVID-Home-Tests-Urgent-Requirement-Waiver-28321322D00060013.xlsx) 
+
+  - [SSA COVID Home Tests Urgent Requirement Waiver 28321322D00060013](/urgent-waivers/SSA-COVID-Home-Tests-Urgent-Requirement-Waiver-28321322D00060013.xlsx)
+
+- March xx, 2022
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0004](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0004.xlsx)
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0005](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0005.xlsx)
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0006](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0006.xlsx)
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0009](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0009.xlsx)
