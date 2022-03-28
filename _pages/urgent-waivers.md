@@ -19,3 +19,13 @@ For additional information on these waivers, please contact the issuing agency u
 - March 22, 2022
 
   - [SSA COVID Home Tests Urgent Requirement Waiver 28321322D00060013](/urgent-waivers/SSA-COVID-Home-Tests-Urgent-Requirement-Waiver-28321322D00060013.xlsx)
+
+- March 30, 2022
+
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0004](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0004.xlsx)
+
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0005](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0005.xlsx)
+
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0006](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0006.xlsx)
+
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0009](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0009.xlsx)
