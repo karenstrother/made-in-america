@@ -24,8 +24,8 @@ For additional information on these waivers, please contact the issuing agency u
 
   - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0004](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0004.xlsx)
 
-  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0005](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0005.xlsx)
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0005](/urgent-waivers/DoD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0005.xlsx)
 
   - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0006](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0006.xlsx)
 
-  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0009](/urgent-waivers/DOD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0009.xlsx)
+  - [DOD Urgent Requirements Report COVID-19 Rapid Antigen Tests 0009](/urgent-waivers/DoD-Urgent-Requirements-Report-COVID-19-Rapid-Antigen-Tests-0009.xlsx)
