@@ -43,9 +43,10 @@ export class PaginationComponent implements OnInit {
     window.scroll(0, 0)
 
     if ([1, 2].includes(this.current)) {
-      this.renderedButtons = PaginationComponent.handleButtonValues(this.last, [
-        2,
-      ])
+      this.renderedButtons = PaginationComponent.handleButtonValues(
+        this.last,
+        [2, 3]
+      )
     } else if ([this.last, this.last - 1].includes(this.current)) {
       this.renderedButtons =
         this.last > 3 ? [this.last - 2, this.last - 1] : [2]
