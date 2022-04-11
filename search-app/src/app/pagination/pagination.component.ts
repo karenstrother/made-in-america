@@ -48,7 +48,7 @@ export class PaginationComponent implements OnInit {
       ])
     } else if ([this.last, this.last - 1].includes(this.current)) {
       this.renderedButtons =
-        this.last > 3 ? [this.last - 3, this.last - 1] : [2]
+        this.last > 3 ? [this.last - 2, this.last - 1] : [2]
     } else {
       this.renderedButtons = [this.current - 1, this.current, this.current + 1]
     }
