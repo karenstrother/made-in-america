@@ -13,18 +13,34 @@ manage your navigation system {% endcomment %}
       href="{{ site.baseurl }}/waivers/"
       >View Waivers</a
     >
-    <nav
-      id="menu-navigation"
-      aria-label="Menu navigation"
-      role="navigation"
-      class="usa-nav"
-      style="width: auto; border: none"
+    <!-- DESKTOP -->
+    <ul
+      class="usa-nav__primary usa-accordion"
+      style="display: flex; justify-content: end"
     >
-      <div class="usa-nav__inner display:none desktop:display-block">
-        <a class="usa-button" href="{{ site.baseurl }}/waivers/"
-          >View Waivers</a
+      <li class="usa-nav__primary-item">
+        <a href="/about/" class="usa-nav__link">
+          <span>About</span>
+        </a>
+      </li>
+      <li class="usa-nav__primary-item">
+        <button
+          class="usa-accordion__button usa-nav__link usa-current"
+          aria-expanded="false"
+          aria-controls="extended-nav-section-one"
         >
-      </div>
-    </nav>
+          <span>Waivers</span>
+        </button>
+
+        <ul id="extended-nav-section-one" class="usa-nav__submenu">
+          <li class="usa-nav__submenu-item">
+            <a href="{{ site.baseurl }}/waivers/"> Nonavailability Waivers </a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="{{ site.baseurl }}/urgent/">Urgent Waivers</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </header>

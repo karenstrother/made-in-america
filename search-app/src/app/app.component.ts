@@ -16,6 +16,10 @@ export class AppComponent implements OnInit {
 
   displayedData = []
 
+  urgentData = []
+
+  urgentDisplayedData = []
+
   filter = ''
 
   sort = ''
@@ -41,6 +45,8 @@ export class AppComponent implements OnInit {
   }
 
   current = 1
+
+  currentRoute = window.location.pathname
 
   // eslint-disable-next-line no-useless-constructor
   constructor(private themeSwitcherService: ThemeSwitcherService) {} // only kicks on the styles for local dev
@@ -86,6 +92,7 @@ export class AppComponent implements OnInit {
     }
     const waiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
     const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=${environment.dataBranch}`
+    const urgentwaiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/urgent-waivers-data.json?ref=${environment.urgentBranch}`
 
     fetch(waiversJsonUrl)
       .then(response => response.json())
@@ -105,6 +112,29 @@ export class AppComponent implements OnInit {
         ]
         this.displayedData = this.data.slice(0, 10)
         this.last = Math.ceil(this.data.length / 10)
+      })
+      .then(() => {
+        this.onSortChange(this.sortOptions[0])
+      })
+
+    fetch(urgentwaiversJsonUrl)
+      .then(response => response.json())
+      .then(({ content }) => {
+        const dataString = decodeURIComponent(
+          Array.prototype.map
+            .call(
+              atob(content),
+              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
+            )
+            .join('')
+        )
+        this.urgentData = JSON.parse(dataString)
+        this.filterOptions = [
+          { label: 'All', value: 'all' },
+          ...AppComponent.createFilters(this.urgentData),
+        ]
+        this.urgentDisplayedData = this.urgentData.slice(0, 10)
+        this.last = Math.ceil(this.urgentData.length / 10)
       })
       .then(() => {
         this.onSortChange(this.sortOptions[0])

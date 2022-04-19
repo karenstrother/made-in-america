@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component'
 import { ThemeSwitcherModule } from './shared/theme-switcher/theme-switcher.module'
 import { SearchResultModule } from './search-result/search-result.module'
+import { SearchUrgentModule } from './search-urgent/search-urgent.module'
 import { PaginationComponent } from './pagination/pagination.component'
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PaginationComponent } from './pagination/pagination.component'
     USWDSDropdownModule,
     UsaAccordionModule,
     SearchResultModule,
+    SearchUrgentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
