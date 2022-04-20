@@ -1,18 +1,23 @@
 ---
-permalink: /waiver-form
-title: Waiver Form
+permalink: /urgent-form/success
+title: Urgent Waiver Form Success
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Waiver Form</title>
+    <title>Urgent Waiver Form Success</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex nofollow" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.form.io/formiojs/formio.full.min.css"
     />
     <link
       rel="stylesheet"
@@ -24,11 +29,7 @@ title: Waiver Form
       type="text/css"
       href="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.form.io/formiojs/formio.full.min.css"
-    />
+
     <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.12.1/js/uswds.min.js"></script>
     <script src="https://unpkg.com/@formio/uswds@2.4.0/dist/uswds.js"></script>
@@ -41,38 +42,22 @@ title: Waiver Form
           <div class="grid-col-4 width-card">{% include logo.html %}</div>
           <div class="grid-col-8">
             <h1 class="font-sans-lg desktop:margin-bottom-0">
-              Made in America Nonavailability Proposed Waiver
+              Urgent Requirements Report
             </h1>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <div class="grid-container padding-bottom-8">
-        <div id="formio"></div>
+      <div class="grid-container">
+        <div class="usa-alert usa-alert--success" style="margin-top: 16px">
+          <div class="usa-alert__body">
+            <h2 class="usa-alert__heading margin-0 margin-top-05 font-sans-md">
+              Submission Complete
+            </h2>
+          </div>
+        </div>
       </div>
     </main>
-
-    <script type="text/javascript">
-      window.onload = function () {
-        Formio.use(premium)
-        Formio.use(uswds)
-        Formio.createForm(
-          document.getElementById('formio'),
-          'https://submission.forms.gov/mia-live/madeinamericanonavailabilitywaiverrequest'
-        ).then(function (form, event) {
-          form.on('nextPage', function (event) {
-            window.scrollTo(0, 0)
-          })
-          form.on('prevPage', function (event) {
-            window.scrollTo(0, 0)
-          })
-          // Submit the form
-          form.on('submit', function (submission) {
-            window.location.href = '/waiver-form/success.html'
-          })
-        })
-      }
-    </script>
   </body>
 </html>
