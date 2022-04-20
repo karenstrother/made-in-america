@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   dataBranch: 'main',
-  urgentBranch: 'feature/urgentwaiverdata',
+  urgentBranch: 'feature/MIA-277',
 }
 
 /*

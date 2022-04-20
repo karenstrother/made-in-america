@@ -4,8 +4,11 @@
       <h1 *ngIf="currentRoute == '/waivers/'" class="margin-0 font-family-sans">
         Nonavailability Waivers
       </h1>
-      <h1 *ngIf="currentRoute == '/urgent/'" class="margin-0 font-family-sans">
-        Urgent Waivers
+      <h1
+        *ngIf="currentRoute == '/urgent-reports/'"
+        class="margin-0 font-family-sans"
+      >
+        Urgent Requirement Reports
       </h1>
       <a
         id="waivers-download"
@@ -49,7 +52,7 @@
   ></usa-pagination>
 </div>
 <div
-  *ngIf="currentRoute == '/urgent/'"
+  *ngIf="currentRoute == '/urgent-reports/'"
   class="grid-container padding-0 margin-top-5 margin-bottom-3"
 >
   <search-urgent [data]="urgentDisplayedData"></search-urgent>
