@@ -136,7 +136,7 @@ export class AppComponent implements OnInit {
           ...AppComponent.createFilters(this.urgentData),
         ]
         this.urgentDisplayedData = this.urgentData.slice(0, 20)
-        this.last = Math.ceil(this.urgentData.length / 10)
+        this.last = Math.ceil(this.urgentData.length / 20)
       })
       .then(() => {
         this.onSortChange(this.sortOptions[0])
