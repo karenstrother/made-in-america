@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
 
   urgentData = []
 
+  urgentFilteredData = []
+
   urgentDisplayedData = []
 
   filter = ''
@@ -133,7 +135,7 @@ export class AppComponent implements OnInit {
           { label: 'All', value: 'all' },
           ...AppComponent.createFilters(this.urgentData),
         ]
-        this.urgentDisplayedData = this.urgentData.slice(0, 10)
+        this.urgentDisplayedData = this.urgentData.slice(0, 20)
         this.last = Math.ceil(this.urgentData.length / 10)
       })
       .then(() => {
@@ -159,14 +161,27 @@ export class AppComponent implements OnInit {
   }
 
   onSortChange(selectedOption) {
-    const currentData =
-      this.filteredData.length > 0 ? this.filteredData : this.data
-    const sortedData =
-      selectedOption === 'alphabetical'
-        ? AppComponent.sortAlphabetically(currentData)
-        : AppComponent.sortChronologically(currentData)
-    this.filteredData = sortedData
-    this.displayedData = this.filteredData.slice(0, 10)
+    if (this.currentRoute === '/waivers/') {
+      const currentData =
+        this.filteredData.length > 0 ? this.filteredData : this.data
+      const sortedData =
+        selectedOption === 'alphabetical'
+          ? AppComponent.sortAlphabetically(currentData)
+          : AppComponent.sortChronologically(currentData)
+      this.filteredData = sortedData
+      this.displayedData = this.filteredData.slice(0, 10)
+    } else if (this.currentRoute === '/urgent-reports/') {
+      const currentData =
+        this.urgentFilteredData.length > 0
+          ? this.urgentFilteredData
+          : this.urgentData
+      const sortedData =
+        selectedOption === 'alphabetical'
+          ? AppComponent.sortAlphabetically(currentData)
+          : AppComponent.sortChronologically(currentData)
+      this.urgentFilteredData = sortedData
+      this.urgentDisplayedData = this.urgentFilteredData.slice(0, 20)
+    }
   }
 
   onFilterChange(selectedOption) {

@@ -11,6 +11,7 @@
         Urgent Requirement Reports
       </h1>
       <a
+        *ngIf="currentRoute == '/waivers/'"
         id="waivers-download"
         target="_blank"
         rel="noopener noreferrer"
@@ -22,6 +23,7 @@
       </a>
     </div>
     <uswds-dropdown
+      *ngIf="currentRoute == '/waivers/'"
       [id]="'filtering'"
       [label]="'Filter By Status'"
       [options]="filterOptions"
