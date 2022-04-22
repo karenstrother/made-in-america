@@ -23,7 +23,6 @@
       </a>
     </div>
     <uswds-dropdown
-      *ngIf="currentRoute == '/waivers/'"
       [id]="'filtering'"
       [label]="'Filter By Status'"
       [options]="filterOptions"
@@ -57,5 +56,11 @@
   *ngIf="currentRoute == '/urgent-reports/'"
   class="grid-container padding-0 margin-top-5 margin-bottom-3"
 >
-  <search-urgent [data]="urgentDisplayedData"></search-urgent>
+  <search-urgent [data]="displayedData"></search-urgent>
+  <usa-pagination
+    [current]="current"
+    [last]="last"
+    *ngIf="last > 1"
+    (movePage)="movePage($event)"
+  ></usa-pagination>
 </div>
