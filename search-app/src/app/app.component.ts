@@ -86,73 +86,50 @@ export class AppComponent implements OnInit {
       filter: 'all',
       sort: 'recent',
     }
-    const waiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
-    const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=${environment.dataBranch}`
-    const urgentwaiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/urgent-waivers-data.json?ref=${environment.urgentBranch}`
+    const requestURL = window.location.pathname.includes('/waivers/')
+      ? `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
+      : `https://api.github.com/repos/GSA/made-in-america-data/contents/urgent-waivers-data.json?ref=${environment.urgentBranch}`
 
-    if (this.currentRoute === '/waivers/') {
-      fetch(waiversCsvUrl)
-        .then(response => response.json())
-        .then(({ content }) => {
-          const dataString = decodeURIComponent(
-            Array.prototype.map
-              .call(
-                atob(content),
-                c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
-              )
-              .join('')
-          )
-          const a = document.getElementById('waivers-download')
-          const file = new Blob([dataString], { type: 'text' })
-          a.setAttribute('href', URL.createObjectURL(file))
-          a.setAttribute('download', 'waivers.csv')
-        })
-      fetch(waiversJsonUrl)
-        .then(response => response.json())
-        .then(({ content }) => {
-          const dataString = decodeURIComponent(
-            Array.prototype.map
-              .call(
-                atob(content),
-                c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
-              )
-              .join('')
-          )
-          this.data = JSON.parse(dataString)
-          this.filterOptions = [
-            { label: 'All', value: 'all' },
-            ...AppComponent.createFilters(this.data),
-          ]
-          this.displayedData = this.data.slice(0, 10)
-          this.last = Math.ceil(this.data.length / 10)
-        })
-        .then(() => {
-          this.onSortChange(this.sortOptions[0])
-        })
-    } else if (this.currentRoute === '/urgent-reports/') {
-      fetch(urgentwaiversJsonUrl)
-        .then(response => response.json())
-        .then(({ content }) => {
-          const dataString = decodeURIComponent(
-            Array.prototype.map
-              .call(
-                atob(content),
-                c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
-              )
-              .join('')
-          )
-          this.data = JSON.parse(dataString)
-          this.filterOptions = [
-            { label: 'All', value: 'all' },
-            ...AppComponent.createFilters(this.data),
-          ]
-          this.displayedData = this.data.slice(0, 10)
-          this.last = Math.ceil(this.data.length / 10)
-        })
-        .then(() => {
-          this.onSortChange(this.sortOptions[0])
-        })
-    }
+    const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=${environment.dataBranch}`
+    fetch(waiversCsvUrl)
+      .then(response => response.json())
+      .then(({ content }) => {
+        const dataString = decodeURIComponent(
+          Array.prototype.map
+            .call(
+              atob(content),
+              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
+            )
+            .join('')
+        )
+        const a = document.getElementById('waivers-download')
+        const file = new Blob([dataString], { type: 'text' })
+        a.setAttribute('href', URL.createObjectURL(file))
+        a.setAttribute('download', 'waivers.csv')
+      })
+
+    fetch(requestURL)
+      .then(response => response.json())
+      .then(({ content }) => {
+        const dataString = decodeURIComponent(
+          Array.prototype.map
+            .call(
+              atob(content),
+              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
+            )
+            .join('')
+        )
+        this.data = JSON.parse(dataString)
+        this.filterOptions = [
+          { label: 'All', value: 'all' },
+          ...AppComponent.createFilters(this.data),
+        ]
+        this.displayedData = this.data.slice(0, 10)
+        this.last = Math.ceil(this.data.length / 10)
+      })
+      .then(() => {
+        this.onSortChange(this.sortOptions[0])
+      })
   }
 
   onSortChange(selectedOption) {
