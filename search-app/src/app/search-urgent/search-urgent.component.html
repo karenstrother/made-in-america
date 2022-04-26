@@ -114,47 +114,24 @@
                 </p>
               </div>
 
-              <div class="margin-bottom-2">
+              <div
+                class="margin-bottom-2"
+                *ngIf="
+                  waiverData.data
+                    .identifyUrgencyContributedToNonavailability === 'Yes'
+                "
+              >
                 <div class="margin-0 font-sans-xs text-bold">
-                  Explain in detail what led to this requirement being urgent
+                  Did urgency contribute to the nonavailability?
                 </div>
                 <p class="margin-0 font-sans-xs">
                   {{
                     waiverData.data.urgencyContributedExplanation != ''
                       ? waiverData.data.urgencyContributedExplanation
-                      : 'N/A'
+                      : 'No'
                   }}
                 </p>
               </div>
-
-              <!-- <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Waiver Coverage
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{
-                    waiverData.data.waiverCoverage != ''
-                      ? waiverData.data.waiverCoverage
-                      : 'N/A'
-                  }}
-                </p>
-              </div> -->
-
-              <!-- <div class="margin-bottom-2 margin-right-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Did / Will the solicitation include one of the standard BAA
-                  provisions announcing the agency’s intention to provide a
-                  price preference for domestic end products and construction
-                  material?
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{
-                    waiverData.data.isPricePreferenceIncluded != ''
-                      ? waiverData.data.isPricePreferenceIncluded
-                      : 'N/A'
-                  }}
-                </p>
-              </div> -->
             </div>
             <!-- end col 1 -->
             <div class="tablet:grid-col">
@@ -169,20 +146,8 @@
                   }})
                 </p>
               </div>
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">Product</div>
-                <p
-                  class="margin-0 font-sans-xs"
-                  data-test="product-details-group"
-                >
-                  {{ waiverData.data.psc.pscName }} ({{
-                    waiverData.data.psc.pscCode
-                  }})
-                </p>
-              </div>
-
               <div
-                class="margin-bottom-2 grid-row"
+                class="margin-bottom-1 grid-row"
                 style="
                   display: 'flex';
                   flex-direction: 'row';
@@ -200,6 +165,35 @@
                   </p>
                 </div>
               </div>
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">Product</div>
+                <p
+                  class="margin-0 font-sans-xs"
+                  data-test="product-details-group"
+                >
+                  {{ waiverData.data.psc.pscName }} ({{
+                    waiverData.data.psc.pscCode
+                  }})
+                </p>
+              </div>
+              <div class="desktop:grid-col margin-bottom-2">
+                <div class="margin-0 margin-right-2 font-sans-xs text-bold">
+                  Contract Number
+                </div>
+                <p class="margin-0 margin-right-2 font-sans-xs">
+                  {{ waiverData.data.contractNumber }}
+                </p>
+              </div>
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">Date Signed</div>
+                <p
+                  class="margin-0 font-sans-xs"
+                  data-test="product-details-group"
+                >
+                  {{ waiverData.data.dateContractSigned }}
+                </p>
+              </div>
+
               <div class="margin-bottom-2" data-test="omb-determination">
                 <div class="margin-0 font-sans-xs text-bold">
                   OMB Determination
@@ -209,19 +203,6 @@
                     waiverData.data?.ombDetermination &&
                     waiverData.data.ombDetermination != ''
                       ? waiverData.data.ombDetermination
-                      : 'N/A'
-                  }}
-                </p>
-              </div>
-
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Anticipated Mission Impact if there is no waiver
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{
-                    waiverData.data.anticipatedMissionImpactNoWaiver != ''
-                      ? waiverData.data.anticipatedMissionImpactNoWaiver
                       : 'N/A'
                   }}
                 </p>
