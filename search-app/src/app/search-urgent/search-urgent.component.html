@@ -118,12 +118,19 @@
                 class="margin-bottom-2"
                 *ngIf="
                   waiverData.data
-                    .identifyUrgencyContributedToNonavailability === 'Yes'
+                    .identifyUrgencyContributedToNonavailability === 'Yes' ||
+                  waiverData.data
+                    .identifyUrgencyContributedToNonavailability === 'Uncertain'
                 "
               >
                 <div class="margin-0 font-sans-xs text-bold">
                   Did urgency contribute to the nonavailability?
                 </div>
+                <p class="margin-0 font-sans-md text-bold">
+                  {{
+                    waiverData.data.identifyUrgencyContributedToNonavailability
+                  }}
+                </p>
                 <p class="margin-0 font-sans-xs">
                   {{
                     waiverData.data.urgencyContributedExplanation != ''
