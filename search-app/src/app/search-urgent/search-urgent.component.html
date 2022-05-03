@@ -43,12 +43,7 @@
               </p>
             </ng-template>
           </div>
-          <div class="desktop:grid-col-3 margin-y-1 margin-right-1">
-            <p class="margin-0"><b>Contracting Department</b></p>
-            <p class="margin-0 text-normal">
-              {{ waiverData.data.contractingOfficeAgencyName }}
-            </p>
-          </div>
+
           <div class="desktop:grid-col-2 margin-y-1 margin-right-1">
             <p class="margin-0"><b>Product Service Code (PSC)</b></p>
             <p class="margin-0 text-normal" data-test="psc-code">
@@ -76,11 +71,7 @@
                   : 'margin-0 font-sans-lg text-bold'
               "
             >
-              {{
-                waiverData.data.procurementTitle != ''
-                  ? waiverData.data.procurementTitle
-                  : 'Pending Title'
-              }}
+              Procurement Summary
             </div>
             <p class="margin-0 font-sans-xs">
               {{ waiverData.data.summaryOfProcurement }}
@@ -106,69 +97,6 @@
               </div>
 
               <div
-                class="margin-bottom-2 grid-row"
-                style="
-                  display: 'flex';
-                  flex-direction: 'row';
-                  justify-content: space-between;
-                "
-              >
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 font-sans-xs text-bold">
-                    Procurement Instrument Identifier (PIID)
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{
-                      waiverData?.data?.piids &&
-                      waiverData?.data?.piids[0].piid !== ''
-                        ? waiverData?.data.piids[0].piid
-                        : 'N/A'
-                    }}
-                  </p>
-                </div>
-
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 font-sans-xs text-bold">
-                    Solicitation ID
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{
-                      waiverData.data?.solicitationId &&
-                      waiverData.data.solicitationId != ''
-                        ? waiverData.data.solicitationId
-                        : 'N/A'
-                    }}
-                  </p>
-                </div>
-
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 font-sans-xs text-bold">
-                    Procurement Stage
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{
-                      waiverData.data.procurementStage != ''
-                        ? waiverData.data.procurementStage
-                        : 'N/A'
-                    }}
-                  </p>
-                </div>
-              </div>
-
-              <div class="margin-bottom-2" data-test="omb-determination">
-                <div class="margin-0 font-sans-xs text-bold">
-                  OMB Determination
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{
-                    waiverData.data?.ombDetermination &&
-                    waiverData.data.ombDetermination != ''
-                      ? waiverData.data.ombDetermination
-                      : 'N/A'
-                  }}
-                </p>
-              </div>
-              <div
                 class="margin-bottom-2"
                 *ngIf="
                   waiverData.data.ombDetermination ===
@@ -186,46 +114,28 @@
                 </p>
               </div>
 
-              <div class="margin-bottom-2">
+              <div
+                class="margin-bottom-2"
+                *ngIf="
+                  waiverData.data
+                    .identifyUrgencyContributedToNonavailability === 'Yes' ||
+                  waiverData.data
+                    .identifyUrgencyContributedToNonavailability === 'Uncertain'
+                "
+              >
                 <div class="margin-0 font-sans-xs text-bold">
-                  Expected Maximum Duration of the Proposed Waiver
+                  Did urgency contribute to the nonavailability?
                 </div>
-                <p class="margin-0 font-sans-xs">
+                <p class="margin-0 font-sans-md text-bold">
                   {{
-                    waiverData.data
-                      .expectedMaximumDurationOfTheRequestedWaiver != ''
-                      ? waiverData.data
-                          .expectedMaximumDurationOfTheRequestedWaiver
-                      : 'N/A'
+                    waiverData.data.identifyUrgencyContributedToNonavailability
                   }}
                 </p>
-              </div>
-
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Waiver Coverage
-                </div>
                 <p class="margin-0 font-sans-xs">
                   {{
-                    waiverData.data.waiverCoverage != ''
-                      ? waiverData.data.waiverCoverage
-                      : 'N/A'
-                  }}
-                </p>
-              </div>
-
-              <div class="margin-bottom-2 margin-right-2">
-                <div class="margin-0 font-sans-xs text-bold">
-                  Did / Will the solicitation include one of the standard BAA
-                  provisions announcing the agency’s intention to provide a
-                  price preference for domestic end products and construction
-                  material?
-                </div>
-                <p class="margin-0 font-sans-xs">
-                  {{
-                    waiverData.data.isPricePreferenceIncluded != ''
-                      ? waiverData.data.isPricePreferenceIncluded
-                      : 'N/A'
+                    waiverData.data.urgencyContributedExplanation != ''
+                      ? waiverData.data.urgencyContributedExplanation
+                      : 'No'
                   }}
                 </p>
               </div>
@@ -243,20 +153,8 @@
                   }})
                 </p>
               </div>
-              <div class="margin-bottom-2">
-                <div class="margin-0 font-sans-xs text-bold">Product</div>
-                <p
-                  class="margin-0 font-sans-xs"
-                  data-test="product-details-group"
-                >
-                  {{ waiverData.data.psc.pscName }} ({{
-                    waiverData.data.psc.pscCode
-                  }})
-                </p>
-              </div>
-
               <div
-                class="margin-bottom-2 grid-row"
+                class="margin-bottom-1 grid-row"
                 style="
                   display: 'flex';
                   flex-direction: 'row';
@@ -273,26 +171,45 @@
                     }})
                   </p>
                 </div>
-                <div class="desktop:grid-col margin-bottom-2">
-                  <div class="margin-0 margin-right-2 font-sans-xs text-bold">
-                    Funding Agency
-                  </div>
-                  <p class="margin-0 font-sans-xs">
-                    {{ waiverData.data.fundingAgencyName }} ({{
-                      waiverData.data.fundingAgencyId
-                    }})
-                  </p>
+              </div>
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">Product</div>
+                <p
+                  class="margin-0 font-sans-xs"
+                  data-test="product-details-group"
+                >
+                  {{ waiverData.data.psc.pscName }} ({{
+                    waiverData.data.psc.pscCode
+                  }})
+                </p>
+              </div>
+              <div class="desktop:grid-col margin-bottom-2">
+                <div class="margin-0 margin-right-2 font-sans-xs text-bold">
+                  Contract Number
                 </div>
+                <p class="margin-0 margin-right-2 font-sans-xs">
+                  {{ waiverData.data.contractNumber }}
+                </p>
+              </div>
+              <div class="margin-bottom-2">
+                <div class="margin-0 font-sans-xs text-bold">Date Signed</div>
+                <p
+                  class="margin-0 font-sans-xs"
+                  data-test="product-details-group"
+                >
+                  {{ waiverData.data.dateContractSigned }}
+                </p>
               </div>
 
-              <div class="margin-bottom-2">
+              <div class="margin-bottom-2" data-test="omb-determination">
                 <div class="margin-0 font-sans-xs text-bold">
-                  Was a sources sought or Request for Information issued?
+                  OMB Determination
                 </div>
                 <p class="margin-0 font-sans-xs">
                   {{
-                    waiverData.data.sourcesSoughtOrRfiIssued != ''
-                      ? waiverData.data.sourcesSoughtOrRfiIssued
+                    waiverData.data?.ombDetermination &&
+                    waiverData.data.ombDetermination != ''
+                      ? waiverData.data.ombDetermination
                       : 'N/A'
                   }}
                 </p>
