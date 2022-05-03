@@ -7,12 +7,20 @@
       >
         Nonavailability Waivers
       </h1>
-      <h1
-        *ngIf="currentRoute.includes('urgent-reports')"
-        class="margin-0 font-family-sans"
-      >
-        Urgent Requirement Reports
-      </h1>
+      <div *ngIf="currentRoute.includes('urgent-reports')">
+        <h1 class="margin-0 font-family-sans margin-bottom-2">
+          Urgent Requirement Reports
+        </h1>
+        <p class="margin-0 text-small">
+          In certain circumstances, an agency may determine that it is required
+          to act more quickly than the Made in America Office (MIAO) waiver
+          review procedures allow. In those circumstances, agencies complete an
+          “Urgent Requirements Report” to inform the MIAO that a Made in America
+          Law has been waived. To promote transparency, the MIAO compiles these
+          reports here.
+        </p>
+      </div>
+
       <a
         *ngIf="currentRoute.includes('waivers')"
         id="waivers-download"
