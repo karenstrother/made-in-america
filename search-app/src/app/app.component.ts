@@ -42,6 +42,8 @@ export class AppComponent implements OnInit {
 
   current = 1
 
+  currentRoute = window.location.pathname
+
   // eslint-disable-next-line no-useless-constructor
   constructor(private themeSwitcherService: ThemeSwitcherService) {} // only kicks on the styles for local dev
 
@@ -84,10 +86,29 @@ export class AppComponent implements OnInit {
       filter: 'all',
       sort: 'recent',
     }
-    const waiversJsonUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
-    const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=${environment.dataBranch}`
+    const requestURL = window.location.pathname.includes('/waivers/')
+      ? `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers-data.json?ref=${environment.dataBranch}`
+      : `https://api.github.com/repos/GSA/made-in-america-data/contents/urgent-waivers-data.json?ref=${environment.urgentBranch}`
 
-    fetch(waiversJsonUrl)
+    const waiversCsvUrl = `https://api.github.com/repos/GSA/made-in-america-data/contents/waivers.csv?ref=${environment.dataBranch}`
+    fetch(waiversCsvUrl)
+      .then(response => response.json())
+      .then(({ content }) => {
+        const dataString = decodeURIComponent(
+          Array.prototype.map
+            .call(
+              atob(content),
+              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
+            )
+            .join('')
+        )
+        const a = document.getElementById('waivers-download')
+        const file = new Blob([dataString], { type: 'text' })
+        a.setAttribute('href', URL.createObjectURL(file))
+        a.setAttribute('download', 'waivers.csv')
+      })
+
+    fetch(requestURL)
       .then(response => response.json())
       .then(({ content }) => {
         const dataString = decodeURIComponent(
@@ -108,23 +129,6 @@ export class AppComponent implements OnInit {
       })
       .then(() => {
         this.onSortChange(this.sortOptions[0])
-      })
-
-    fetch(waiversCsvUrl)
-      .then(response => response.json())
-      .then(({ content }) => {
-        const dataString = decodeURIComponent(
-          Array.prototype.map
-            .call(
-              atob(content),
-              c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`
-            )
-            .join('')
-        )
-        const a = document.getElementById('waivers-download')
-        const file = new Blob([dataString], { type: 'text' })
-        a.setAttribute('href', URL.createObjectURL(file))
-        a.setAttribute('download', 'waivers.csv')
       })
   }
 
