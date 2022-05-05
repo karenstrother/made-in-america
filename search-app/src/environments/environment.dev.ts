@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  dataBranch: 'develop',
-  urgentBranch: 'develop',
+  dataBranch: 'stage',
+  urgentBranch: 'stage',
 }
