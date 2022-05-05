@@ -73,7 +73,7 @@ describe('results display', () => {
         .find('[data-test="psc-code"]')
         .invoke('text')
         .should($pscCode => {
-          expect($pscCode).to.match(/^[0-9\s]*$/)
+          expect($pscCode).to.match(/^[A-Za-z0-9\s]*$/)
         })
         .then($pscCode => {
           cy.get(accordionElements[1])
