@@ -38,7 +38,7 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr> 
   <tr>
     <td>Department of Homeland Security</td>
-    <td><a target="_blank" href="https://www.fema.gov/grants/policy-guidance/buy-america">https://www.fema.gov/grants/policy-guidance/buy-america</a></td>
+    <td>TBD</td>
   </tr> 
   <tr>
     <td>Department of Housing and Urban Development</td>
@@ -110,6 +110,6 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr>
   <tr>
     <td>National Endowment for the Humanities</td>
-     <td><a target="_blank" href="https://www.neh.gov/neh_buildamericabuyamerica_waivers">https://www.neh.gov/neh_buildamericabuyamerica_waivers</a></td>
+     <td>TBD</td>
   </tr>
 </table>
