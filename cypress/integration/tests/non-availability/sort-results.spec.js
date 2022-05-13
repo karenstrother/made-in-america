@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('sort waivers by alphabetical order', () => {
+describe('sort waivers by alphabetical order on N/A waivers', () => {
   before('visit site', () => {
     cy.visit('localhost:4000/waivers')
   })

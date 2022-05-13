@@ -9,7 +9,7 @@ Cypress.on(
   // accordon structure error from USWDS we are ingoreing
 )
 
-describe('results display', () => {
+describe('results display for Urgent waivers', () => {
   before('let site load', () => {
     cy.visit('localhost:4000/urgent-reports')
   })

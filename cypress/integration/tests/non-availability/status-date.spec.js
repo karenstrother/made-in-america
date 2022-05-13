@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('check status date', () => {
+describe('check status date on N/A waivers page', () => {
   before('visit site', () => {
     cy.visit('localhost:4000/waivers')
   })

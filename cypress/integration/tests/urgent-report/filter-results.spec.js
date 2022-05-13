@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('filter results', () => {
+describe('filter results for Urgent waivers', () => {
   before('visit site', () => {
     cy.visit('localhost:4000/urgent-reports')
   })

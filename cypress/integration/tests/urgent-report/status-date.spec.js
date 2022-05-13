@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('check status date', () => {
+describe('check status date on Urgent Waivers', () => {
   before('visit site', () => {
     cy.visit('localhost:4000/urgent-reports')
   })
