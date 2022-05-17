@@ -22,7 +22,8 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr>
   <tr>
     <td>Department of Commerce</td>
-    <td>TBD</td>
+      <td><a target="_blank" href="https://www.commerce.gov/oam">https://www.commerce.gov/oam
+  </a></td>
   </tr>
   <tr>
     <td>Department of Defense</td>
@@ -30,7 +31,8 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr>
   <tr>
     <td>Department of Energy</td>
-    <td>TBD</td>
+    <td><a target="_blank" href="https://www.energy.gov/management/financial-assistance">https://www.energy.gov/management/financial-assistance
+  </a></td>
   </tr>
    <tr>
     <td>Department of Health and Human Services</td>
@@ -38,7 +40,9 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr> 
   <tr>
     <td>Department of Homeland Security</td>
-    <td>TBD</td>
+    <td><a target="_blank" href="https://www.fema.gov/grants/policy-guidance/buy-america">https://www.fema.gov/grants/policy-guidance/buy-america
+  </a></td>
+
   </tr> 
   <tr>
     <td>Department of Housing and Urban Development</td>
