@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
-describe('sort waivers by alphabetical order', () => {
+describe('sort Urgent waivers by alphabetical order', () => {
   before('visit site', () => {
-    cy.visit('localhost:4000/waivers')
+    cy.visit('localhost:4000/urgent-reports')
   })
   beforeEach('create alias', () => {
     cy.get('[data-test="sort-select"] select').children().as('sort-options')

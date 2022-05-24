@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
-describe('check status date', () => {
+describe('check status date on Urgent Waivers', () => {
   before('visit site', () => {
-    cy.visit('localhost:4000/waivers')
+    cy.visit('localhost:4000/urgent-reports')
   })
   it('check that date is present and formatted correctly', () => {
     cy.get('[data-test="status-date"]').should('be.visible')
