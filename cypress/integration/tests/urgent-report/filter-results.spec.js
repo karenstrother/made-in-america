@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
-describe('filter results', () => {
+describe('filter results for Urgent waivers', () => {
   before('visit site', () => {
-    cy.visit('localhost:4000/waivers')
+    cy.visit('localhost:4000/urgent-reports')
   })
   beforeEach('create alias', () => {
     cy.get('[data-test="filter-select"] select').children().as('filter-options')

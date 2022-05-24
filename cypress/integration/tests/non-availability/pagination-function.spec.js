@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('pagination of waiver page', () => {
+describe('pagination of N/A waiver page', () => {
   before('visit site', () => {
     cy.visit('localhost:4000/waivers')
   })
