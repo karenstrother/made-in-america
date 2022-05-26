@@ -8,7 +8,7 @@ description: 'Waivers for financial assistance waivers'
 
 ## Buy America Waivers for Federal Financial Assistance
 
-The Build America, Buy America Act in the Bipartisan Infrastructure Law requires that the head of each covered Federal agency shall ensure that none of the funds made available for a Federal financial assistance program for infrastructure may be obligated for a project unless all of the iron, steel, manufactured products, and construction materials used in the project are produced in the United States. The head of a Federal agency may waive the application of a Buy America preference under an infrastructure program as explained in _[M-22-11.](https://www.whitehouse.gov/wp-content/uploads/2022/04/M-22-11.pdf){:target="\_blank" rel="noreferrer"}_ Generally, before issuing a waiver, the agency must post it online for 15 days to allow the public to review it and submit comments. You may view waivers posted for public comment on the websites listed below. (Note that if an agency does not have infrastructure programs or has not yet published any waivers for public comment, the entry for that agency’s website below may read “TBD.”)
+Federal Agency Websites Regarding the Build America, Buy America Act. The Build America, Buy America Act requires that all of the iron, steel, manufactured products, and construction materials used in infrastructure projects are produced in the United States. Exceptions can be made by the head of a Federal agency – but first the agency must post the proposed waiver online for 15 days to allow the public to review it and submit comments. Waivers posted for public comment are listed below and on an interim basis pending the development of a permanent website. (Note that this list will be updated as necessary to provide links to all published waivers.).
 
 <table>
   <tr>
@@ -28,6 +28,10 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   <tr>
     <td>Department of Defense</td>
     <td>TBD</td>
+  </tr>
+  <tr>
+    <td>Department of Education</td>
+    <td><a target="_blank" href="https://www2.ed.gov/policy/fund/guid/buy-america/index.html">https://www2.ed.gov/policy/fund/guid/buy-america/index.html</a></td>
   </tr>
   <tr>
     <td>Department of Energy</td>
@@ -78,7 +82,7 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr>
   <tr>
     <td>Environmental Protection Agency</td>
-    <td>TBD</td>
+    <td><a target="_blank" href=" https://www.epa.gov/cwsrf/build-america-buy-america-baba-waivers-open-public-comment"> https://www.epa.gov/cwsrf/build-america-buy-america-baba-waivers-open-public-comment</a></td>
   </tr>
   <tr>
     <td>National Aeronautics and Space Administration</td>
@@ -114,6 +118,8 @@ The Build America, Buy America Act in the Bipartisan Infrastructure Law requires
   </tr>
   <tr>
     <td>National Endowment for the Humanities</td>
-     <td>TBD</td>
+     <td><a target="_blank" href="https://www.neh.gov/neh_buildamericabuyamerica_waivers">https://www.neh.gov/neh_buildamericabuyamerica_waivers</a></td>
   </tr>
 </table>
+
+<em>Note that if an agency does not have infrastructure programs or has not yet published any waivers for public comment, the entry for that agency’s website below may read “TBD.”<em>
