@@ -13,7 +13,7 @@ The Build America, Buy America Act requires that all of the iron, steel, manufac
 <table 
   style="margin-left: auto;
         margin-right: auto;
-        width: 30%"
+        width: 325px"
   > 
   <tr>
     <td style="background-color: #CDCDCD"><b>Covered Agencies</b></td>
