@@ -64,7 +64,7 @@ The Build America, Buy America Act requires that all of the iron, steel, manufac
     <td>Department of Veterans Affairs</td>
   </tr>
   <tr>
-    <td><a target="_blank" href=" https://www.epa.gov/cwsrf/build-america-buy-america-baba-waivers-open-public-comment">Environmental Protection Agency</a></td>
+    <td><a target="_blank" href="https://www.epa.gov/cwsrf/build-america-buy-america-baba-waivers-open-public-comment">Environmental Protection Agency</a></td>
   </tr>
   <tr>
     <td>National Aeronautics and Space Administration</td>
