@@ -8,7 +8,7 @@ description: 'Waivers for financial assistance waivers'
 
 ## Buy America Waivers for Federal Financial Assistance
 
-The Build America, Buy America Act requires that all of the iron, steel, manufactured products, and construction materials used in infrastructure projects are produced in the United States. Exceptions can be made by the head of a Federal agency – but first the agency must post the proposed waiver online for 15 days to allow the public to review it and submit comments. Waivers posted for public comment are listed below and on an interim basis pending the development of a permanent website. (Note that this list will be updated as necessary to provide links to all published waivers.).
+The Build America, Buy America Act requires that all of the iron, steel, manufactured products, and construction materials used in infrastructure projects are produced in the United States. Exceptions can be made by the head of a Federal agency – but first the agency must post the proposed waiver online for 15 days to allow the public to review it and submit comments. OMB’s guidance and additional resources on Initial Implementation Guidance on Application of Buy America Preference in Federal Financial Assistance Programs for Infrastructure can be found on the <a href="https://www.whitehouse.gov/omb/management/made-in-america/" class="usa-link usa-link--external" target="_blank">Office of Management and Budget’s Made-In-America</a> website.
 
 <table 
   style="margin-left: auto;
